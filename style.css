@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+--clr-white: #ebe9e9;
+--clr-blk: #2f2f2f;
+--clr-pink: #d139cf;
+--clr-darkPink: #b205ac;
+--clr-purple: #5d0f9c;
+--clr-lightPurple: #7f22cb;
+}
+body {
+    color: var(--clr-blk);
+    background: var(--clr-white);
+    width: 100%;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.5;
+    cursor: default;
+}
+/* HEADER */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 86rem;
+    position: absolute;
+    padding: 0 15px;
+    background: var(--clr-pink);
+    min-height: 70px;
+}
+#logo {
+    position: absolute;
+    left: 5.75rem;
+    color: var(--clr-white);
+    font-family: "Great Vibes", cursive;
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    letter-spacing: .5px;
+    text-decoration: none;
+}
+header img {
+    position: relative;
+    bottom: .35rem;
+    width: 70px;
+    height: auto;
+}
+nav ul {
+    position: relative;
+}
+nav ul li {
+    position: relative;
+    list-style: none;
+    float: left;
+}
+nav ul li i {
+    position: relative;
+    left: .5rem;
+    color: var(--clr-white);
+    font-size: clamp(.95rem, 3vw, 1rem);
+}
+nav ul li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-family: "Jost", sans-serif;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    font-weight: 300;
+    text-transform: capitalize;
+    padding: 25px 35px;
+    color: var(--clr-white);
+    transition: 250ms;
+}
+nav ul li a:hover {
+    background-color: var(--clr-darkPink);
+}
+nav ul li ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background: var(--clr-pink);
+}
+nav ul li:hover > ul {
+    display: block;
+}
+nav ul li ul li {
+    position: relative;
+    width: 100%;
+    border: 1px solid rgba(239, 239, 239, 0.3);
+}
+/* MEDIA QUERY'S */
+@media screen and (max-width: 1145px) {
+    nav {
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 60px;
+        left: 0;
+        background: var(--clr-pink);
+    }
+    header.active nav {
+        display: block;
+    }
+    nav ul li {
+        width: 100%;
+    }
+    nav ul li ul {
+        position: relative;
+        left: 0;
+        width: 100%;
+    }
+    nav ul li ul li {
+        border: 1px solid rgba(239, 239, 239, 0);
+    }
+    .hamburger-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 20px;
+        height: 25px;
+    }
+    .hamburger-menu::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: var(--clr-white);
+        transform: translateY(-5px);
+        transition: 250ms ease;
+    }
+    .hamburger-menu::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: var(--clr-white);
+        transform: translateY(5px);
+        transition: 250ms ease;
+    }
+    header.active .hamburger-menu::before {
+        transform: rotate(45deg);
+    }
+    header.active .hamburger-menu::after {
+        transform: rotate(315deg);
+    }
+}
+/* DARK MODE */
+@media screen and (prefers-color-scheme: dark) {
+    body {
+        color: var(--clr-white);
+        background: var(--clr-blk);
+    }
+    header {
+        background: var(--clr-purple);
+    }
+    nav ul li ul {
+        background: var(--clr-purple);
+    }
+    nav ul li a:hover {
+        background-color: var(--clr-lightPurple);
+    }
+    nav ul li ul li {
+        border: 1px solid rgba(40, 40, 40, 0.3);
+    }
+}
+@media screen and (max-width: 1145px) and (prefers-color-scheme: dark) {
+    nav {
+        background: var(--clr-purple);
+    }
+    nav ul li ul li {
+        border: 1px solid rgba(40, 40, 40, 0);
+    }
+}
