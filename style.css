@@ -78,9 +78,9 @@ nav ul li a {
     display: flex;
     align-items: center;
     text-decoration: none;
-    font-family: "Jost", sans-serif;
-    font-size: clamp(1rem, 3vw, 1.2rem);
-    font-weight: 300;
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(1rem, 3vw, 1.1rem);
+    font-weight: 200;
     text-transform: capitalize;
     padding: 25px 30px;
     color: var(--clr-white);
@@ -114,7 +114,7 @@ nav ul li ul li {
 }
 .hero h1 {
     position: absolute;
-    bottom: 16%;
+    bottom: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-transform: capitalize;
@@ -127,7 +127,7 @@ nav ul li ul li {
     border: 13px solid var(--clr-white);
     border-image: url(./assets/main/border.png) 4% repeat;
     box-shadow: 0 5px 20px rgba(0, 0, 0, .6);
-    padding: 1.75rem 1.25rem;
+    padding: 1.85rem 1.25rem;
     letter-spacing: 1px;
 }
 /* media query's */
