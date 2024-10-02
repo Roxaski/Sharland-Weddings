@@ -32,20 +32,20 @@ body {
     padding-bottom: 2rem;
     cursor: default;
 }
-/* HEADER */
+/* header */
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
     width: 100%;
     max-width: 86rem;
-    position: relative;
     padding: 0 15px;
     background: var(--clr-pink);
     min-height: 70px;
     z-index: 1;
 }
-#logo {
+.logo {
     position: absolute;
     left: 5.75rem;
     color: var(--clr-white);
@@ -60,7 +60,7 @@ header img {
     width: 70px;
     height: auto;
 }
-/* NAVBAR */
+/* nav */
 nav ul {
     position: relative;
 }
@@ -105,9 +105,7 @@ nav ul li ul li {
     width: 100%;
     border: 1px solid rgba(239, 239, 239, 0.3);
 }
-/* GALLERY */
-
-/* MEDIA QUERY'S */
+/* media query's*/
 @media screen and (max-width: 1145px) {
     nav {
         display: none;
@@ -164,7 +162,7 @@ nav ul li ul li {
         transform: rotate(315deg);
     }
 }
-/* DARK MODE */
+/* dark mode */
 @media screen and (prefers-color-scheme: dark) {
     ::-webkit-scrollbar-track {
         background: var(--clr-blk);

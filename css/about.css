@@ -33,7 +33,7 @@ body {
     padding-bottom: 2rem;
     cursor: default;
 }
-/* HEADER */
+/* header */
 header {
     display: flex;
     align-items: center;
@@ -61,7 +61,7 @@ header img {
     width: 70px;
     height: auto;
 }
-/* NAVBAR */
+/* nav */
 nav ul {
     position: relative;
 }
@@ -106,7 +106,7 @@ nav ul li ul li {
     width: 100%;
     border: 1px solid rgba(239, 239, 239, 0.3);
 }
-/* ABOUT */
+/* about */
 .banner {
     position: absolute;
     max-width: 700px;
@@ -155,7 +155,7 @@ nav ul li ul li {
 .content p {
     font-size: clamp(1rem, 3vw, 1.1rem);
 }
-/* MEDIA QUERY'S */
+/* media query's */
 @media screen and (max-width: 1145px) {
     nav {
         display: none;
@@ -230,7 +230,7 @@ nav ul li ul li {
         text-align: left;
     }
 }
-/* DARK MODE */
+/* dark mode */
 @media screen and (prefers-color-scheme: dark) {
     ::-webkit-scrollbar-track {
         background: var(--clr-blk);
