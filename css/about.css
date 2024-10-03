@@ -7,7 +7,8 @@
 }
 :root {
     --clr-white: #fefefe;
-    --clr-blk: #2f2f2f;
+    --clr-offWhite: #c6c5c5;
+    --clr-blk: #000000;
     --clr-grey: #a9a8a8;
     --clr-pink: #be32bc;
     --clr-darkPink: #a1039c;

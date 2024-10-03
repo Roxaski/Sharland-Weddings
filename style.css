@@ -7,7 +7,8 @@
 }
 :root {
     --clr-white: #fefefe;
-    --clr-blk: #2f2f2f;
+    --clr-offWhite: #c6c5c5;
+    --clr-blk: #000000;
     --clr-grey: #a9a8a8;
     --clr-pink: #be32bc;
     --clr-darkPink: #a1039c;
@@ -133,31 +134,36 @@ nav ul li ul li {
     letter-spacing: 1px;
 }
 /* venues */
-.grid-container {
+.venue-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    margin: 15px auto;
 }
-.left img,
-.right img {
+.venue-container .left img,
+.venue-container .right img {
     display: block;
     width: 100%;
     height: auto;
 }
-.left img {
-    mask-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 50%, transparent 90%);
+.venue-container .left img {
+    mask-image: linear-gradient(90deg, 
+                rgba(0, 0, 0, 1) 50%, 
+                transparent 90%);
 }
-.right img {
-    mask-image: linear-gradient(-90deg, rgba(0, 0, 0, 1) 50%, transparent 90%);
+.venue-container .right img {
+    mask-image: linear-gradient(-90deg, 
+                rgba(0, 0, 0, 1) 50%, 
+                transparent 90%);
 }
-.left h2,
-.right h2 {
+.venue-container .left h2,
+.venue-container .right h2 {
     text-transform: capitalize;
     font-weight: 400;
     margin: 15px auto 0;
     padding: 0 1rem;
 }
-.left p,
-.right p {
+.venue-container .left p,
+.venue-container .right p {
     width: 100%;
     margin: 15px auto;
     padding: 0 1rem;
@@ -228,7 +234,7 @@ nav ul li ul li {
         background: var(--clr-grey);
     }
     body {
-        color: var(--clr-white);
+        color: var(--clr-offWhite);
         background: var(--clr-blk);
     }
     header {
@@ -246,6 +252,16 @@ nav ul li ul li {
     .hero h1 {
         background-color: var(--clr-purple);
         color: var(--clr-white);
+    }
+    .venue-container .left img {
+        mask-image: linear-gradient(90deg, 
+                    rgba(0, 0, 0, 1) 10%, 
+                    transparent 95%);
+    }
+    .venue-container .right img {
+        mask-image: linear-gradient(-90deg, 
+                    rgba(0, 0, 0, 1) 10%, 
+                    transparent 95%);
     }
 }
 @media screen and (max-width: 1145px) and (prefers-color-scheme: dark) {
