@@ -6,12 +6,13 @@
     box-sizing: border-box;
 }
 :root {
---clr-white: #ebe9e9;
---clr-blk: #2f2f2f;
---clr-pink: #d139cf;
---clr-darkPink: #b205ac;
---clr-purple: #5d0f9c;
---clr-lightPurple: #7f22cb;
+    --clr-white: #fefefe;
+    --clr-blk: #2f2f2f;
+    --clr-grey: #a9a8a8;
+    --clr-pink: #be32bc;
+    --clr-darkPink: #a1039c;
+    --clr-purple: #5d0f9c;
+    --clr-lightPurple: #7f22cb;
 }
 ::-webkit-scrollbar {
     width: 8px;
