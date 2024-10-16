@@ -108,6 +108,18 @@ nav ul li ul li {
     width: 100%;
     border: 1px solid rgba(239, 239, 239, 0.3);
 }
+/* gallery */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    gap: 5px;
+    padding: 1rem;
+}
+.grid-container img {
+    width: 100%;
+    height: auto;
+}
 /* media query's*/
 @media screen and (max-width: 1145px) {
     nav {
