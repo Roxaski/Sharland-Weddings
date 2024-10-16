@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="../css/gallery.css">
     <script defer src="../script.js"></script>
+    <script defer src="../scripts/gallery.js"></script>
 </head>
 <body>
     <!-- nav -->
@@ -56,18 +57,70 @@
     <main>
         <!-- gallery -->
         <div class="grid-container">
-            <img src="../assets/gallery/gallery_1.webp" alt="couple stood up">
-            <img src="../assets/gallery/gallery_2.webp" alt="couple sat down">
-            <img src="../assets/gallery/gallery_3.webp" alt="couple confetti">
-            <img src="../assets/gallery/gallery_4.webp" alt="couple camper van">
-            <img src="../assets/gallery/gallery_5.webp" alt="bride with bridesmaids">
-            <img src="../assets/gallery/gallery_6.webp" alt="couple hugging">
-            <img src="../assets/gallery/gallery_7.webp" alt="couple kissing">
-            <img src="../assets/gallery/gallery_8.webp" alt="couple holding hands">
-            <img src="../assets/gallery/gallery_9.webp" alt="couple sat on car bonnet">
-            <img src="../assets/gallery/gallery_10.webp" alt="couple sat in car">
-            <img src="../assets/gallery/gallery_11.webp" alt="couple drinking champagne">
-            <img src="../assets/gallery/gallery_12.webp" alt="couple scenic">
+            <div class="img">
+                <img draggable="false" width="2560" height="1440" src="../assets/gallery/gallery_1.webp" alt="couple stood up">
+            </div>
+
+            <div class="img">
+                <img draggable="false" width="2560" height="1440" src="../assets/gallery/gallery_2.webp" alt="couple sat down">
+            </div>
+
+            <div class="img">
+                <img draggable="false" width="2560" height="1440" src="../assets/gallery/gallery_3.webp" alt="couple confetti">
+            </div>
+
+            <div class="img">
+                <img draggable="false" width="2560" height="1440" src="../assets/gallery/gallery_4.webp" alt="couple camper van">
+            </div>
+
+            <div class="img">
+                <img draggable="false" width="2560" height="1440" src="../assets/gallery/gallery_5.webp" alt="bride with bridesmaids">
+            </div>
+
+            <div class="img">
+                <img draggable="false" width="2560" height="1440" src="../assets/gallery/gallery_6.webp" alt="couple hugging">
+            </div>
+
+            <div class="img">
+                <img draggable="false" width="2560" height="1440" src="../assets/gallery/gallery_7.webp" alt="couple kissing">
+            </div>
+
+            <div class="img">
+                <img draggable="false" width="2560" height="1440" src="../assets/gallery/gallery_8.webp" alt="couple holding hands">
+            </div>
+
+            <div class="img">
+                <img draggable="false" width="2560" height="1440" src="../assets/gallery/gallery_9.webp" alt="couple sat on car bonnet">
+            </div>
+
+            <div class="img">
+                <img draggable="false" width="2560" height="1440" src="../assets/gallery/gallery_10.webp" alt="couple sat in car">
+            </div>
+
+            <div class="img">
+                <img draggable="false" width="2560" height="1440" src="../assets/gallery/gallery_11.webp" alt="couple drinking champagne">
+            </div>
+
+            <div class="img">
+                <img draggable="false" width="2560" height="1440" src="../assets/gallery/gallery_12.webp" alt="couple scenic">
+            </div>
+
+            <div class="img-preview">
+                    <div role="button" aria-label="closes current image" class="details">
+                        <i class="icon fa-solid fa-xmark"></i>
+                    </div>
+                    <div class="img-box">
+                        <div role="button" aria-label="previous image" class="slide prev">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </div>
+                        <div role="button" aria-label="next image" class="slide next">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                        <img draggable="false" src="" alt="">
+                    </div>
+                </div>
+                <div class="img-focus"></div>
+            </div>
         </div>
     </main>
 </body>
