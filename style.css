@@ -34,7 +34,6 @@ body {
     width: 100%;
     min-height: 100vh;
     font-family: "Poppins", sans-serif;
-    padding-bottom: 2rem;
     cursor: default;
 }
 /* header */
@@ -275,6 +274,39 @@ nav ul li ul li {
     text-transform: capitalize;
     margin: 0 auto 10px;
     font-weight: 400;
+}
+/* footer */
+footer {
+    width: 100%;
+    height: auto;
+    padding: 30px 100px;
+    color: var(--clr-white);
+    background: var(--clr-darkGrey);
+}
+footer .container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+footer .container .section {
+    text-transform: capitalize;
+    letter-spacing: .5px;
+}
+footer .container .section h3 {
+    font-weight: 500;
+}
+footer .container .section ul li {
+    display: flex;
+    font-size: clamp(.95rem, 3vw, 1rem);
+    list-style: none;
+    margin: 5px auto;
+    font-weight: 300;
+}
+footer .container .section.social i {
+    margin-top: 1rem;
+    margin-right: 1.5rem;
+    font-size: clamp(1rem, 3vw, 1.1rem);
 }
 /* media query's */
 @media screen and (max-width: 1145px) {
