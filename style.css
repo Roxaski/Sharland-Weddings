@@ -254,6 +254,28 @@ nav ul li ul li {
     margin: 15px auto;
     padding: 0 1rem;
 }
+/* events */
+.events-container {
+    margin: 15px auto;
+    width: 100%;
+}
+.events-container img {
+    display: block;
+    width: 100%;
+    height: 45vh;
+    object-fit: cover;
+    mask-image: linear-gradient(180deg, 
+                rgba(0, 0, 0, 1) 50%, 
+                transparent 90%);
+}
+.events-container {
+    text-align: center;
+}
+.events-container h2 {
+    text-transform: capitalize;
+    margin: 0 auto 10px;
+    font-weight: 400;
+}
 /* media query's */
 @media screen and (max-width: 1145px) {
     nav {
