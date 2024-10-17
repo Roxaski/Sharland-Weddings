@@ -37,13 +37,16 @@ body {
     font-family: "Poppins", sans-serif;
     cursor: default;
 }
+.wrapper {
+    max-width: 90rem;
+}
 /* header */
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 90rem;
     width: 100%;
-    max-width: 86rem;
     position: absolute;
     padding: 0 15px;
     background: var(--clr-pink);
@@ -275,6 +278,9 @@ nav ul li ul li {
     text-transform: capitalize;
     margin: 0 auto 10px;
     font-weight: 400;
+}
+.events-container p {
+    padding: 0 .75rem;
 }
 /* footer */
 footer {

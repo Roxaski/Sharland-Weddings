@@ -34,6 +34,9 @@ body {
     font-family: "Poppins", sans-serif;
     cursor: default;
 }
+.wrapper {
+    max-width: 90rem;
+}
 /* header */
 header {
     display: flex;
@@ -41,7 +44,7 @@ header {
     justify-content: space-between;
     position: relative;
     width: 100%;
-    max-width: 86rem;
+    max-width: 90rem;
     padding: 0 15px;
     background: var(--clr-pink);
     min-height: 70px;
@@ -244,6 +247,11 @@ nav ul li ul li {
         transform: rotate(315deg);
     }
 }
+@media screen and (max-width: 390px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
 /* dark mode */
 @media screen and (prefers-color-scheme: dark) {
     ::-webkit-scrollbar-track {
@@ -270,6 +278,9 @@ nav ul li ul li {
     }
     .grid-container img {
         border: solid 2px var(--clr-offWhite);
+    }
+    .img-focus {
+        background: var(--clr-darkGrey);
     }
 }
 @media screen and (max-width: 1145px) and (prefers-color-scheme: dark) {
