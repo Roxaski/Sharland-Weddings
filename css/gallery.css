@@ -116,6 +116,7 @@ nav ul li ul li {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     width: 100%;
     gap: 0 8px;
+    margin: 15px auto;
     padding: 1.5rem 1rem;
 }
 .grid-container img {
@@ -275,9 +276,6 @@ nav ul li ul li {
     }
     nav ul li ul li {
         border: 1px solid rgba(40, 40, 40, 0.3);
-    }
-    .grid-container img {
-        border: solid 2px var(--clr-offWhite);
     }
     .img-focus {
         background: var(--clr-darkGrey);

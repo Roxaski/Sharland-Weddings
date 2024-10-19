@@ -7,7 +7,7 @@
 }
 :root {
     --clr-white: #fefefe;
-    --clr-whiteChalk: #e3e1e1;
+    --clr-chalk: #dbdada;
     --clr-offWhite: #c6c5c5;
     --clr-blk: #000000;
     --clr-grey: #a9a8a8;
@@ -287,7 +287,7 @@ footer {
     width: 100%;
     height: auto;
     padding: 30px 100px;
-    color: var(--clr-whiteChalk);
+    color: var(--clr-chalk);
     background: var(--clr-darkGrey);
 }
 footer .container {
@@ -396,6 +396,9 @@ footer .container .section.social i {
     }
     nav ul li ul li {
         border: 1px solid rgba(40, 40, 40, 0.3);
+    }
+    main {
+        color: var(--clr-chalk);
     }
     .hero img {
         filter: opacity(80%);
