@@ -8,6 +8,7 @@
 :root {
     --clr-white: #fefefe;
     --clr-offWhite: #c6c5c5;
+    --clr-chalk: #dbdada;
     --clr-blk: #000000;
     --clr-grey: #a9a8a8;
     --clr-darkGrey: #2c2c2c;
@@ -111,10 +112,14 @@ nav ul li ul li {
     border: 1px solid rgba(239, 239, 239, 0.3);
 }
 /* about */
+main {
+    position: relative;
+}
 .banner {
     position: absolute;
     max-width: 700px;
-    top: 58%;
+    width: 100%;
+    top: 32%;
     left: 50%;
     transform: translate(-50%, -50%);
     height: auto;
@@ -148,7 +153,7 @@ nav ul li ul li {
     text-align: center;
     width: 80%;
     margin: 35px auto 0;
-    line-height: 1.65;
+    line-height: 1.7;
 }
 .content h1 {
     font-size: clamp(1.5rem, 3vw, 1.9rem);
@@ -229,11 +234,6 @@ nav ul li ul li {
         margin: 50px auto 0;
     }
 }
-@media screen and (max-width: 300px) {
-    .content {
-        text-align: left;
-    }
-}
 /* dark mode */
 @media screen and (prefers-color-scheme: dark) {
     ::-webkit-scrollbar-track {
@@ -265,7 +265,7 @@ nav ul li ul li {
         display: block;
     }
     .content {
-        color: var(--clr-white);
+        color: var(--clr-chalk);
     }
 }
 @media screen and (max-width: 1145px) and (prefers-color-scheme: dark) {
