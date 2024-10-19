@@ -123,7 +123,7 @@ nav ul li ul li {
 }
 .hero h1 {
     position: absolute;
-    bottom: 15%;
+    bottom: 11%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-transform: capitalize;
