@@ -145,7 +145,7 @@ nav ul li ul li {
     max-width: 800px;
     margin: 15px auto;
     color: var(--clr-white);
-    background-color: var(--clr-offWhite);
+    background-color: var(--clr-chalk);
     border-radius: 5px;
     box-shadow: 1px 3px 5px rgba(0, 0, 0, .4);
 }
@@ -184,6 +184,7 @@ nav ul li ul li {
     position: relative;
     bottom: .65rem;
     text-transform: capitalize;
+    color: var(--clr-white);
     font-size: clamp(1.1rem, 3vw, 1.3rem);
     font-weight: 400;
 }
@@ -213,7 +214,7 @@ nav ul li ul li {
     background: var(--clr-chalk);
     outline: none;
     border: none;
-    transition: 250ms ease-in;
+    transition: 200ms ease-in;
     border-radius: 5px;
     cursor: pointer;
 }
