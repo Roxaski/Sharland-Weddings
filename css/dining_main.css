@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --clr-white: #fefefe;
+    --clr-offWhite: #c6c5c5;
+    --clr-chalk: #dbdada;
+    --clr-blk: #000000;
+    --clr-grey: #a9a8a8;
+    --clr-cadetGrey: #838181;
+    --clr-darkGrey: #2c2c2c;
+    --clr-pink: #b120af;
+    --clr-darkPink: #a1039c;
+    --clr-purple: #5d0f9c;
+    --clr-lightPurple: #7f22cb;
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--clr-white);
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: var(--clr-cadetGrey);
+}
+body {
+    color: var(--clr-darkGrey);
+    background: var(--clr-white);
+    width: 100%;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    padding-bottom: 2rem;
+    cursor: default;
+}
+.wrapper {
+    max-width: 90rem;
+}
+/* header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    max-width: 90rem;
+    padding: 0 15px;
+    background: var(--clr-pink);
+    min-height: 70px;
+    z-index: 1;
+}
+.logo {
+    position: absolute;
+    left: 5.75rem;
+    color: var(--clr-white);
+    font-family: "Great Vibes", cursive;
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    letter-spacing: .5px;
+    text-decoration: none;
+}
+header img {
+    position: relative;
+    bottom: .35rem;
+    width: 70px;
+    height: auto;
+}
+/* nav */
+nav ul {
+    position: relative;
+}
+nav ul li {
+    position: relative;
+    list-style: none;
+    float: left;
+}
+nav ul li i {
+    position: relative;
+    left: .5rem;
+    color: var(--clr-white);
+    font-size: clamp(.95rem, 3vw, 1rem);
+}
+nav ul li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(1rem, 3vw, 1.1rem);
+    font-weight: 200;
+    text-transform: capitalize;
+    padding: 25px 30px;
+    color: var(--clr-white);
+    transition: 250ms;
+}
+nav ul li a:hover {
+    background-color: var(--clr-darkPink);
+}
+nav ul li ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background: var(--clr-pink);
+}
+nav ul li:hover > ul {
+    display: block;
+}
+nav ul li ul li {
+    position: relative;
+    width: 100%;
+    border: 1px solid rgba(239, 239, 239, 0.3);
+}
+/* media query's*/
+@media screen and (max-width: 1145px) {
+    nav {
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 60px;
+        left: 0;
+        background: var(--clr-pink);
+    }
+    header.active nav {
+        display: block;
+    }
+    nav ul li {
+        width: 100%;
+    }
+    nav ul li ul {
+        position: relative;
+        left: 0;
+        width: 100%;
+    }
+    nav ul li ul li {
+        border: 1px solid rgba(239, 239, 239, 0);
+    }
+    .hamburger-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 20px;
+        height: 25px;
+    }
+    .hamburger-menu::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: var(--clr-white);
+        transform: translateY(-5px);
+        transition: 250ms ease;
+    }
+    .hamburger-menu::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: var(--clr-white);
+        transform: translateY(5px);
+        transition: 250ms ease;
+    }
+    header.active .hamburger-menu::before {
+        transform: rotate(45deg);
+    }
+    header.active .hamburger-menu::after {
+        transform: rotate(315deg);
+    }
+}
+/* dark mode */
+@media screen and (prefers-color-scheme: dark) {
+    ::-webkit-scrollbar-track {
+        background: var(--clr-blk);
+    }
+    ::-webkit-scrollbar-thumb {
+        background: var(--clr-chalk);
+    }
+    body {
+        color: var(--clr-white);
+        background: var(--clr-blk);
+    }
+    header {
+        background: var(--clr-purple);
+    }
+    nav ul li ul {
+        background: var(--clr-purple);
+    }
+    nav ul li a:hover {
+        background-color: var(--clr-lightPurple);
+    }
+    nav ul li ul li {
+        border: 1px solid rgba(40, 40, 40, 0.3);
+    }
+}
+@media screen and (max-width: 1145px) and (prefers-color-scheme: dark) {
+    nav {
+        background: var(--clr-purple);
+    }
+    nav ul li ul li {
+        border: 1px solid rgba(40, 40, 40, 0);
+    }
+}

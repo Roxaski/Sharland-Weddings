@@ -8,8 +8,10 @@
 :root {
     --clr-white: #fefefe;
     --clr-offWhite: #c6c5c5;
+    --clr-chalk: #dbdada;
     --clr-blk: #000000;
     --clr-grey: #a9a8a8;
+    --clr-cadetGrey: #838181;
     --clr-darkGrey: #2c2c2c;
     --clr-pink: #b120af;
     --clr-darkPink: #a1039c;
@@ -24,7 +26,7 @@
 }
 ::-webkit-scrollbar-thumb {
     border-radius: 5px;
-    background: var(--clr-blk);
+    background: var(--clr-cadetGrey);
 }
 body {
     color: var(--clr-darkGrey);
@@ -174,7 +176,7 @@ nav ul li ul li {
         background: var(--clr-blk);
     }
     ::-webkit-scrollbar-thumb {
-        background: var(--clr-grey);
+        background: var(--clr-chalk);
     }
     body {
         color: var(--clr-white);

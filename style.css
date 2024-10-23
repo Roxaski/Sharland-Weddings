@@ -11,6 +11,7 @@
     --clr-offWhite: #c6c5c5;
     --clr-blk: #000000;
     --clr-grey: #a9a8a8;
+    --clr-cadetGrey: #838181;
     --clr-charcoal: #3a3a3a;
     --clr-darkGrey: #2c2c2c;
     --clr-lightPink: #e452e1;
@@ -27,7 +28,7 @@
 }
 ::-webkit-scrollbar-thumb {
     border-radius: 5px;
-    background: var(--clr-blk);
+    background: var(--clr-cadetGrey);
 }
 body {
     color: var(--clr-darkGrey);
@@ -447,7 +448,7 @@ footer .container .section.social i {
         background: var(--clr-blk);
     }
     ::-webkit-scrollbar-thumb {
-        background: var(--clr-grey);
+        background: var(--clr-chalk);
     }
     body {
         color: var(--clr-offWhite);
