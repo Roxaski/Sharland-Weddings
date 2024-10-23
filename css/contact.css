@@ -12,6 +12,7 @@
     --clr-cream: #ededed;
     --clr-blk: #000000;
     --clr-grey: #a9a8a8;
+    --clr-lightGrey: #c5c4c1;
     --clr-cadetGrey: #838181;
     --clr-charcoal: #4a4a4a;
     --clr-darkGrey: #2c2c2c;
@@ -146,7 +147,7 @@ nav ul li ul li {
     max-width: 800px;
     margin: 15px auto;
     color: var(--clr-white);
-    background-color: var(--clr-chalk);
+    background-color: var(--clr-lightGrey);
     border-radius: 5px;
     box-shadow: 1px 3px 5px rgba(0, 0, 0, .4);
 }
@@ -211,17 +212,18 @@ nav ul li ul li {
     width: 100%;
     padding: .5rem 1rem;
     text-transform: uppercase;
-    color: var(--clr-charcoal);
-    background: var(--clr-chalk);
+    color: var(--clr-white);
+    background: var(--clr-lightGrey);
     outline: none;
     border: none;
+    font-size: .95rem;
+    font-weight: 400;
     transition: 200ms ease-in;
     border-radius: 5px;
     cursor: pointer;
 }
 .contact-form .right button:hover {
-    color: var(--clr-cream);
-    background: var(--clr-grey);
+    background: var(--clr-cadetGrey);
 }
 /* media query's*/
 @media screen and (max-width: 1145px) {
@@ -342,6 +344,9 @@ nav ul li ul li {
     .contact-form {
         color: var(--clr-cream);
         background-color: var(--clr-charcoal);
+    }
+    .contact-form .right button {
+        background: var(--clr-charcoal);
     }
     .contact-form .right .input {
         background: var(--clr-cream);
