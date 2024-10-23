@@ -321,7 +321,7 @@ footer .container .section.social i {
     font-size: clamp(1rem, 3vw, 1.1rem);
 }
 /* media query's */
-@media screen and (max-width: 1230px) {
+@media screen and (max-width: 1100px) {
     .hero h1 {
         width: 50%;
         top: 50%;
