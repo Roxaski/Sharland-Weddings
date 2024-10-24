@@ -34,7 +34,6 @@ body {
     width: 100%;
     min-height: 100vh;
     font-family: "Poppins", sans-serif;
-    padding-bottom: 2rem;
     cursor: default;
 }
 .wrapper {
@@ -125,15 +124,17 @@ nav ul li ul li {
 .title h2 {
     font-size: clamp(1.15rem, 3vw, 1.3rem);
     font-weight: 300;
+    margin: 0 auto 15px;
 }
 /* menu selection */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    grid-column-gap: 7px;
     padding: .1rem 2rem;
     position: relative;
     top: 2.5rem;
+    padding-bottom: 2rem;
 }
 .grid-container img {
     width: 100%;

@@ -37,7 +37,6 @@ body {
     width: 100%;
     min-height: 100vh;
     font-family: "Poppins", sans-serif;
-    padding-bottom: 2rem;
     cursor: default;
 }
 .wrapper {
