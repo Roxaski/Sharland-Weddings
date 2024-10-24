@@ -134,6 +134,7 @@ nav ul li ul li {
     padding: .1rem 2rem;
     position: relative;
     top: 2.5rem;
+    margin-top: 23px;
     padding-bottom: 2rem;
 }
 .grid-container img {
