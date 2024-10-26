@@ -80,7 +80,7 @@ nav ul li {
 nav ul li i {
     position: relative;
     left: .5rem;
-    color: var(--clr-white);
+    color: var(--clr-chalk);
     font-size: clamp(.95rem, 3vw, 1rem);
 }
 nav ul li a {
@@ -112,6 +112,33 @@ nav ul li ul li {
     position: relative;
     width: 100%;
     border: 1px solid rgba(239, 239, 239, 0.3);
+}
+/* menu */
+.img-container {
+    position: relative;
+}
+.img-container img {
+    width: 100%;
+    height: auto;
+    filter: brightness(45%);
+}
+.img-container .content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--clr-chalk);
+}
+.img-container .content h1 {
+    text-transform: capitalize;
+    font-size: clamp(1.5rem, 3vw, 3.5rem);
+    font-weight: 200;
+}
+.img-container .content p {
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    font-weight: 200;
 }
 /* media query's*/
 @media screen and (max-width: 1145px) {

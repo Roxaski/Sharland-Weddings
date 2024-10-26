@@ -79,7 +79,7 @@ nav ul li {
 nav ul li i {
     position: relative;
     left: .5rem;
-    color: var(--clr-white);
+    color: var(--clr-chalk);
     font-size: clamp(.95rem, 3vw, 1rem);
 }
 nav ul li a {
