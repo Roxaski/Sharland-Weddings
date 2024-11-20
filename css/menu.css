@@ -130,6 +130,7 @@ nav ul li ul li {
     justify-content: center;
     flex-direction: column;
     color: var(--clr-chalk);
+    text-transform: capitalize;
 }
 .img-container .content h1 {
     text-transform: capitalize;
@@ -147,28 +148,41 @@ nav ul li ul li {
     gap: 10px;
     padding: 2rem;
 }
-.grid-container img {
-    width: 200px;
-    height: 100%;
-}
 .grid-container .menu {
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, .4);
+}
+.grid-container .menu img {
+    width: 150px;
+    height: auto;
+}
+.grid-container .menu .content {
+    display: flex;
     position: relative;
-    border: 2px solid var(--clr-grey);
+    border: solid 1.5px var(--clr-cadetGrey);
     border-radius: 5px;
 }
-.grid-container .description {
-    position: absolute;
-    top: 0;
-    left: 200px;
-    margin-left: .7rem;
+.grid-container .menu .content .description {
+    margin: 10px .75rem;
+    width: 70%;
 }
-.grid-container .description h2 {
-    text-transform: capitalize;
-    letter-spacing: .25px;
+.grid-container .menu .content .description h2 {
+    display: flex;
+    margin-right: .75rem;
     font-weight: 400;
-    margin: 5px auto 0;
+    text-transform: capitalize;
+    letter-spacing: .15px;
 }
-.grid-container .description p {
+.grid-container .menu .content .icons {
+    position: absolute;
+    right: 1.25rem;
+    top: 1rem;
+    font-size: 1.25rem;
+}
+.grid-container .menu .content .icons i:nth-child(1) {
+    margin-right: .45rem;
+}
+.grid-container .menu .content .description p {
+    margin: 5px auto;
     font-weight: 300;
 }
 /* media query's*/
