@@ -113,7 +113,7 @@ nav ul li ul li {
     width: 100%;
     border: 1px solid rgba(239, 239, 239, 0.3);
 }
-/* menu */
+/* menu banner */
 .img-container {
     position: relative;
 }
@@ -139,6 +139,37 @@ nav ul li ul li {
 .img-container .content p {
     font-size: clamp(1.25rem, 3vw, 1.75rem);
     font-weight: 200;
+}
+/* menu */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 2rem;
+}
+.grid-container img {
+    width: 200px;
+    height: 100%;
+}
+.grid-container .menu {
+    position: relative;
+    border: 2px solid var(--clr-grey);
+    border-radius: 5px;
+}
+.grid-container .description {
+    position: absolute;
+    top: 0;
+    left: 200px;
+    margin-left: .7rem;
+}
+.grid-container .description h2 {
+    text-transform: capitalize;
+    letter-spacing: .25px;
+    font-weight: 400;
+    margin: 5px auto 0;
+}
+.grid-container .description p {
+    font-weight: 300;
 }
 /* media query's*/
 @media screen and (max-width: 1145px) {
