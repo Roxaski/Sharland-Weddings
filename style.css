@@ -199,26 +199,29 @@ nav ul li ul li {
 }
 .banner .content h2 {
     text-transform: uppercase;
-    margin: 180px auto 0;
-    font-size: clamp(2rem, 3vw, 4rem);
-    letter-spacing: 1px;
+    margin: 190px auto 0;
+    font-size: clamp(1.45rem, 3vw, 4rem);
+    letter-spacing: 2px;
+    text-align: center;
+    width: 95%;
 }
 .banner .content h3 {
     text-transform: capitalize;
     font-weight: 400;
-    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-size: clamp(1.25rem, 3vw, 2rem);
     letter-spacing: 1px;
+    margin: 10px auto 0;
 }
 .banner .btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 25px auto 0;
+    margin: 17px auto 0;
     padding: .45rem .75rem;
     text-transform: capitalize;
     border: none;
     outline: none;
-    width: 100px;
+    width: 130px;
     border-radius: 5px;
     background: var(--clr-charcoal);
     cursor: pointer;
