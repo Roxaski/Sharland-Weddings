@@ -11,10 +11,14 @@
     --clr-chalk: #dbdada;
     --clr-milkWhite: #fcfbfb;
     --clr-daisyWhite: #e4e4e4;
+    --clr-alabasterWhite: #d7d5d5;
     --clr-blk: #000000;
     --clr-grey: #a9a8a8;
     --clr-grullo: #ae9494;
+    --clr-darkGrullo: #8c7575;
+    --clr-brown: #5e4e4e;
     --clr-cadetGrey: #838181;
+    --clr-coolGrey: #696767;
     --clr-shadowGrey: #4b4b4b;
     --clr-darkGrey: #2c2c2c;
     --clr-charcoal: #282727;
@@ -265,10 +269,10 @@ nav ul li ul li {
     position: relative;
     bottom: 1.75rem;
     font-size: clamp(1.45rem, 3vw, 1.75rem);
-    font-weight: 300;
+    font-weight: 200;
     text-align: center;
     text-transform: capitalize;
-    color: var(--clr-daisyWhite);
+    color: var(--clr-white);
     padding: 0 .5rem;
 }
 .price-container .content .package-price {
@@ -287,6 +291,47 @@ nav ul li ul li {
     text-align: center;
     font-weight: 300;
     color: var(--clr-milkWhite);
+}
+/* other packages */
+.package-container .content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 7px auto 0;
+    padding: 0 2rem;
+    gap: .5rem;
+}
+.package-container .content .left,
+.package-container .content .right {
+    margin: 0 auto;
+    text-align: center;
+    background: var(--clr-grullo);
+    border-radius: 5px;
+    width: 100%;
+    padding: 3rem;
+}
+.package-container .content h4 {
+    color: var(--clr-white);
+    font-weight: 200;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-size: clamp(1.2rem, 3vw, 1.4rem);
+}
+.package-container .content .btn {
+    margin: 30px auto 0;
+}
+.package-container .content .btn a {
+    padding: .5rem .75rem;
+    background: var(--clr-darkGrullo);
+    color: var(--clr-white);
+    font-weight: 300;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 250ms ease-out;
+}
+.package-container .content .btn a:hover {
+    background: var(--clr-brown);
 }
 /* media query's*/
 @media screen and (max-width: 1145px) {
@@ -371,6 +416,9 @@ nav ul li ul li {
     .price-container {
         padding: 0 1rem;
     }
+    .package-container .content {
+        padding: 0 1rem;
+    }
 }
 @media screen and (max-width: 735px) {
     .menu-container {
@@ -378,6 +426,9 @@ nav ul li ul li {
     }
     .menu-container .title {
         grid-column: span 2;
+    }
+    .package-container .content {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 @media screen and (max-width: 475px) {
@@ -455,8 +506,27 @@ nav ul li ul li {
         background: var(--clr-charcoal);
     }
     .price-container .content {
-        color: var(--clr-chalk);
         background: var(--clr-charcoal);
+    }
+    .price-container .content .title h4 {
+        color: var(--clr-alabasterWhite);
+    }
+    .price-container .content .package-price ul li {
+        color: var(--clr-alabasterWhite);
+    }
+    .package-container .content .left,
+    .package-container .content .right {
+        background: var(--clr-charcoal);
+    }
+    .package-container .content h4 {
+        color: var(--clr-alabasterWhite);
+    }
+    .package-container .content .btn a {
+        background: var(--clr-shadowGrey);
+        color: var(--clr-white);
+    }
+    .package-container .content .btn a:hover {
+        background: var(--clr-coolGrey);
     }
 }
 @media screen and (max-width: 1145px) and (prefers-color-scheme: dark) {
