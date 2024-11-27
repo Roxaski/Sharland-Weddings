@@ -169,59 +169,46 @@ nav ul li ul li {
     font-size: clamp(1.5rem, 3vw, 2.1rem);
     font-weight: 200;
 }
+.menu-container .title h2::before {
+    content: '';
+    position: absolute;
+    bottom: 45%;
+    width: 15px;
+    height: 1.25px;
+    background: var(--clr-darkGrey);
+}
+.menu-container .title h2::after {
+    content: '';
+    position: absolute;
+    bottom: 45%;
+    width: 15px;
+    height: 1.25px;
+    background: var(--clr-darkGrey);
+}
 .menu-container .title #appetizer::before {
     content: '';
-    position: absolute;
     left: 105%;
-    bottom: 45%;
-    width: 15px;
-    height: 1.25px;
-    background: var(--clr-darkGrey);
 }
 .menu-container .title #appetizer::after {
-    content: '';
-    position: absolute;
     right: 105%;
-    bottom: 45%;
-    width: 15px;
-    height: 1.25px;
-    background: var(--clr-darkGrey);
 }
 .menu-container .title #main::before {
-    content: '';
-    position: absolute;
     left: 115%;
-    bottom: 45%;
-    width: 15px;
-    height: 1.25px;
-    background: var(--clr-darkGrey);
 }
 .menu-container .title #main::after {
-    content: '';
-    position: absolute;
     right: 115%;
-    bottom: 45%;
-    width: 15px;
-    height: 1.25px;
-    background: var(--clr-darkGrey);
 }
 .menu-container .title #dessert::before {
-    content: '';
-    position: absolute;
     left: 110%;
-    bottom: 45%;
-    width: 15px;
-    height: 1.25px;
-    background: var(--clr-darkGrey);
 }
 .menu-container .title #dessert::after {
-    content: '';
-    position: absolute;
     right: 110%;
-    bottom: 45%;
-    width: 15px;
-    height: 1.25px;
-    background: var(--clr-darkGrey);
+}
+.menu-container .title #drinks::before {
+    left: 110%;
+}
+.menu-container .title #drinks::after {
+    right: 110%;
 }
 .menu-container .menu {
     border-radius: 5px;
@@ -487,15 +474,18 @@ nav ul li ul li {
         background: var(--clr-daisyWhite);
     }
     .menu-container .title #main::after {
-        content: '';
         background: var(--clr-daisyWhite);
     }
     .menu-container .title #dessert::before {
-        content: '';
         background: var(--clr-daisyWhite);
     }
     .menu-container .title #dessert::after {
-        content: '';
+        background: var(--clr-daisyWhite);
+    }
+    .menu-container .title #drinks::before {
+        background: var(--clr-daisyWhite);
+    }
+    .menu-container .title #drinks::after {
         background: var(--clr-daisyWhite);
     }
     .menu-container .menu .content {
