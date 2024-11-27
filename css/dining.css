@@ -233,15 +233,6 @@ nav ul li ul li {
         text-align: left;
     }
 }
-@media screen and (max-width: 400px) {
-    .grid-container .img-container .title {
-        justify-content: flex-start;
-    }
-    .grid-container .img-container .title h2 {
-        font-size: .9rem;
-        margin: 15px auto;
-    }
-}
 /* dark mode */
 @media screen and (prefers-color-scheme: dark) {
     ::-webkit-scrollbar-track {
@@ -268,7 +259,7 @@ nav ul li ul li {
     }
     .grid-container .img-container .title h2 {
         color: var(--clr-chalk);
-        border: solid 2px var(--clr-chalk);
+        border: solid 1.5px var(--clr-chalk);
         background: var(--clr-darkGrey);
     }
 }
