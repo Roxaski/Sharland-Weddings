@@ -154,6 +154,10 @@ nav ul li ul li {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     padding: 0 2rem;
+    margin: 35px 0;
+}
+.menu-container.packages {
+    margin: 0;
 }
 .menu-container .title {
     grid-column: span 2;
@@ -231,10 +235,12 @@ nav ul li ul li {
 }
 .menu-container .menu .content .description h3 {
     display: flex;
-    margin-right: .75rem;
     font-weight: 400;
     text-transform: capitalize;
     letter-spacing: .15px;
+}
+.menu-container .menu .content .description h3 span {
+    padding-left: .5rem;
 }
 .menu-container .menu .content .description p {
     margin: 5px auto;
