@@ -154,7 +154,7 @@ nav ul li ul li {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     padding: 0 2rem;
-    margin: 35px 0;
+    margin: 35px auto;
 }
 .menu-container.packages {
     margin: 0;
@@ -240,21 +240,32 @@ nav ul li ul li {
     letter-spacing: .15px;
 }
 .menu-container .menu .content .description h3 span {
+    color: var(--clr-coolGrey);
+    font-size: 1.05rem;
     padding-left: .5rem;
 }
 .menu-container .menu .content .description p {
     margin: 5px auto;
     font-weight: 300;
 }
-/* package cost */
+/* package cost and package deals */
 .price-container {
     margin: 45px auto 0;
     padding: 0 2rem;
 }
+.price-container.package-advert {
+    color: var(--clr-milkWhite);
+    font-size: clamp(1.1rem, 3vw, 1.2rem);
+    font-weight: 200;
+    text-align: center;
+}
 .price-container .content {
     background: var(--clr-grullo);
-    padding: 3rem 0;
+    padding: 2.75rem 0;
     border-radius: 5px;
+}
+.price-container.package-advert .content {
+    padding: 3.5rem 0;
 }
 .price-container .content .title h4 {
     position: relative;
@@ -265,6 +276,9 @@ nav ul li ul li {
     text-transform: capitalize;
     color: var(--clr-white);
     padding: 0 .5rem;
+}
+.price-container.package-advert .content .title p {
+    letter-spacing: 1px;
 }
 .price-container .content .package-price {
     margin: 20px auto 0;
@@ -283,15 +297,22 @@ nav ul li ul li {
     font-weight: 300;
     color: var(--clr-milkWhite);
 }
-/* other packages */
-.package-container .content {
+/* package options and deals */
+.package-container .content,
+.package-container.all-packages .content {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     margin: 7px auto 0;
     padding: 0 2rem;
     gap: .5rem;
 }
+.package-container .content {
+    grid-template-columns: repeat(2, 1fr);
+}
+.package-container.all-packages .content {
+    grid-template-columns: repeat(3, 1fr);
+}
 .package-container .content .left,
+.package-container .content .center,
 .package-container .content .right {
     margin: 0 auto;
     text-align: center;
@@ -404,11 +425,18 @@ nav ul li ul li {
         margin: 0;
         padding: .55rem;
     }
-    .price-container {
+    .price-container,
+    .price-container.package-advert {
         padding: 0 1rem;
     }
-    .package-container .content {
+    .package-container .content,
+    .package-container.all-packages .content {
         padding: 0 1rem;
+    }
+}
+@media screen and (max-width: 835px) {
+    .package-container.all-packages .content {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 @media screen and (max-width: 735px) {
@@ -419,6 +447,11 @@ nav ul li ul li {
         grid-column: span 2;
     }
     .package-container .content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media screen and (max-width: 575px) {
+    .package-container.all-packages .content {
         grid-template-columns: repeat(1, 1fr);
     }
 }
@@ -446,15 +479,6 @@ nav ul li ul li {
     body {
         color: var(--clr-white);
         background: var(--clr-blk);
-    }
-    header {
-        background: var(--clr-purple);
-    }
-    nav ul li ul {
-        background: var(--clr-purple);
-    }
-    nav ul li a:hover {
-        background-color: var(--clr-lightPurple);
     }
     nav ul li ul li {
         border: 1px solid rgba(40, 40, 40, 0.3);
@@ -496,6 +520,9 @@ nav ul li ul li {
         color: var(--clr-chalk);
         background: var(--clr-charcoal);
     }
+    .menu-container .menu .content .description h3 span {
+        color: var(--clr-grey);
+    }
     .menu-container .menu .content .description {
         background: var(--clr-charcoal);
     }
@@ -505,10 +532,14 @@ nav ul li ul li {
     .price-container .content .title h4 {
         color: var(--clr-alabasterWhite);
     }
+    .price-container.package-advert .content .title p {
+        color: var(--clr-alabasterWhite);
+    }
     .price-container .content .package-price ul li {
         color: var(--clr-alabasterWhite);
     }
     .package-container .content .left,
+    .package-container .content .center,
     .package-container .content .right {
         background: var(--clr-charcoal);
     }
@@ -521,13 +552,5 @@ nav ul li ul li {
     }
     .package-container .content .btn a:hover {
         background: var(--clr-coolGrey);
-    }
-}
-@media screen and (max-width: 1145px) and (prefers-color-scheme: dark) {
-    nav {
-        background: var(--clr-purple);
-    }
-    nav ul li ul li {
-        border: 1px solid rgba(40, 40, 40, 0);
     }
 }
