@@ -235,6 +235,7 @@ nav ul li ul li {
 }
 .menu-container .menu .content .description h3 {
     display: flex;
+    font-size: clamp(1rem, 3vw, 1.1rem);
     font-weight: 400;
     text-transform: capitalize;
     letter-spacing: .15px;
@@ -246,6 +247,7 @@ nav ul li ul li {
 }
 .menu-container .menu .content .description p {
     margin: 5px auto;
+    font-size: clamp(.9rem, 3vw, 1rem);
     font-weight: 300;
 }
 /* package cost and package deals */
@@ -429,6 +431,9 @@ nav ul li ul li {
     .price-container.package-advert {
         padding: 0 1rem;
     }
+    .price-container.package-advert .content p {
+        padding: 0 1.5rem;
+    }
     .package-container .content,
     .package-container.all-packages .content {
         padding: 0 1rem;
@@ -439,13 +444,15 @@ nav ul li ul li {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-@media screen and (max-width: 735px) {
+@media screen and (max-width: 786px) {
     .menu-container {
         grid-template-columns: repeat(2, 1fr);
     }
     .menu-container .title {
         grid-column: span 2;
     }
+}
+@media screen and (max-width: 735px) {
     .package-container .content {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -455,17 +462,17 @@ nav ul li ul li {
         grid-template-columns: repeat(1, 1fr);
     }
 }
-@media screen and (max-width: 475px) {
-    .img-container .content p {
-        display: none;
-    }
-}
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 500px) {
     .menu-container {
         grid-template-columns: repeat(1, 1fr);
     }
     .menu-container .title {
         grid-column: span 1;
+    }
+}
+@media screen and (max-width: 475px) {
+    .img-container .content p {
+        display: none;
     }
 }
 /* dark mode */
