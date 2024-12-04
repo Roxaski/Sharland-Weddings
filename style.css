@@ -14,9 +14,6 @@
     --clr-cadetGrey: #838181;
     --clr-charcoal: #3a3a3a;
     --clr-darkGrey: #2c2c2c;
-    --clr-lightPink: #e452e1;
-    --clr-pink: #b120af;
-    --clr-darkPink: #a1039c;
     --clr-purple: #5d0f9c;
     --clr-lightPurple: #7f22cb;
 }
@@ -50,7 +47,7 @@ header {
     width: 100%;
     position: absolute;
     padding: 0 15px;
-    background: var(--clr-pink);
+    background: var(--clr-purple);
     min-height: 70px;
     z-index: 1;
 }
@@ -97,14 +94,14 @@ nav ul li a {
     transition: 250ms;
 }
 nav ul li a:hover {
-    background-color: var(--clr-darkPink);
+    background-color: var(--clr-lightPurple);
 }
 nav ul li ul {
     display: none;
     position: absolute;
     left: 0;
     width: 200px;
-    background: var(--clr-pink);
+    background: var(--clr-purple);
 }
 nav ul li:hover > ul {
     display: block;
@@ -126,7 +123,7 @@ nav ul li ul li {
 }
 .hero h1 {
     position: absolute;
-    top: 63.55%;
+    top: 63.5%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-transform: capitalize;
@@ -135,11 +132,11 @@ nav ul li ul li {
     font-family: "Great Vibes", cursive;
     font-size: 2.5rem;
     font-weight: 400;
-    color: var(--clr-lightPink);
-    background: var(--clr-white);
-    border-radius: 10px;
-    border: 13px solid var(--clr-white);
+    color: var(--clr-chalk);
+    background: var(--clr-purple);
+    border: 12px solid var(--clr-white);
     border-image: url(./assets/main/border.png) 4% repeat;
+    border-radius: 10px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, .6);
     padding: 1rem 1.5rem;
     letter-spacing: 1px;
@@ -332,7 +329,7 @@ footer .container .section.social i {
         width: 100%;
         top: 60px;
         left: 0;
-        background: var(--clr-pink);
+        background: var(--clr-purple);
     }
     header.active nav {
         display: block;
@@ -457,15 +454,6 @@ footer .container .section.social i {
         color: var(--clr-offWhite);
         background: var(--clr-blk);
     }
-    header {
-        background: var(--clr-purple);
-    }
-    nav ul li ul {
-        background: var(--clr-purple);
-    }
-    nav ul li a:hover {
-        background-color: var(--clr-lightPurple);
-    }
     nav ul li ul li {
         border: 1px solid rgba(40, 40, 40, 0.3);
     }
@@ -475,22 +463,10 @@ footer .container .section.social i {
     .hero img {
         filter: opacity(80%);
     }
-    .hero h1 {
-        background-color: var(--clr-purple);
-        color: var(--clr-white);
-    }
     .banner .btn {
         background: var(--clr-darkGrey);
     }
     .banner .btn a {
         color: var(--clr-white);
-    }
-}
-@media screen and (max-width: 1145px) and (prefers-color-scheme: dark) {
-    nav {
-        background: var(--clr-purple);
-    }
-    nav ul li ul li {
-        border: 1px solid rgba(40, 40, 40, 0);
     }
 }

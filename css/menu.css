@@ -22,8 +22,6 @@
     --clr-shadowGrey: #4b4b4b;
     --clr-darkGrey: #2c2c2c;
     --clr-charcoal: #282727;
-    --clr-pink: #b120af;
-    --clr-darkPink: #a1039c;
     --clr-purple: #5d0f9c;
     --clr-lightPurple: #7f22cb;
 }
@@ -58,7 +56,7 @@ header {
     width: 100%;
     max-width: 90rem;
     padding: 0 15px;
-    background: var(--clr-pink);
+    background: var(--clr-purple);
     min-height: 70px;
     z-index: 1;
 }
@@ -105,14 +103,14 @@ nav ul li a {
     transition: 250ms;
 }
 nav ul li a:hover {
-    background-color: var(--clr-darkPink);
+    background-color: var(--clr-lightPurple);
 }
 nav ul li ul {
     display: none;
     position: absolute;
     left: 0;
     width: 200px;
-    background: var(--clr-pink);
+    background: var(--clr-purple);
 }
 nav ul li:hover > ul {
     display: block;
@@ -328,7 +326,7 @@ nav ul li ul li {
         width: 100%;
         top: 60px;
         left: 0;
-        background: var(--clr-pink);
+        background: var(--clr-purple);
     }
     header.active nav {
         display: block;

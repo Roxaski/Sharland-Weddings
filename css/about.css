@@ -13,8 +13,6 @@
     --clr-grey: #a9a8a8;
     --clr-cadetGrey: #838181;
     --clr-darkGrey: #2c2c2c;
-    --clr-pink: #b120af;
-    --clr-darkPink: #a1039c;
     --clr-purple: #5d0f9c;
     --clr-lightPurple: #7f22cb;
 }
@@ -48,7 +46,7 @@ header {
     position: relative;
     width: 100%;
     padding: 0 15px;
-    background: var(--clr-pink);
+    background: var(--clr-purple);
     min-height: 70px;
     z-index: 1;
 }
@@ -95,14 +93,14 @@ nav ul li a {
     transition: 250ms;
 }
 nav ul li a:hover {
-    background-color: var(--clr-darkPink);
+    background-color: var(--clr-lightPurple);
 }
 nav ul li ul {
     display: none;
     position: absolute;
     left: 0;
     width: 200px;
-    background: var(--clr-pink);
+    background: var(--clr-purple);
 }
 nav ul li:hover > ul {
     display: block;
@@ -173,7 +171,7 @@ main {
         width: 100%;
         top: 60px;
         left: 0;
-        background: var(--clr-pink);
+        background: var(--clr-purple);
     }
     header.active nav {
         display: block;
@@ -247,15 +245,6 @@ main {
         color: var(--clr-white);
         background: var(--clr-blk);
     }
-    header {
-        background: var(--clr-purple);
-    }
-    nav ul li ul {
-        background: var(--clr-purple);
-    }
-    nav ul li a:hover {
-        background-color: var(--clr-lightPurple);
-    }
     nav ul li ul li {
         border: 1px solid rgba(40, 40, 40, 0.3);
     }
@@ -267,13 +256,5 @@ main {
     }
     .content {
         color: var(--clr-chalk);
-    }
-}
-@media screen and (max-width: 1145px) and (prefers-color-scheme: dark) {
-    nav {
-        background: var(--clr-purple);
-    }
-    nav ul li ul li {
-        border: 1px solid rgba(40, 40, 40, 0);
     }
 }
