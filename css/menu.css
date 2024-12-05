@@ -404,7 +404,7 @@ nav ul li ul li {
         transform: rotate(315deg);
     }
 }
-@media screen and (max-width: 1055px) {
+@media screen and (max-width: 1180px) {
     .menu-container {
         grid-template-columns: repeat(3, 1fr);
         gap: .75rem;
@@ -468,6 +468,9 @@ nav ul li ul li {
     }
     .menu-container .title {
         grid-column: span 1;
+    }
+    .menu-container .menu .content img {
+        display: none;
     }
 }
 @media screen and (max-width: 475px) {
