@@ -241,8 +241,8 @@ nav ul li ul li {
     letter-spacing: .15px;
 }
 .menu-container .menu .content .description h3 span {
+    font-size: clamp(.9rem, 3vw, 1.05rem);
     color: var(--clr-coolGrey);
-    font-size: 1.05rem;
     padding-left: .5rem;
 }
 .menu-container .menu .content .description p {
