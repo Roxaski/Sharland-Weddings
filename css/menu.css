@@ -212,6 +212,18 @@ nav ul li ul li {
 .menu-container .title #drinks::after {
     right: 110%;
 }
+.menu-container .title .drinks::before {
+    left: 110%;
+}
+.menu-container .title .drinks::after {
+    right: 110%;
+}
+.menu-container .title #drinks-alcohol::before {
+    left: 105%;
+}
+.menu-container .title #drinks-alcohol::after {
+    right: 105%;
+}
 .menu-container .menu {
     border-radius: 5px;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, .4);
@@ -229,16 +241,18 @@ nav ul li ul li {
     background: var(--clr-milkWhite);
 }
 .menu-container .menu .content .description {
-    margin: 10px .75rem;
+    margin: 7px .75rem;
     width: 70%;
     background: var(--clr-milkWhite);
 }
 .menu-container .menu .content .description h3 {
     display: flex;
+    align-items: center;
     font-size: clamp(1rem, 3vw, 1.1rem);
     font-weight: 400;
     text-transform: capitalize;
     letter-spacing: .15px;
+    margin-bottom: .5rem;
 }
 .menu-container .menu .content .description h3 span {
     font-size: clamp(.9rem, 3vw, 1.05rem);
@@ -303,7 +317,7 @@ nav ul li ul li {
 .package-container .content,
 .package-container.packages .content {
     display: grid;
-    margin: 7px auto 0;
+    margin: 10px auto 0;
     padding: 0 2rem;
     gap: .5rem;
 }
@@ -524,6 +538,18 @@ nav ul li ul li {
         background: var(--clr-daisyWhite);
     }
     .menu-container .title #drinks::after {
+        background: var(--clr-daisyWhite);
+    }
+    .menu-container .title .drinks::before {
+        background: var(--clr-daisyWhite);
+    }
+    .menu-container .title .drinks::after {
+        background: var(--clr-daisyWhite);
+    }
+    .menu-container .title #drinks-alcohol::before {
+        background: var(--clr-daisyWhite);
+    }
+    .menu-container .title #drinks-alcohol::after {
         background: var(--clr-daisyWhite);
     }
     .menu-container .menu .content {
