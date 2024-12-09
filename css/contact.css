@@ -113,15 +113,15 @@ nav ul li ul li {
     width: 100%;
     border: 1px solid rgba(239, 239, 239, 0.3);
 }
-/* title */
-.title {
+/* header */
+.header {
     text-align: center;
 }
-.title h1 {
+.header h1 {
     font-size: clamp(1.85rem, 3vw, 2.25rem);
     font-weight: 400;
 }
-.title h2 {
+.header h2 {
     font-size: clamp(1.15rem, 3vw, 1.3rem);
     font-weight: 300;
 }
@@ -280,10 +280,10 @@ nav ul li ul li {
     }
 }
 @media screen and (max-width: 840px) {
-    .title {
+    .header {
         text-align: left;
     }
-    .title h2 {
+    .header h2 {
         margin-top: .5rem;
     }
     .contact-container {
@@ -326,7 +326,7 @@ nav ul li ul li {
     nav ul li ul li {
         border: 1px solid rgba(40, 40, 40, 0.3);
     }
-    .title {
+    .header {
         color: var(--clr-chalk);
     }
     .contact-form {

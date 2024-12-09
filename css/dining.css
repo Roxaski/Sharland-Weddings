@@ -110,21 +110,7 @@ nav ul li ul li {
     width: 100%;
     border: 1px solid rgba(239, 239, 239, 0.3);
 }
-/* title */
-.grid-container .header {
-    text-align: center;
-    grid-column: span 2;
-}
-.grid-container .header h1 {
-    font-size: clamp(1.85rem, 3vw, 2.25rem);
-    font-weight: 400;
-}
-.grid-container .header h2 {
-    font-size: clamp(1.15rem, 3vw, 1.3rem);
-    font-weight: 300;
-    margin: 0 auto 15px;
-}
-/* menu selection */
+/* main */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -135,6 +121,21 @@ nav ul li ul li {
     margin-top: 23px;
     padding-bottom: 2rem;
 }
+/* header */
+.header {
+    text-align: center;
+    grid-column: span 2;
+}
+.header h1 {
+    font-size: clamp(1.85rem, 3vw, 2.25rem);
+    font-weight: 400;
+}
+.header h2 {
+    font-size: clamp(1.15rem, 3vw, 1.3rem);
+    font-weight: 300;
+    margin: 0 auto 15px;
+}
+/* menu selection */
 .grid-container a {
     cursor: default;
 }
