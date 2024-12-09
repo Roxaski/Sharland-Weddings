@@ -154,10 +154,6 @@ nav ul li ul li {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     padding: 0 2rem;
-    margin: 35px auto;
-}
-.menu-container.menu-titles {
-    margin: 0;
 }
 .menu-container .title {
     grid-column: span 2;
@@ -165,7 +161,7 @@ nav ul li ul li {
     text-transform: capitalize;
     letter-spacing: .5px;
     text-align: center;
-    margin: 25px auto;
+    margin: 35px auto;
 }
 .menu-container .title h2 {
     font-size: clamp(1.5rem, 3vw, 2.1rem);
@@ -187,29 +183,23 @@ nav ul li ul li {
     height: 1.25px;
     background: var(--clr-darkGrey);
 }
-.menu-container .title #appetizer::before {
+.menu-container .title .appetizer::before {
     content: '';
     left: 105%;
 }
-.menu-container .title #appetizer::after {
+.menu-container .title .appetizer::after {
     right: 105%;
 }
-.menu-container .title #main::before {
+.menu-container .title .main::before {
     left: 115%;
 }
-.menu-container .title #main::after {
+.menu-container .title .main::after {
     right: 115%;
 }
-.menu-container .title #dessert::before {
+.menu-container .title .dessert::before {
     left: 110%;
 }
-.menu-container .title #dessert::after {
-    right: 110%;
-}
-.menu-container .title #drinks::before {
-    left: 110%;
-}
-.menu-container .title #drinks::after {
+.menu-container .title .dessert::after {
     right: 110%;
 }
 .menu-container .title .drinks::before {
@@ -218,10 +208,16 @@ nav ul li ul li {
 .menu-container .title .drinks::after {
     right: 110%;
 }
-.menu-container .title #drinks-alcohol::before {
+.menu-container .title .drinks::before {
+    left: 110%;
+}
+.menu-container .title .drinks::after {
+    right: 110%;
+}
+.menu-container .title .drinks-alcohol::before {
     left: 105%;
 }
-.menu-container .title #drinks-alcohol::after {
+.menu-container .title .drinks-alcohol::after {
     right: 105%;
 }
 .menu-container .menu {
@@ -513,31 +509,25 @@ nav ul li ul li {
     .menu-container .title h2 {
         color: var(--clr-daisyWhite);
     }
-    .menu-container .title #appetizer::before {
+    .menu-container .title .appetizer::before {
         content: '';
         background: var(--clr-chalk);
     }
-    .menu-container .title #appetizer::after {
+    .menu-container .title .appetizer::after {
         content: '';
         background: var(--clr-daisyWhite);
     }
-    .menu-container .title #main::before {
+    .menu-container .title .main::before {
         content: '';
         background: var(--clr-daisyWhite);
     }
-    .menu-container .title #main::after {
+    .menu-container .title .main::after {
         background: var(--clr-daisyWhite);
     }
-    .menu-container .title #dessert::before {
+    .menu-container .title .dessert::before {
         background: var(--clr-daisyWhite);
     }
-    .menu-container .title #dessert::after {
-        background: var(--clr-daisyWhite);
-    }
-    .menu-container .title #drinks::before {
-        background: var(--clr-daisyWhite);
-    }
-    .menu-container .title #drinks::after {
+    .menu-container .title .dessert::after {
         background: var(--clr-daisyWhite);
     }
     .menu-container .title .drinks::before {
@@ -546,10 +536,16 @@ nav ul li ul li {
     .menu-container .title .drinks::after {
         background: var(--clr-daisyWhite);
     }
-    .menu-container .title #drinks-alcohol::before {
+    .menu-container .title .drinks::before {
         background: var(--clr-daisyWhite);
     }
-    .menu-container .title #drinks-alcohol::after {
+    .menu-container .title .drinks::after {
+        background: var(--clr-daisyWhite);
+    }
+    .menu-container .title .drinks-alcohol::before {
+        background: var(--clr-daisyWhite);
+    }
+    .menu-container .title .drinks-alcohol::after {
         background: var(--clr-daisyWhite);
     }
     .menu-container .menu .content {
