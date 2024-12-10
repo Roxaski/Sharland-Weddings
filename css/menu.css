@@ -14,8 +14,6 @@
     --clr-alabasterWhite: #d7d5d5;
     --clr-blk: #000000;
     --clr-grey: #a9a8a8;
-    --clr-grullo: #ae9494;
-    --clr-darkGrullo: #8c7575;
     --clr-brown: #5e4e4e;
     --clr-cadetGrey: #838181;
     --clr-coolGrey: #696767;
@@ -24,6 +22,7 @@
     --clr-charcoal: #282727;
     --clr-purple: #5d0f9c;
     --clr-lightPurple: #7f22cb;
+    --clr-darkPurple: #461270;
 }
 ::-webkit-scrollbar {
     width: 8px;
@@ -272,7 +271,7 @@ nav ul li ul li {
     text-align: center;
 }
 .price-container .content {
-    background: var(--clr-grullo);
+    background: var(--clr-purple);
     padding: 2.75rem 0;
     border-radius: 5px;
 }
@@ -328,7 +327,7 @@ nav ul li ul li {
 .package-container .content .right {
     margin: 0 auto;
     text-align: center;
-    background: var(--clr-grullo);
+    background: var(--clr-purple);
     border-radius: 5px;
     width: 100%;
     padding: 3rem;
@@ -345,7 +344,7 @@ nav ul li ul li {
 }
 .package-container .content .btn a {
     padding: .5rem .75rem;
-    background: var(--clr-darkGrullo);
+    background: var(--clr-lightPurple);
     color: var(--clr-white);
     font-weight: 300;
     text-transform: capitalize;
@@ -355,7 +354,7 @@ nav ul li ul li {
     transition: 250ms ease-out;
 }
 .package-container .content .btn a:hover {
-    background: var(--clr-brown);
+    background: var(--clr-darkPurple);
 }
 /* media query's*/
 @media screen and (max-width: 1145px) {
