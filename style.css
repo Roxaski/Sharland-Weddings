@@ -442,7 +442,6 @@ footer .container .section.social i {
         background: var(--clr-chalk);
     }
     body {
-        color: var(--clr-offWhite);
         background: var(--clr-blk);
     }
     nav ul li ul li {
