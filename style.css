@@ -149,7 +149,6 @@ nav ul li ul li {
 }
 .venue-container .left img,
 .venue-container .right img {
-    display: block;
     width: 100%;
     height: auto;
 }
@@ -427,6 +426,9 @@ footer .container .section.social i {
     }
 }
 @media screen and (max-width: 500px) {
+    .banner .content {
+        padding-top: 1.75rem;
+    }
     footer .container {
         grid-template-columns: 1fr;
     }
