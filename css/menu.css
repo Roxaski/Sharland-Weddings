@@ -579,7 +579,6 @@ nav ul li ul li {
     }
     .package-container .content .btn a {
         background: var(--clr-shadowGrey);
-        color: var(--clr-white);
     }
     .package-container .content .btn a:hover {
         background: var(--clr-coolGrey);
