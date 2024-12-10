@@ -242,7 +242,7 @@ nav ul li ul li {
         background: var(--clr-chalk);
     }
     body {
-        color: var(--clr-white);
+        color: var(--clr-chalk);
         background: var(--clr-blk);
     }
     nav ul li ul li {

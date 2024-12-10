@@ -212,6 +212,7 @@ section {
 .other-events .content p {
     color: var(--clr-chalk);
     margin: 8px auto 0;
+    letter-spacing: 1px;
     font-weight: 300;
 }
 .other-events .btn {
@@ -297,11 +298,13 @@ section {
         background: var(--clr-chalk);
     }
     body {
-        color: var(--clr-white);
         background: var(--clr-blk);
     }
     nav ul li ul li {
         border: 1px solid rgba(40, 40, 40, 0.3);
+    }
+    .event-container {
+        color: var(--clr-chalk);
     }
     .other-events .content .contact,
     .other-events .content .birthday,

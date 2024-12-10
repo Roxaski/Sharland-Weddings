@@ -242,7 +242,6 @@ main {
         background: var(--clr-chalk);
     }
     body {
-        color: var(--clr-white);
         background: var(--clr-blk);
     }
     nav ul li ul li {
