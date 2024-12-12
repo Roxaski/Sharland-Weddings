@@ -226,37 +226,36 @@ nav ul li ul li {
     color: var(--clr-white);
     text-decoration: none;
 }
-/* cuisine */
-.cuisine-container {
+/* catering */
+.catering-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin: 15px auto;
 }
-.cuisine-container .left img,
-.cuisine-container .right img {
+.catering-container img {
     display: block;
     width: 100%;
     height: auto;
 }
-.cuisine-container .left img {
+.catering-container .left img {
     mask-image: linear-gradient(90deg, 
                 rgba(0, 0, 0, 1) 50%, 
                 transparent 90%);
 }
-.cuisine-container .right img {
+.catering-container .right img {
     mask-image: linear-gradient(-90deg, 
                 rgba(0, 0, 0, 1) 50%, 
                 transparent 90%);
 }
-.cuisine-container .left h2,
-.cuisine-container .right h2 {
+.catering-container .left h2,
+.catering-container .right h2 {
     text-transform: capitalize;
     font-weight: 400;
     margin: 15px auto 0;
     padding: 0 1rem;
 }
-.cuisine-container .left p,
-.cuisine-container .right p {
+.catering-container .left p,
+.catering-container .right p {
     width: 100%;
     margin: 15px auto;
     padding: 0 1rem;
@@ -399,15 +398,15 @@ footer .container .section.social i {
     .venue-container .left h2 {
         margin: 0 auto;
     }
-    .cuisine-container {
+    .catering-container {
         grid-template-columns: 1fr;
     }
-    .cuisine-container .left img {
+    .catering-container .left img {
         mask-image: linear-gradient(0deg, 
                     rgba(0, 0, 0, 1) 50%, 
                     transparent 90%);
     }
-    .cuisine-container .right img {
+    .catering-container .right img {
         mask-image: linear-gradient(0deg, 
                     rgba(0, 0, 0, 1) 50%, 
                     transparent 90%);
