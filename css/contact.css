@@ -35,6 +35,7 @@ body {
     width: 100%;
     min-height: 100vh;
     font-family: "Poppins", sans-serif;
+    padding-bottom: 1.5rem;
     cursor: default;
 }
 .wrapper {
@@ -118,7 +119,7 @@ nav ul li ul li {
     text-align: center;
 }
 .header h1 {
-    font-size: clamp(1.85rem, 3vw, 2.25rem);
+    font-size: clamp(1.85rem, 3vw, 2.5rem);
     font-weight: 400;
 }
 .header p {
@@ -287,7 +288,7 @@ nav ul li ul li {
         margin-top: .5rem;
     }
     .contact-container {
-        padding: 0 2rem;
+        padding: 0 1rem;
     }
     .contact-form {
         grid-template-columns: 1fr;

@@ -398,7 +398,7 @@ footer .container .section.social i {
         'catering-two-img'
         'catering-two-content'
         'events';
-        padding: 0 .25rem;
+        padding: 0 .5rem;
     }
     .grid-container .venue-one-img img,
     .grid-container .venue-two-img img,
@@ -416,7 +416,7 @@ footer .container .section.social i {
     .grid-container .right h2,
     .grid-container .left p,
     .grid-container .right p {
-        padding: 0 .25rem;
+        padding: 0 .5rem;
     }
     .banner-container {
         margin: 0 auto;

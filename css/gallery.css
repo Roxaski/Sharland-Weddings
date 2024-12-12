@@ -117,7 +117,7 @@ nav ul li ul li {
     width: 100%;
     gap: 0 8px;
     margin: 15px auto;
-    padding: 1.5rem 1rem;
+    padding: 0 1rem;
 }
 .grid-container img {
     width: 100%;
