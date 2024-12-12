@@ -37,7 +37,6 @@ body {
     width: 100%;
     min-height: 100vh;
     font-family: "Poppins", sans-serif;
-    padding-bottom: 2rem;
     cursor: default;
 }
 .wrapper {
@@ -116,13 +115,13 @@ nav ul li ul li {
     width: 100%;
     border: 1px solid rgba(239, 239, 239, 0.3);
 }
-/* events */
+/* title */
 .event-container {
     position: relative;
     top: .75rem;
     width: 95%;
     margin: 23px auto 0;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
 }
 .event-container .header {
     text-align: center;
@@ -137,42 +136,61 @@ nav ul li ul li {
     font-weight: 300;
     margin: 0 auto 15px;
 }
-.event-container img {
-    width: 100%;
-    height: auto;
-}
-section {
+/* content */
+.grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 7px;
-    margin: 45px auto 0;
+    margin: 50px auto 0;
+    grid-template-areas: 
+        'conference-img conference-content'
+        'catering-content catering-img'
+        'sports-img sports-content';
 }
-.event-container img {
+.grid-container .conference-img {
+    grid-area: conference-img;
+}
+.grid-container .conference-content {
+    grid-area: conference-content;
+}
+.grid-container .catering-content {
+    grid-area: catering-content;
+}
+.grid-container .catering-img {
+    grid-area: catering-img;
+}
+.grid-container .sports-img {
+    grid-area: sports-img;
+}
+.grid-container .sports-content {
+    grid-area: sports-content;
+}
+.grid-container > div {
+    margin: 0 auto 30px;
+}
+.grid-container img {
     width: 100%;
     height: auto;
 }
-.event-container .left img {
+.grid-container .left img {
     mask-image: linear-gradient(90deg, 
                 rgba(0, 0, 0, 1) 50%, 
                 transparent 90%);
 }
-.event-container .right img {
+.grid-container .right img {
     mask-image: linear-gradient(-90deg, 
                 rgba(0, 0, 0, 1) 50%, 
                 transparent 90%);
 }
-.event-container .left h2,
-.event-container .right h2 {
+.grid-container .left h2,
+.grid-container .right h2 {
     text-transform: capitalize;
     font-weight: 400;
-    margin: 15px auto 0;
-    padding: 0 1rem;
 }
-.event-container .left p,
-.event-container .right p {
+.grid-container .left p,
+.grid-container .right p {
     width: 100%;
     margin: 15px auto;
-    padding: 0 1rem;
 }
 /* other events */
 .other-events .content {
@@ -182,7 +200,6 @@ section {
     color: var(--clr-chalk);
     text-align: center;
     gap: .5rem;
-    padding: 0 2rem;
 }
 .other-events .content .contact,
 .other-events .content .birthday,
@@ -192,6 +209,7 @@ section {
     background: var(--clr-purple);
     border-radius: 5px;
     padding: 2.5rem;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .5);
 }
 .other-events .content .contact  {
     display: flex;
@@ -287,6 +305,33 @@ section {
     }
     header.active .hamburger-menu::after {
         transform: rotate(315deg);
+    }
+}
+@media screen and (max-width: 1100px) {
+    .header h1,
+    .header p {
+        margin-top: .5rem;
+        text-align: left;
+    }
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+        'conference-img'
+        'conference-content'
+        'catering-img'
+        'catering-content'
+        'sports-img'
+        'sports-content';
+        padding: 0 .5rem;
+    }
+    .grid-container .left img,
+    .grid-container .right img {
+        mask-image: none;
+    }
+}
+@media screen and (max-width: 715px) {
+    .other-events .content {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 /* dark mode */
