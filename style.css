@@ -398,7 +398,7 @@ footer .container .section.social i {
         'catering-two-img'
         'catering-two-content'
         'events';
-        padding: 0 1rem;
+        padding: 0 .25rem;
     }
     .grid-container .venue-one-img img,
     .grid-container .venue-two-img img,
