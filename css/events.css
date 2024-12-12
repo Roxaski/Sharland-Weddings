@@ -312,6 +312,7 @@ nav ul li ul li {
     .header p {
         margin-top: .5rem;
         text-align: left;
+        padding: 0 1rem;
     }
     .grid-container {
         grid-template-columns: repeat(1, 1fr);
@@ -327,6 +328,9 @@ nav ul li ul li {
     .grid-container .left img,
     .grid-container .right img {
         mask-image: none;
+    }
+    .other-events {
+        padding: 0 1rem;
     }
 }
 @media screen and (max-width: 715px) {
