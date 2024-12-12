@@ -141,39 +141,76 @@ nav ul li ul li {
     padding: 1rem;
     letter-spacing: 1px;
 }
-/* venues */
-.venue-container {
+/* grid layout */
+.grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin: 15px auto 0;
+    grid-template-areas: 
+    'venue-one-img venue-one-content'
+    'venue-two-content venue-two-img'
+    'banner banner'
+    'catering-one-img catering-one-content'
+    'catering-two-content catering-two-img'
+    'events events';
+    margin: 15px auto;
 }
-.venue-container .left img,
-.venue-container .right img {
+.grid-container .venue-one-img {
+    grid-area: venue-one-img;
+}
+.grid-container .venue-one-content {
+    grid-area: venue-one-content;
+}
+.grid-container .venue-two-content {
+    grid-area: venue-two-content;
+}
+.grid-container .venue-two-img {
+    grid-area: venue-two-img;
+}
+.grid-container .banner-container {
+    grid-area: banner;
+}
+.grid-container .catering-one-img {
+    grid-area: catering-one-img;
+}
+.grid-container .catering-one-content {
+    grid-area: catering-one-content
+}
+.grid-container .catering-two-img {
+    grid-area: catering-two-img
+}
+.grid-container .catering-two-content {
+    grid-area: catering-two-content;
+}
+.grid-container .events-container {
+    grid-area: events;
+}
+/* default values */
+.grid-container img {
     width: 100%;
     height: auto;
 }
-.venue-container .left img {
+.grid-container .left img {
     mask-image: linear-gradient(90deg, 
                 rgba(0, 0, 0, 1) 50%, 
                 transparent 90%);
 }
-.venue-container .right img {
+.grid-container .right img {
     mask-image: linear-gradient(-90deg, 
                 rgba(0, 0, 0, 1) 50%, 
                 transparent 90%);
 }
-.venue-container .left h2,
-.venue-container .right h2 {
+.grid-container .left h2,
+.grid-container .right h2 {
     text-transform: capitalize;
     font-weight: 400;
     margin: 15px auto 0;
-    padding: 0 1rem;
+    padding: 0 .5rem;
 }
-.venue-container .left p,
-.venue-container .right p {
+.grid-container .left p,
+.grid-container .right p {
     width: 100%;
     margin: 15px auto;
-    padding: 0 1rem;
+    padding: 0 .5rem;
 }
 /* banner */
 .banner-container {
@@ -183,6 +220,7 @@ nav ul li ul li {
     position: relative;
     width: 100%;
     height: 90vh;
+    margin-bottom: 8px;
     background-image: url(./assets/main/banner.webp);
     background-size: cover;
     background-repeat: no-repeat;
@@ -226,47 +264,12 @@ nav ul li ul li {
     color: var(--clr-white);
     text-decoration: none;
 }
-/* catering */
-.catering-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin: 15px auto;
-}
-.catering-container img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-.catering-container .left img {
-    mask-image: linear-gradient(90deg, 
-                rgba(0, 0, 0, 1) 50%, 
-                transparent 90%);
-}
-.catering-container .right img {
-    mask-image: linear-gradient(-90deg, 
-                rgba(0, 0, 0, 1) 50%, 
-                transparent 90%);
-}
-.catering-container .left h2,
-.catering-container .right h2 {
-    text-transform: capitalize;
-    font-weight: 400;
-    margin: 15px auto 0;
-    padding: 0 1rem;
-}
-.catering-container .left p,
-.catering-container .right p {
-    width: 100%;
-    margin: 15px auto;
-    padding: 0 1rem;
-}
 /* events */
 .events-container {
-    margin: 25px auto;
+    margin: 10px auto;
     width: 100%;
 }
 .events-container img {
-    display: block;
     width: 100%;
     height: 45vh;
     object-fit: cover;
@@ -382,34 +385,41 @@ footer .container .section.social i {
         padding: .75rem;
         width: 55%;
     }
-    .venue-container {
-        grid-template-columns: 1fr;
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+        'venue-one-img'
+        'venue-one-content'
+        'venue-two-img'
+        'venue-two-content'
+        'banner'
+        'catering-one-img'
+        'catering-one-content'
+        'catering-two-img'
+        'catering-two-content'
+        'events';
+        padding: 0 1rem;
     }
-    .venue-container .left img {
+    .grid-container .venue-one-img img,
+    .grid-container .venue-two-img img,
+    .grid-container .catering-one-img img,
+    .grid-container .catering-two-img img {
         mask-image: linear-gradient(180deg, 
-        rgba(0, 0, 0, 1) 50%, 
-        transparent 90%);
+                    rgba(0, 0, 0, 1) 50%, 
+                    transparent 90%);
     }
-    .venue-container .right img {
-        mask-image: linear-gradient(-180deg, 
-        rgba(0, 0, 0, 1) 50%, 
-        transparent 90%);
-    }
-    .venue-container .left h2 {
+    .grid-container .left h2,
+    .grid-container .right h2 {
         margin: 0 auto;
     }
-    .catering-container {
-        grid-template-columns: 1fr;
+    .grid-container .left h2,
+    .grid-container .right h2,
+    .grid-container .left p,
+    .grid-container .right p {
+        padding: 0 .25rem;
     }
-    .catering-container .left img {
-        mask-image: linear-gradient(0deg, 
-                    rgba(0, 0, 0, 1) 50%, 
-                    transparent 90%);
-    }
-    .catering-container .right img {
-        mask-image: linear-gradient(0deg, 
-                    rgba(0, 0, 0, 1) 50%, 
-                    transparent 90%);
+    .banner-container {
+        margin: 0 auto;
     }
     .events-container {
         text-align: left;
@@ -430,6 +440,11 @@ footer .container .section.social i {
     }
     footer .container {
         grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width: 315px) {
+    .banner .content {
+        padding-top: 0;
     }
 }
 /* dark mode */
