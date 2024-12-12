@@ -307,11 +307,6 @@ nav ul li ul li {
         max-width: 32px;
     }
 }
-@media screen and (max-width: 345px) {
-    .contact-container {
-        padding: 0 1rem;
-    }
-}
 /* dark mode */
 @media screen and (prefers-color-scheme: dark) {
     ::-webkit-scrollbar-track {

@@ -152,7 +152,7 @@ nav ul li ul li {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    padding: 0 2rem;
+    padding: 0 1rem;
 }
 .menu-container .title {
     grid-column: span 2;
@@ -262,7 +262,7 @@ nav ul li ul li {
 /* package cost and package deals */
 .price-container {
     margin: 45px auto 0;
-    padding: 0 2rem;
+    padding: 0 1rem;
 }
 .price-container.package-advert {
     color: var(--clr-milkWhite);
@@ -314,7 +314,7 @@ nav ul li ul li {
 .package-container.packages .content {
     display: grid;
     margin: 10px auto 0;
-    padding: 0 2rem;
+    padding: 0 1rem;
     gap: .5rem;
 }
 .package-container .content {

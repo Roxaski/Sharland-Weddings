@@ -322,7 +322,7 @@ nav ul li ul li {
         'catering-content'
         'sports-img'
         'sports-content';
-        padding: 0 .5rem;
+        padding: 0 1rem;
     }
     .grid-container .left img,
     .grid-container .right img {

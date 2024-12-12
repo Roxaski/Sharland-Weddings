@@ -116,7 +116,7 @@ nav ul li ul li {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 7px;
-    padding: .1rem .75rem;
+    padding: .1rem 1rem;
     position: relative;
     top: .75rem;
     margin-top: 23px;
