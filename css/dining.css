@@ -32,7 +32,7 @@ body {
     width: 100%;
     min-height: 100vh;
     font-family: "Poppins", sans-serif;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
     cursor: default;
 }
 .wrapper {
@@ -112,16 +112,6 @@ nav ul li ul li {
     width: 100%;
     border: 1px solid rgba(239, 239, 239, 0.3);
 }
-/* main */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 7px;
-    padding: .1rem 1rem;
-    position: relative;
-    top: .75rem;
-    margin-top: 23px;
-}
 /* header */
 .header {
     text-align: center;
@@ -137,6 +127,15 @@ nav ul li ul li {
     margin: 0 auto 15px;
 }
 /* menu selection */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 7px;
+    padding: .1rem 1rem;
+    position: relative;
+    top: .75rem;
+    margin-top: 23px;
+}
 .grid-container a {
     cursor: default;
     text-decoration: none;

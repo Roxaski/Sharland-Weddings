@@ -429,7 +429,7 @@ footer .container .section.social i {
         margin-left: .75rem;
     }
     footer {
-        padding: 30px 15px;
+        padding: 20px 30px;
     }
     footer .container {
         grid-template-columns: repeat(2, 1fr);
