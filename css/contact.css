@@ -35,7 +35,6 @@ body {
     width: 100%;
     min-height: 100vh;
     font-family: "Poppins", sans-serif;
-    padding-bottom: 1.5rem;
     cursor: default;
 }
 .wrapper {
@@ -134,16 +133,16 @@ nav ul li ul li {
     align-items: center;
     flex-direction: column;
     position: relative;
-    top: 2.5rem;
+    top: 1.5rem;
     width: 100%;
     height: 100%;
-    padding: 0 5rem;
+    padding: 0 1rem;
 }
 .contact-form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     text-align: center;
-    max-width: 800px;
+    max-width: 900px;
     margin: 15px auto;
     color: var(--clr-white);
     background-color: var(--clr-lightGrey);
@@ -281,25 +280,24 @@ nav ul li ul li {
         transform: rotate(315deg);
     }
 }
-@media screen and (max-width: 840px) {
-    .header {
-        text-align: left;
-    }
+@media screen and (max-width: 965px) {
     .header h2 {
         margin-top: .5rem;
     }
-    .contact-container {
-        padding: 0 1rem;
-    }
     .contact-form {
         grid-template-columns: 1fr;
-        max-width: 675px;
+        max-width: 750px;
     }
     .contact-form .left {
         height: 300px;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
         border-bottom-left-radius: 0;
+    }
+}
+@media screen and (max-width: 650px) {
+    .header {
+        text-align: left;
     }
 }
 @media screen and (max-width: 535px) {
