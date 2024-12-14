@@ -335,6 +335,10 @@ nav ul li ul li {
                     rgba(0, 0, 0, 1) 50%, 
                     transparent 90%);
     }
+    .grid-container h2,
+    .grid-container p {
+        padding: 0 .25rem;
+    }
     .other-events {
         padding: 0 1rem;
     }
