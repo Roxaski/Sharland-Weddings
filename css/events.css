@@ -143,27 +143,27 @@ nav ul li ul li {
     grid-column-gap: 7px;
     margin: 50px auto 0;
     grid-template-areas: 
-        'conference-img conference-content'
-        'catering-content catering-img'
-        'sports-img sports-content';
+        'img-one content-one'
+        'content-two img-two'
+        'img-three content-three';
 }
-.grid-container .conference-img {
-    grid-area: conference-img;
+.grid-container .img-one {
+    grid-area: img-one;
 }
-.grid-container .conference-content {
-    grid-area: conference-content;
+.grid-container .content-one {
+    grid-area: content-one;
 }
-.grid-container .catering-content {
-    grid-area: catering-content;
+.grid-container .content-two {
+    grid-area: content-two;
 }
-.grid-container .catering-img {
-    grid-area: catering-img;
+.grid-container .img-two {
+    grid-area: img-two;
 }
-.grid-container .sports-img {
-    grid-area: sports-img;
+.grid-container .img-three {
+    grid-area: img-three;
 }
-.grid-container .sports-content {
-    grid-area: sports-content;
+.grid-container .content-three {
+    grid-area: content-three;
 }
 .grid-container > div {
     margin: 0 auto 30px;
@@ -317,17 +317,20 @@ nav ul li ul li {
     .grid-container {
         grid-template-columns: repeat(1, 1fr);
         grid-template-areas: 
-        'conference-img'
-        'conference-content'
-        'catering-img'
-        'catering-content'
-        'sports-img'
-        'sports-content';
+        'img-one'
+        'content-one'
+        'img-two'
+        'content-two'
+        'img-three'
+        'content-three';
         padding: 0 1rem;
+        margin: 25px auto 0;
     }
     .grid-container .left img,
     .grid-container .right img {
-        mask-image: none;
+        mask-image: linear-gradient(180deg, 
+                    rgba(0, 0, 0, 1) 50%, 
+                    transparent 90%);
     }
     .other-events {
         padding: 0 1rem;
