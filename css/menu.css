@@ -354,6 +354,7 @@ nav ul li ul li {
     letter-spacing: 1.5px;
     text-decoration: none;
     border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
     transition: 200ms ease-out;
 }
 .package-container .content .btn a:hover {
