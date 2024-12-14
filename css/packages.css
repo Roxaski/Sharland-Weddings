@@ -11,10 +11,10 @@
     --clr-chalk: #dbdada;
     --clr-blk: #000000;
     --clr-grey: #a9a8a8;
-    --clr-cadetGrey: #838181;
     --clr-darkGrey: #2c2c2c;
     --clr-purple: #5d0f9c;
     --clr-lightPurple: #7f22cb;
+    --clr-lilac: #9d3aee;
 }
 ::-webkit-scrollbar {
     width: 8px;
@@ -24,7 +24,7 @@
 }
 ::-webkit-scrollbar-thumb {
     border-radius: 5px;
-    background: var(--clr-cadetGrey);
+    background: var(--clr-lilac);
 }
 body {
     color: var(--clr-darkGrey);
@@ -175,7 +175,7 @@ nav ul li ul li {
         background: var(--clr-blk);
     }
     ::-webkit-scrollbar-thumb {
-        background: var(--clr-chalk);
+        background: var(--clr-lilac);
     }
     body {
         background: var(--clr-blk);

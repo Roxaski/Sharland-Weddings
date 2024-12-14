@@ -19,16 +19,6 @@
     --clr-purple: #5d0f9c;
     --clr-lightPurple: #7f22cb;
 }
-::-webkit-scrollbar {
-    width: 8px;
-}
-::-webkit-scrollbar-track {
-    background: var(--clr-white);
-}
-::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    background: var(--clr-cadetGrey);
-}
 body {
     color: var(--clr-darkGrey);
     background: var(--clr-white);
@@ -308,12 +298,6 @@ nav ul li ul li {
 }
 /* dark mode */
 @media screen and (prefers-color-scheme: dark) {
-    ::-webkit-scrollbar-track {
-        background: var(--clr-blk);
-    }
-    ::-webkit-scrollbar-thumb {
-        background: var(--clr-chalk);
-    }
     body {
         background: var(--clr-blk);
     }
