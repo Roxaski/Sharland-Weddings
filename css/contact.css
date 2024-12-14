@@ -68,6 +68,7 @@ header img {
     bottom: .35rem;
     width: 70px;
     height: auto;
+    color: var(--clr-white);
 }
 /* nav */
 nav ul {

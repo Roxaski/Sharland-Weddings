@@ -65,6 +65,7 @@ header img {
     bottom: .35rem;
     width: 70px;
     height: auto;
+    color: var(--clr-white);
 }
 /* nav */
 nav ul {
@@ -138,6 +139,7 @@ nav ul li ul li {
 /* menu selection */
 .grid-container a {
     cursor: default;
+    text-decoration: none;
 }
 .grid-container .img-container {
     position: relative;
@@ -145,6 +147,7 @@ nav ul li ul li {
 .grid-container .img-container img {
     width: 100%;
     height: auto;
+    color: var(--clr-blk);
 }
 .grid-container .img-container .title {
     position: absolute;
@@ -252,5 +255,8 @@ nav ul li ul li {
         color: var(--clr-chalk);
         border: solid 1.5px var(--clr-chalk);
         background: var(--clr-darkGrey);
+    }
+    .grid-container .img-container img {
+        color: var(--clr-white);
     }
 }

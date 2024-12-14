@@ -64,6 +64,7 @@ header img {
     bottom: .35rem;
     width: 70px;
     height: auto;
+    color: var(--clr-white);
 }
 /* nav */
 nav ul {
@@ -136,6 +137,7 @@ main {
     width: 80%;
     height: auto;
     border-radius: 50%;
+    color: var(--clr-blk);
 }
 .img-wrapper .border {
     position: absolute;
@@ -246,6 +248,9 @@ main {
     }
     nav ul li ul li {
         border: 1px solid rgba(40, 40, 40, 0.3);
+    }
+    .img-wrapper img {
+        color: var(--clr-white);
     }
     .border.light {
         display: none;

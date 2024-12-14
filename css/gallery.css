@@ -64,6 +64,7 @@ header img {
     bottom: .35rem;
     width: 70px;
     height: auto;
+    color: var(--clr-white);
 }
 /* nav */
 nav ul {
@@ -123,6 +124,7 @@ nav ul li ul li {
     width: 100%;
     height: auto;
     cursor: pointer;
+    color: var(--clr-blk);
 }
 .img-preview {
     position: fixed;
@@ -266,6 +268,9 @@ nav ul li ul li {
     }
     nav ul li ul li {
         border: 1px solid rgba(40, 40, 40, 0.3);
+    }
+    .grid-container img {
+        color: var(--clr-white);
     }
     .img-focus {
         background: var(--clr-darkGrey);
