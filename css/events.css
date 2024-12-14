@@ -186,11 +186,14 @@ nav ul li ul li {
 .grid-container .right h2 {
     text-transform: capitalize;
     font-weight: 400;
+    margin: 15px auto 0;
+    padding: 0 .5rem;
 }
 .grid-container .left p,
 .grid-container .right p {
     width: 100%;
     margin: 15px auto;
+    padding: 0 .5rem;
 }
 /* other events */
 .other-events .content {
