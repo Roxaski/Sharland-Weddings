@@ -122,6 +122,7 @@ nav ul li ul li {
     position: relative;
     top: .75rem;
     margin: 23px auto 0;
+    padding: 0 1rem;
 }
 .event-container .header {
     text-align: center;
@@ -182,22 +183,19 @@ nav ul li ul li {
                 rgba(0, 0, 0, 1) 50%, 
                 transparent 90%);
 }
+.grid-container .right h2,
+.grid-container .right p {
+    width: 95%;
+}
 .grid-container .left h2,
 .grid-container .right h2 {
     text-transform: capitalize;
     font-weight: 400;
     margin: 15px auto 0;
 }
-.grid-container .right h2 {
-    width: 95%;
-}
 .grid-container .left p,
 .grid-container .right p {
-    width: 100%;
     margin: 15px auto;
-}
-.grid-container .right p {
-    width: 95%;
 }
 /* other events */
 .other-events .content {
@@ -320,9 +318,6 @@ nav ul li ul li {
     .header p {
         margin-top: .5rem;
         text-align: left;
-    }
-    .event-container {
-        padding: 0 1rem;
     }
     .grid-container {
         grid-template-columns: repeat(1, 1fr);
