@@ -526,27 +526,13 @@ nav ul li ul li {
     .menu-container .title .main::after {
         background: var(--clr-daisyWhite);
     }
-    .menu-container .title .dessert::before {
-        background: var(--clr-daisyWhite);
-    }
-    .menu-container .title .dessert::after {
-        background: var(--clr-daisyWhite);
-    }
-    .menu-container .title .drinks::before {
-        background: var(--clr-daisyWhite);
-    }
-    .menu-container .title .drinks::after {
-        background: var(--clr-daisyWhite);
-    }
-    .menu-container .title .drinks::before {
-        background: var(--clr-daisyWhite);
-    }
-    .menu-container .title .drinks::after {
-        background: var(--clr-daisyWhite);
-    }
-    .menu-container .title .drinks-alcohol::before {
-        background: var(--clr-daisyWhite);
-    }
+    .menu-container .title .dessert::before,
+    .menu-container .title .dessert::after,
+    .menu-container .title .drinks::before,
+    .menu-container .title .drinks::after,
+    .menu-container .title .drinks::before,
+    .menu-container .title .drinks::after,
+    .menu-container .title .drinks-alcohol::before,
     .menu-container .title .drinks-alcohol::after {
         background: var(--clr-daisyWhite);
     }
