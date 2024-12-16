@@ -310,7 +310,7 @@ nav ul li ul li {
     font-weight: 300;
     color: var(--clr-milkWhite);
 }
-/* package options and deals */
+/* package options */
 .package-container .content,
 .package-container.packages .content {
     display: grid;
