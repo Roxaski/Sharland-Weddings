@@ -207,11 +207,17 @@ nav ul li ul li {
     margin: 15px auto 0;
     padding: 0 .5rem;
 }
+.grid-container .right h2 {
+    width: 95%;
+}
 .grid-container .left p,
 .grid-container .right p {
     width: 100%;
     margin: 15px auto;
     padding: 0 .5rem;
+}
+.grid-container .right p {
+    width: 95%;
 }
 /* banner */
 .banner-container {
@@ -409,6 +415,10 @@ footer .container .section.social i {
                     rgba(0, 0, 0, 1) 50%, 
                     transparent 90%);
     }
+    .grid-container .right h2,
+    .grid-container .right p {
+        width: 100%;
+    }
     .grid-container .left h2,
     .grid-container .right h2 {
         margin: 0 auto;
@@ -454,7 +464,7 @@ footer .container .section.social i {
         background: var(--clr-blk);
     }
     ::-webkit-scrollbar-thumb {
-        background: var(--clr-lilac);
+        background: var(--clr-chalk);
     }
     body {
         background: var(--clr-blk);

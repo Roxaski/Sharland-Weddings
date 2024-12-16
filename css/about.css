@@ -241,7 +241,7 @@ main {
         background: var(--clr-blk);
     }
     ::-webkit-scrollbar-thumb {
-        background: var(--clr-lilac);
+        background: var(--clr-chalk);
     }
     body {
         background: var(--clr-blk);

@@ -242,7 +242,7 @@ nav ul li ul li {
         background: var(--clr-blk);
     }
     ::-webkit-scrollbar-thumb {
-        background: var(--clr-lilac);
+        background: var(--clr-chalk);
     }
     body {
         color: var(--clr-chalk);
