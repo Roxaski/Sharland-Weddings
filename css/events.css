@@ -166,9 +166,6 @@ nav ul li ul li {
 .grid-container .content-three {
     grid-area: content-three;
 }
-.grid-container > div {
-    margin: 0 auto 30px;
-}
 .grid-container img {
     width: 100%;
     height: auto;
@@ -198,6 +195,9 @@ nav ul li ul li {
     margin: 15px auto;
 }
 /* other events */
+.other-events {
+    margin: 45px auto 0;
+}
 .other-events .content {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
