@@ -12,6 +12,8 @@
     --clr-milkWhite: #fcfbfb;
     --clr-alabasterWhite: #d7d5d5;
     --clr-blk: #000000;
+    --clr-green: #358510;
+    --clr-red: #a71a31;
     --clr-grey: #a9a8a8;
     --clr-charcoal: #282727;
     --clr-coolGrey: #696767;
@@ -211,6 +213,19 @@ nav ul li ul li {
 .grid-container .right p {
     margin: 15px auto;
 }
+.grid-container ul li {
+    list-style: none;
+    margin: 20px auto 0;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+}
+.grid-container ul li i {
+    color: var(--clr-green);
+    margin-right: 1rem;
+}
+.grid-container ul li .not-included {
+    color: var(--clr-red);
+}
 /* package options */
 .package-container .content {
     display: grid;
@@ -363,6 +378,9 @@ nav ul li ul li {
     header.active .hamburger-menu::after {
         transform: rotate(315deg);
     }
+    .grid-container ul li {
+        margin: 15px auto 0;
+    }
 }
 @media screen and (max-width: 1100px) {
     .grid-container {
@@ -386,6 +404,9 @@ nav ul li ul li {
     .grid-container .right h2,
     .grid-container .right p {
         width: 100%;
+    }
+    .grid-container ul li {
+        margin: 30px auto;
     }
 }
 @media screen and (max-width: 735px) {
@@ -418,8 +439,11 @@ nav ul li ul li {
     .grid-container {
         color: var(--clr-chalk);
     }
-    .bookings-container .content {
-        background: var(--clr-charcoal);
+    .grid-container ul li i {
+        color: var(--clr-chalk);
+    }
+    .grid-container ul li .not-included {
+        color: var(--clr-chalk);
     }
     .bookings-container .content {
         background: var(--clr-charcoal);
