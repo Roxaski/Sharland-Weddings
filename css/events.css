@@ -180,6 +180,9 @@ nav ul li ul li {
                 rgba(0, 0, 0, 1) 50%, 
                 transparent 90%);
 }
+.grid-container .right h2:nth-child(1) {
+    margin: 0 auto;
+}
 .grid-container .right h2,
 .grid-container .right p {
     width: 95%;
