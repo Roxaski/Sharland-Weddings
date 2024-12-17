@@ -9,11 +9,17 @@
     --clr-white: #fefefe;
     --clr-offWhite: #c6c5c5;
     --clr-chalk: #dbdada;
+    --clr-milkWhite: #fcfbfb;
+    --clr-alabasterWhite: #d7d5d5;
     --clr-blk: #000000;
     --clr-grey: #a9a8a8;
+    --clr-charcoal: #282727;
+    --clr-coolGrey: #696767;
+    --clr-shadowGrey: #4b4b4b;
     --clr-darkGrey: #2c2c2c;
     --clr-purple: #5d0f9c;
     --clr-lightPurple: #7f22cb;
+    --clr-darkPurple: #461270;
     --clr-lilac: #861cdc;
 }
 ::-webkit-scrollbar {
@@ -32,7 +38,7 @@ body {
     width: 100%;
     min-height: 100vh;
     font-family: "Poppins", sans-serif;
-    padding-bottom: 1.5rem;
+    padding-bottom: .75rem;
     cursor: default;
 }
 .wrapper {
@@ -112,6 +118,159 @@ nav ul li ul li {
     width: 100%;
     border: 1px solid rgba(239, 239, 239, 0.3);
 }
+/* banner */
+.img-container {
+    position: relative;
+}
+.img-container img {
+    width: 100%;
+    height: auto;
+    filter: brightness(45%);
+}
+.img-container .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    inset: 0;
+    color: var(--clr-milkWhite);
+    text-transform: capitalize;
+}
+.img-container .header h1 {
+    font-size: clamp(1.75rem, 3vw, 3.5rem);
+    font-weight: 200;
+}
+.img-container p {
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    font-weight: 200;
+}
+/* grid-container */
+.grid-container {
+    padding: .5rem 1rem;
+}
+.grid-container img {
+    width: 100%;
+    height: auto;
+}
+.grid-container .left img {
+    mask-image: linear-gradient(90deg, 
+                rgba(0, 0, 0, 1) 50%, 
+                transparent 90%);
+}
+.grid-container .right img {
+    mask-image: linear-gradient(-90deg, 
+                rgba(0, 0, 0, 1) 50%, 
+                transparent 90%);
+}
+.grid-container .right h2,
+.grid-container .right p {
+    width: 95%;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+/* package options */
+.package-container .content,
+.package-container.packages .content {
+    display: grid;
+    margin: 10px auto 0;
+    padding: 0 1rem;
+    gap: .5rem;
+}
+.package-container .content {
+    grid-template-columns: repeat(2, 1fr);
+}
+.package-container.packages .content {
+    grid-template-columns: repeat(3, 1fr);
+}
+.package-container .content .left,
+.package-container .content .right {
+    margin: 0 auto;
+    text-align: center;
+    background: var(--clr-purple);
+    border-radius: 5px;
+    width: 100%;
+    padding: 3rem;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .5);
+}
+.package-container .content h4 {
+    color: var(--clr-white);
+    font-weight: 200;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-size: clamp(1.2rem, 3vw, 1.4rem);
+}
+.package-container .content .btn {
+    margin: 30px auto 0;
+}
+.package-container .content .btn a {
+    padding: .5rem .75rem;
+    background: var(--clr-lightPurple);
+    color: var(--clr-white);
+    font-weight: 300;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+    transition: 200ms ease-out;
+}
+.package-container .content .btn a:hover {
+    background: var(--clr-darkPurple);
+}
+/* bookings and availability */
+.bookings-container {
+    margin: 45px auto 0;
+    padding: 0 1rem;
+}
+.bookings-container .content {
+    background: var(--clr-purple);
+    padding: 2.75rem 0;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .5);
+}
+.bookings-container .content .title h4 {
+    position: relative;
+    bottom: 1.75rem;
+    font-size: clamp(1.45rem, 3vw, 1.75rem);
+    font-weight: 200;
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--clr-white);
+    padding: 0 .5rem;
+}
+.bookings-container .content .availability {
+    margin: 20px auto 0;
+}
+.bookings-container .content .availability ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 4fr));
+    gap: 2rem;
+    justify-items: center;
+}
+.bookings-container .content .availability ul li {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    text-transform: capitalize;
+    line-height: 2;
+    letter-spacing: 1.5px;
+    font-weight: 300;
+    font-size: clamp(1rem, 3vw, 1.1rem);
+    color: var(--clr-milkWhite);
+}
+.bookings-container .content .availability ul li span {
+    color: var(--clr-offWhite);
+
+    font-size: clamp(.9rem, 3vw, .99rem);
+}
+.bookings-container .content .availability ul li .available {
+    color: var(--clr-chalk);
+    text-decoration: underline;
+}
 /* media query's*/
 @media screen and (max-width: 1145px) {
     nav {
@@ -169,18 +328,72 @@ nav ul li ul li {
         transform: rotate(315deg);
     }
 }
+@media screen and (max-width: 1100px) {
+    .grid-container .left img,
+    .grid-container .right img {
+        mask-image: linear-gradient(180deg, 
+                    rgba(0, 0, 0, 1) 50%, 
+                    transparent 90%);
+    }
+    .grid-container .right h2,
+    .grid-container .right p {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 475px) {
+    .img-container .header p {
+        display: none;
+    }
+}
 /* dark mode */
 @media screen and (prefers-color-scheme: dark) {
     ::-webkit-scrollbar-track {
         background: var(--clr-blk);
     }
     ::-webkit-scrollbar-thumb {
-        background: var(--clr-lilac);
+        background: var(--clr-chalk);
     }
     body {
         background: var(--clr-blk);
     }
     nav ul li ul li {
         border: 1px solid rgba(40, 40, 40, 0.3);
+    }
+    .img-container .header {
+        color: var(--clr-chalk);
+    }
+    .grid-container {
+        color: var(--clr-chalk);
+    }
+    .bookings-container .content {
+        background: var(--clr-charcoal);
+    }
+    .bookings-container .content {
+        background: var(--clr-charcoal);
+    }
+    .bookings-container .content .title h4 {
+        color: var(--clr-alabasterWhite);
+    }
+    .bookings-container .content .availability ul li {
+        color: var(--clr-alabasterWhite);
+    }
+    .bookings-container .content .availability ul li span {
+        color: var(--clr-coolGrey);
+    }
+    .bookings-container .content .availability ul li .available {
+        color: var(--clr-grey);
+    }
+    .package-container .content .left,
+    .package-container .content .right {
+        background: var(--clr-charcoal);
+    }
+    .package-container .content h4 {
+        color: var(--clr-alabasterWhite);
+    }
+    .package-container .content .btn a {
+        background: var(--clr-shadowGrey);
+    }
+    .package-container .content .btn a:hover {
+        background: var(--clr-coolGrey);
     }
 }
