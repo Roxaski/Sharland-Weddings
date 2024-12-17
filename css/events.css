@@ -199,7 +199,7 @@ nav ul li ul li {
 }
 /* other events */
 .other-events {
-    margin: 45px auto 0;
+    margin: 20px auto 0;
 }
 .other-events .content {
     display: grid;
@@ -331,7 +331,6 @@ nav ul li ul li {
         'content-two'
         'img-three'
         'content-three';
-        margin: 25px auto 0;
     }
     .grid-container .left img,
     .grid-container .right img {

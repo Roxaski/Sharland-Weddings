@@ -262,7 +262,7 @@ nav ul li ul li {
 }
 /* package cost and package deals */
 .price-container {
-    margin: 45px auto 0;
+    margin: 20px auto 0;
     padding: 0 1rem;
 }
 .price-container.package-advert {
