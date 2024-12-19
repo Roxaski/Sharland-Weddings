@@ -417,7 +417,7 @@ nav ul li ul li {
         transform: rotate(315deg);
     }
 }
-@media screen and (max-width: 1180px) {
+@media screen and (max-width: 1100px) {
     .menu-container {
         grid-template-columns: repeat(3, 1fr);
         gap: .75rem;
@@ -440,7 +440,6 @@ nav ul li ul li {
         margin: 0;
         padding: .55rem;
     }
-    .price-container,
     .price-container.package-advert {
         padding: 0 1rem;
     }

@@ -246,7 +246,7 @@ nav ul li ul li {
     padding: 3rem;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, .5);
 }
-.package-container .content h4 {
+.package-container .content h3 {
     color: var(--clr-white);
     font-weight: 200;
     text-transform: capitalize;
@@ -271,6 +271,44 @@ nav ul li ul li {
 .package-container .content .btn a:hover {
     background: var(--clr-darkPurple);
 }
+/* package cost */
+.price-container {
+    margin: 10px auto 0;
+    padding: 0 1rem;
+}
+.price-container .content {
+    background: var(--clr-purple);
+    padding: 2.75rem 0;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .5);
+}
+.price-container .content .title h3 {
+    position: relative;
+    bottom: 1.75rem;
+    font-size: clamp(1.45rem, 3vw, 1.75rem);
+    font-weight: 200;
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--clr-white);
+    padding: 0 .5rem;
+}
+.price-container .content .package-price {
+    margin: 20px auto 0;
+}
+.price-container .content .package-price ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 4fr));
+    gap: 2rem;
+}
+.price-container .content .package-price ul li {
+    list-style: none;
+    text-transform: capitalize;
+    line-height: 2;
+    letter-spacing: 1.5px;
+    text-align: center;
+    font-weight: 300;
+    color: var(--clr-milkWhite);
+}
 /* bookings and availability */
 .bookings-container {
     margin: 10px auto 0;
@@ -282,7 +320,7 @@ nav ul li ul li {
     border-radius: 5px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, .5);
 }
-.bookings-container .content .title h4 {
+.bookings-container .content .title h3 {
     position: relative;
     bottom: 1.75rem;
     font-size: clamp(1.45rem, 3vw, 1.75rem);
@@ -315,12 +353,12 @@ nav ul li ul li {
 }
 .bookings-container .content .availability ul li span {
     color: var(--clr-offWhite);
-
     font-size: clamp(.9rem, 3vw, .99rem);
 }
 .bookings-container .content .availability ul li .available {
     color: var(--clr-chalk);
     text-decoration: underline;
+    cursor: pointer;
 }
 /* media query's*/
 @media screen and (max-width: 1145px) {
@@ -448,7 +486,7 @@ nav ul li ul li {
     .bookings-container .content {
         background: var(--clr-charcoal);
     }
-    .bookings-container .content .title h4 {
+    .bookings-container .content .title h3 {
         color: var(--clr-alabasterWhite);
     }
     .bookings-container .content .availability ul li {
@@ -460,11 +498,20 @@ nav ul li ul li {
     .bookings-container .content .availability ul li .available {
         color: var(--clr-grey);
     }
+    .price-container .content {
+        background: var(--clr-charcoal);
+    }
+    .price-container .content .title h3 {
+        color: var(--clr-alabasterWhite);
+    }
+    .price-container .content .package-price ul li {
+        color: var(--clr-alabasterWhite);
+    }
     .package-container .content .left,
     .package-container .content .right {
         background: var(--clr-charcoal);
     }
-    .package-container .content h4 {
+    .package-container .content h3 {
         color: var(--clr-alabasterWhite);
     }
     .package-container .content .btn a {
