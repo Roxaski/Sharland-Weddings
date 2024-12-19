@@ -478,6 +478,9 @@ nav ul li ul li {
     .menu-container {
         grid-template-columns: repeat(1, 1fr);
     }
+    .menu-container .menu .description {
+        border-radius: 5px;
+    }
     .menu-container .title {
         grid-column: span 1;
     }
