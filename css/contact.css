@@ -14,6 +14,7 @@
     --clr-grey: #a9a8a8;
     --clr-lightGrey: #c5c4c1;
     --clr-cadetGrey: #838181;
+    --clr-lightCharcoal: #393838;
     --clr-charcoal: #4a4a4a;
     --clr-darkGrey: #2c2c2c;
     --clr-purple: #5d0f9c;
@@ -201,7 +202,7 @@ nav ul li ul li {
     padding: .5rem 1rem;
     text-transform: uppercase;
     color: var(--clr-white);
-    background: var(--clr-lightGrey);
+    background: var(--clr-grey);
     outline: none;
     border: none;
     font-size: .95rem;
@@ -209,9 +210,6 @@ nav ul li ul li {
     transition: 200ms ease-in;
     border-radius: 5px;
     cursor: pointer;
-}
-.contact-form .right button:hover {
-    background: var(--clr-cadetGrey);
 }
 /* media query's*/
 @media screen and (max-width: 1145px) {
@@ -312,12 +310,12 @@ nav ul li ul li {
         background-color: var(--clr-charcoal);
     }
     .contact-form .right button {
-        background: var(--clr-charcoal);
+        background: var(--clr-lightCharcoal);
     }
     .contact-form .right .input {
         background: var(--clr-cream);
     }
     .contact-form .right .input:focus {
-        outline: solid 3.5px var(--clr-lightPurple);
+        outline: solid 2px var(--clr-lightPurple);
     }
 }
