@@ -186,7 +186,7 @@ nav ul li ul li {
     outline: none;
     border: none;
     margin: 3px auto;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 .contact-form .right .input:focus {
     outline: solid 2px var(--clr-purple);
@@ -292,6 +292,9 @@ nav ul li ul li {
     .contact-form .right img,
     .contact-form .right img:nth-child(1) {
         max-width: 32px;
+    }
+    .contact-form .right button {
+        top: .25rem;
     }
 }
 /* dark mode */
