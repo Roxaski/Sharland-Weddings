@@ -470,23 +470,22 @@ nav ul li ul li {
     }
 }
 @media screen and (max-width: 575px) {
+    .img-container {
+        display: none;
+    }
     .package-container.packages .content {
         grid-template-columns: repeat(1, 1fr);
     }
-}
-@media screen and (max-width: 500px) {
     .menu-container {
         grid-template-columns: repeat(1, 1fr);
+    }
+    .menu-container .menu .description {
+        border-radius: 5px;
     }
     .menu-container .title {
         grid-column: span 1;
     }
     .menu-container .menu .content img {
-        display: none;
-    }
-}
-@media screen and (max-width: 475px) {
-    .img-container .header p {
         display: none;
     }
 }

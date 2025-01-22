@@ -452,8 +452,8 @@ nav ul li ul li {
         grid-template-columns: repeat(1, 1fr);
     }
 }
-@media screen and (max-width: 475px) {
-    .img-container .header p {
+@media screen and (max-width: 575px) {
+    .img-container {
         display: none;
     }
 }
