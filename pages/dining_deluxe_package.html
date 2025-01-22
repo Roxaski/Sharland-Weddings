@@ -20,30 +20,45 @@
     <div class="wrapper">
         <!-- nav -->
         <header>
-            <img draggable="false" src="../assets/logo/logo.svg" alt="logo">
-            <a class="logo" href="../index.html">Sharland's</a>
-            <div class="hamburger-menu"></div>
             <nav>
-                <ul>
-                    <li><a href="#">packages <i class="fa-solid fa-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="./packages_silver.html">silver</a></li>
-                            <li><a href="./packages_gold.html">gold</a></li>
-                            <li><a href="./packages_platinum.html">platinum</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="./gallery.html">gallery</a></li>
-                    <li><a href="#">events <i class="fa-solid fa-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="./events_business.html">business</a></li>
-                            <li><a href="./events_birthdays.html">birthdays</a></li>
-                            <li><a href="./events_christmas.html">christmas</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="./dining.html">dining</a></li>
-                    <li><a href="./contact.html">contact</a></li>
-                    <li><a href="./about.html">about</a></li>
-                </ul>
+                <!-- nav overlay -->
+                <div class="nav-overlay"></div>
+                <!-- logo -->
+                <div class="logo">
+                    <img draggable="false" src="../assets/logo/logo.svg" alt="logo">
+                    <a class="logo" href="../index.html">Sharland's</a>
+                </div>
+                <!-- links -->
+                <div class="links-wrapper">
+                    <ul class="links">
+                        <li>
+                            <a class="packages" href="#">packages</a>
+                            <i class="fa-solid fa-chevron-right arrow packages-arrow" style="color: #d6d4d4;"></i>
+                            <ul class="sub-menu packages-sub-menu">
+                                <li><a href="./packages_silver.html">silver</a></li>
+                                <li><a href="./packages_gold.html">gold</a></li>
+                                <li><a href="./packages_platinum.html">platinum</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="./gallery.html">gallery</a></li>
+                        <li>
+                            <a class="events" href="#">events</a>
+                            <i class="fa-solid fa-chevron-right arrow events-arrow" style="color: #d6d4d4;"></i>
+                            <ul class="sub-menu events-sub-menu">
+                                <li><a href="./events_business.html">business</a></li>
+                                <li><a href="./events_birthdays.html">birthdays</a></li>
+                                <li><a href="./events_christmas.html">christmas</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="./dining.html">dining</a></li>
+                        <li><a href="./contact.html">contact</a></li>
+                        <li><a href="./about.html">about</a></li>
+                    </ul>
+                </div>
+                <!-- hamburger menu -->
+                <div aria-label="opens the navigation menu" role="button" class="hamburger-menu">
+                    <div class="bars"></div>
+                </div>
             </nav>
         </header>
         <main>
