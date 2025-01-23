@@ -205,7 +205,7 @@ nav {
 .grid-container .header {
     text-align: center;
     grid-column: span 3;
-    color: var(--clr-offWhite);
+    color: var(--clr-blk);
 }
 .grid-container .header h1 {
     font-size: clamp(1.85rem, 3vw, 2.25rem);
@@ -445,6 +445,9 @@ nav {
     }
     body {
         background: var(--clr-blk);
+    }
+    .grid-container .header {
+        color: var(--clr-offWhite);
     }
     .grid-container img {
         color: var(--clr-white);
