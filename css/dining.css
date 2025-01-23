@@ -194,7 +194,14 @@ nav {
 .transparent-overlay {
     display: none;
 }
-/* header */
+/* menu selection */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 7px;
+    padding: 0 1rem;
+    margin: 25px auto 0;
+}
 .header {
     text-align: center;
     grid-column: span 2;
@@ -207,16 +214,6 @@ nav {
     font-size: clamp(1.15rem, 3vw, 1.3rem);
     font-weight: 300;
     margin: 0 auto 15px;
-}
-/* menu selection */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 7px;
-    padding: .1rem 1rem;
-    position: relative;
-    top: .75rem;
-    margin-top: 23px;
 }
 .grid-container a {
     cursor: default;
@@ -368,7 +365,7 @@ nav {
         grid-template-columns: 1fr;
         top: 1rem;
     }
-    .grid-container .header {
+    .header {
         grid-column: 1 / 2;
         text-align: left;
     }
