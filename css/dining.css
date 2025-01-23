@@ -202,15 +202,15 @@ nav {
     padding: 0 1rem;
     margin: 25px auto 0;
 }
-.header {
+.title {
     text-align: center;
     grid-column: span 2;
 }
-.header h1 {
+.title h1 {
     font-size: clamp(1.85rem, 3vw, 2.25rem);
     font-weight: 400;
 }
-.header p {
+.title p {
     font-size: clamp(1.15rem, 3vw, 1.3rem);
     font-weight: 300;
     margin: 0 auto 15px;
@@ -365,7 +365,7 @@ nav {
         grid-template-columns: 1fr;
         top: 1rem;
     }
-    .header {
+    .title {
         grid-column: 1 / 2;
         text-align: left;
     }

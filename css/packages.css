@@ -209,7 +209,7 @@ nav {
     height: auto;
     filter: brightness(45%);
 }
-.img-container .header {
+.img-container .banner-title {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -219,7 +219,7 @@ nav {
     color: var(--clr-milkWhite);
     text-transform: capitalize;
 }
-.img-container .header h1 {
+.img-container .banner-title h1 {
     font-size: clamp(1.75rem, 3vw, 3.5rem);
     font-weight: 200;
 }
@@ -601,7 +601,7 @@ nav {
     body {
         background: var(--clr-blk);
     }
-    .img-container .header {
+    .img-container .banner-title {
         color: var(--clr-chalk);
     }
     .grid-container {

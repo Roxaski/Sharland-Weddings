@@ -187,15 +187,15 @@ nav {
 .transparent-overlay {
     display: none;
 }
-/* header */
-.header {
+/* title */
+.title {
     text-align: center;
 }
-.header h1 {
+.title h1 {
     font-size: clamp(1.85rem, 3vw, 2.25rem);
     font-weight: 400;
 }
-.header p {
+.title p {
     font-size: clamp(1.15rem, 3vw, 1.3rem);
     font-weight: 300;
     margin: 0 auto 15px;
@@ -408,9 +408,6 @@ nav {
     }
 }
 @media screen and (max-width: 965px) {
-    .header h2 {
-        margin-top: .5rem;
-    }
     .contact-form {
         grid-template-columns: 1fr;
         max-width: 750px;
@@ -423,7 +420,7 @@ nav {
     }
 }
 @media screen and (max-width: 650px) {
-    .header {
+    .title {
         text-align: left;
     }
 }
@@ -449,7 +446,7 @@ nav {
     body {
         background: var(--clr-blk);
     }
-    .header {
+    .title {
         color: var(--clr-chalk);
     }
     .contact-form {

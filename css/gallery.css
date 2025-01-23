@@ -202,16 +202,16 @@ nav {
     margin: 25px auto 0;
     padding: 0 1rem;
 }
-.grid-container .header {
+.grid-container .title {
     text-align: center;
     grid-column: span 3;
     color: var(--clr-blk);
 }
-.grid-container .header h1 {
+.grid-container .title h1 {
     font-size: clamp(1.85rem, 3vw, 2.25rem);
     font-weight: 400;
 }
-.grid-container .header p {
+.grid-container .title p {
     font-size: clamp(1.15rem, 3vw, 1.3rem);
     font-weight: 300;
     margin: 0 auto 15px;
@@ -407,7 +407,7 @@ nav {
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
     }
-    .grid-container .header {
+    .grid-container .title {
         grid-column: span 2;
     }
 }
@@ -415,7 +415,7 @@ nav {
     .grid-container {
         grid-template-columns: 1fr;
     }
-    .grid-container .header {
+    .grid-container .title {
         text-align: left;
         grid-column: span 1;
     }
@@ -439,7 +439,7 @@ nav {
     body {
         background: var(--clr-blk);
     }
-    .grid-container .header {
+    .grid-container .title {
         color: var(--clr-offWhite);
     }
     .grid-container img {
