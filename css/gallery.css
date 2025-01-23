@@ -409,6 +409,7 @@ nav {
     }
     .grid-container .header {
         grid-column: span 2;
+        padding: 0 .5rem;
     }
 }
 @media screen and (max-width: 768px) {
