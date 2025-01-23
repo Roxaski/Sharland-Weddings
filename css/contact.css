@@ -192,12 +192,13 @@ nav {
     text-align: center;
 }
 .header h1 {
-    font-size: clamp(1.85rem, 3vw, 2.5rem);
+    font-size: clamp(1.85rem, 3vw, 2.25rem);
     font-weight: 400;
 }
 .header p {
     font-size: clamp(1.15rem, 3vw, 1.3rem);
     font-weight: 300;
+    margin: 0 auto 15px;
 }
 /* contact form */
 .contact-container {
