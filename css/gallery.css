@@ -430,11 +430,6 @@ nav {
         grid-template-columns: 1fr;
     }
 }
-@media screen and (max-width: 390px) {
-    .grid-container {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-}
 /* dark mode */
 @media screen and (prefers-color-scheme: dark) {
     ::-webkit-scrollbar-track {
