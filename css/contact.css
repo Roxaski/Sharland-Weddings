@@ -258,13 +258,14 @@ nav {
     bottom: .65rem;
     text-transform: capitalize;
     color: var(--clr-white);
-    font-size: clamp(1.1rem, 3vw, 1.3rem);
-    font-weight: 400;
+    font-size: clamp(1.2rem, 3vw, 1.3rem);
+    font-weight: 300;
 }
 .contact-form .right .input {
     width: 100%;
     padding: .5rem .25rem;
     background: var(--clr-white);
+    font-size: 1rem;
     outline: none;
     border: none;
     margin: 3px auto;

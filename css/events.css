@@ -448,6 +448,14 @@ nav {
         width: 100%;
     }
 }
+@media screen and (max-width: 575px) {
+    .links-wrapper {
+        max-width: 100%;
+    }
+    .links-wrapper .links li {
+        padding: 0 .5rem;
+    }
+}
 @media screen and (max-width: 715px) {
     .other-events .content {
         grid-template-columns: repeat(2, 1fr);
