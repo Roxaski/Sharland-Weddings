@@ -409,7 +409,6 @@ nav {
     }
     .grid-container .header {
         grid-column: span 2;
-        padding: 0 .5rem;
     }
 }
 @media screen and (max-width: 768px) {
@@ -418,6 +417,7 @@ nav {
     }
     .grid-container .header {
         text-align: left;
+        grid-column: span 1;
     }
 }
 @media screen and (max-width: 575px) {
@@ -426,9 +426,6 @@ nav {
     }
     .links-wrapper .links li {
         padding: 0 .5rem;
-    }
-    .grid-container {
-        grid-template-columns: 1fr;
     }
 }
 /* dark mode */
