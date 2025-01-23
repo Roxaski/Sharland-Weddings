@@ -204,8 +204,8 @@ nav {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    padding: .5rem 0;
     grid-column-gap: 7px;
-    margin: 50px auto 0;
     grid-template-areas: 
         'img-one content-one'
         'content-two img-two'
