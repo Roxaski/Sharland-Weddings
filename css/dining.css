@@ -218,6 +218,7 @@ nav {
 .grid-container a {
     cursor: default;
     text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
 }
 .grid-container .img-container {
     position: relative;
