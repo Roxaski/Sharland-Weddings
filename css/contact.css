@@ -272,7 +272,7 @@ nav {
     border-radius: 5px;
 }
 .contact-form .right .input:focus {
-    outline: solid 2px var(--clr-purple);
+    outline: solid 2px var(--clr-grey);
 }
 .contact-form .right textarea {
     resize: none;
