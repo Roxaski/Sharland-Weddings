@@ -571,7 +571,7 @@ nav {
         width: 100%;
     }
     .grid-container ul li {
-        margin: 30px auto;
+        margin: 20px auto;
     }
 }
 @media screen and (max-width: 735px) {
