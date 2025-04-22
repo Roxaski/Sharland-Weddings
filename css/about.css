@@ -213,7 +213,6 @@ main {
 }
 .img-wrapper img {
     position: relative;
-    display: block;
     max-width: 225px;
     width: 80%;
     height: auto;

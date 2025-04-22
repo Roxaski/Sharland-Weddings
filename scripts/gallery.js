@@ -23,7 +23,7 @@ window.onload = () => {
             function imgPreview() {
                 let selectedImg = gallery[newIndex].querySelector('img').src;
                 previewImg.src = selectedImg;
-            }
+            };
 
             //when at the first image it changes the display to none
             if (newIndex == 0) {
@@ -31,7 +31,7 @@ window.onload = () => {
             }
             if (newIndex >= gallery.length - 1) {
                 nextBtn.style.display = 'none';
-            }
+            };
 
             //previous button
             previousBtn.onclick = () => {
@@ -44,7 +44,7 @@ window.onload = () => {
                     nextBtn.style.display = 'block';
                     imgPreview();
                 }
-            }
+            };
 
             //next button
             nextBtn.onclick = () => {
@@ -79,7 +79,7 @@ window.onload = () => {
                 nextBtn.style.display = 'block';
                 imgFocus.style.display = 'none';
                 document.querySelector('body').style.overflow = 'auto';
-            }
-        }
-    }
-}
+            };
+        };
+    };
+};

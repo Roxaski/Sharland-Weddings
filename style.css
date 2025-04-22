@@ -194,7 +194,6 @@ nav {
     position: relative;
 }
 .hero img {
-    display: block;
     width: 100%;
     height: auto;
     mask-image: linear-gradient(180deg, 
