@@ -190,15 +190,20 @@ nav {
     transform: translateY(0) rotate(-45deg);
 }
 /* hero */
-.hero {
+.hero,
+.mobile-hero {
     position: relative;
 }
-.hero img {
+.hero img,
+.mobile-hero img {
     width: 100%;
     height: auto;
     mask-image: linear-gradient(180deg, 
                 rgba(0, 0, 0, 1) 50%, 
                 transparent 90%);
+}
+.mobile-hero img {
+    display: none;
 }
 /* grid layout */
 .grid-container {
@@ -548,6 +553,10 @@ footer .container .section.social i {
         padding: 0 .5rem;
     }
     .hero img {
+        display: none;
+    }
+    .mobile-hero img {
+        display: block;
         height: 50vh;
         object-fit: cover;
     }
