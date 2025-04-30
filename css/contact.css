@@ -42,7 +42,6 @@ nav {
     justify-content: space-between;
     width: 100%;
     background: var(--clr-purple);
-    cursor: default;
     z-index: 1;
 }
 .logo {
@@ -290,7 +289,6 @@ nav {
     font-weight: 400;
     transition: 200ms ease-in;
     border-radius: 5px;
-    cursor: pointer;
 }
 /* media query's*/
 @media screen and (max-width: 1145px) {

@@ -49,7 +49,6 @@ nav {
     justify-content: space-between;
     width: 100%;
     background: var(--clr-purple);
-    cursor: default;
     z-index: 1;
 }
 .logo {
@@ -327,7 +326,6 @@ nav {
     width: 130px;
     border-radius: 5px;
     background: var(--clr-charcoal);
-    cursor: pointer;
 }
 .banner .btn a {
     color: var(--clr-white);

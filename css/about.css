@@ -49,7 +49,6 @@ nav {
     justify-content: space-between;
     width: 100%;
     background: var(--clr-purple);
-    cursor: default;
     z-index: 1;
 }
 .logo {
