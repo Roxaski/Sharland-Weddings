@@ -63,7 +63,6 @@ nav {
 .logo {
     display: flex;
     align-items: center;
-    margin-left: 1rem;
     color: var(--clr-white);
     font-family: "Great Vibes", cursive;
     font-size: clamp(2rem, 3vw, 2.5rem);
@@ -71,9 +70,14 @@ nav {
     text-decoration: none;
     z-index: 2;
 }
+.logo h1 {
+    font-weight: 400;
+    margin-left: 1.5rem;
+}
 .logo img {
     position: relative;
     bottom: .35rem;
+    left: 1rem;
     width: 70px;
     height: auto;
     color: var(--clr-white);
@@ -463,12 +467,11 @@ nav {
         max-width: 100%;
         padding: 0 25px;
     }
-    .logo {
-        position: relative;
-        right: .75rem;
+    .logo h1 {
+        margin-left: 0;
     }
     .logo img {
-        right: .45rem;
+        left: -.6rem;
     }
     .links-wrapper {
         display: block;
