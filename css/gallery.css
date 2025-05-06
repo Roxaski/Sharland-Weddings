@@ -195,100 +195,75 @@ nav {
     display: none;
 }
 /* gallery */
-.grid-container {
+.gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    width: 100%;
-    gap: 0 8px;
+    gap: 8px;
     margin: 25px auto 0;
     padding: 0 1rem;
 }
-.grid-container .title {
+.gallery .title {
     text-align: center;
     grid-column: span 3;
     color: var(--clr-blk);
 }
-.grid-container .title h1 {
+.gallery .title h1 {
     font-size: clamp(1.85rem, 3vw, 2.25rem);
     font-weight: 400;
 }
-.grid-container .title p {
+.gallery .title p {
     font-size: clamp(1.15rem, 3vw, 1.3rem);
     font-weight: 300;
     margin: 0 auto 15px;
 }
-.grid-container img {
+.gallery img {
     width: 100%;
     height: auto;
-    cursor: pointer;
-    color: var(--clr-blk);
-}
-.img-preview {
-    position: fixed;
-    height: auto;
-    width: 100%;
-    max-width: 700px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.5);
-    opacity: 0;
-    pointer-events: none;
-    z-index: 3;
-}
-.img-preview.enhanced {
-    transform: translate(-50%, -50%) scale(1);
-    transition: ease 400ms;
-    opacity: 1;
-    pointer-events: auto;
-}
-.img-preview .details {
-    position: relative;
-    cursor: pointer;
-}
-.img-preview .details i {
-    position: absolute;
-    top: .75rem;
-    right: .95rem;
-    border-radius: 50%;
-    padding: 5px 7px;
-    font-size: clamp(1rem, 3vw, 1.1rem);
-    color: var(--clr-darkGrey);
-    background-color: var(--clr-white);
-}
-.img-preview .img-box {
-    width: 100%;
-    height: auto;
-}
-.img-preview .img-box img {
-    width: 100%;
-    height: auto;
-    cursor: default;
-}
-.img-preview .img-box .slide {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: clamp(2rem, 3vw, 2.5rem);
+    border: 1.5px solid var(--clr-white);
     color: var(--clr-white);
     cursor: pointer;
+}
+.lightbox {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    width: 100%;
+    max-width: 800px;
     z-index: 3;
 }
-.img-preview .img-box .slide.prev {
-    left: .95rem;
+.lightbox img {
+    display: none;
+    width: 100%;
+    height: auto;
 }
-.img-preview .img-box .slide.next {
-    right: .95rem;
+.lightbox img.active {
+    display: block;
 }
-.img-focus {
+.lightbox .btn {
     display: none;
     position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    color: var(--clr-white);
+    cursor: pointer;
+}
+.lightbox .previous {
+    left: -4rem;
+}
+.lightbox .next {
+    right: -4rem;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
     width: 100%;
     height: 100%;
-    top: 0;
-    left: 0;
-    background: var(--clr-offWhite);
-    transition: 350ms ease-in-out;
-    z-index: 1;
+    background: var(--clr-blk);
+    z-index: 2;
 }
 /* media query's*/
 @media screen and (max-width: 1145px) {
@@ -404,18 +379,27 @@ nav {
     }
 }
 @media screen and (max-width: 1113px) {
-    .grid-container {
+    .gallery {
         grid-template-columns: repeat(2, 1fr);
     }
-    .grid-container .title {
+    .gallery .title {
         grid-column: span 2;
     }
 }
+@media screen and (max-width: 865px) {
+    .lightbox img {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    .lightbox .btn i {
+        display: none;
+    }
+}
 @media screen and (max-width: 768px) {
-    .grid-container {
+    .gallery {
         grid-template-columns: 1fr;
     }
-    .grid-container .title {
+    .gallery .title {
         text-align: left;
         grid-column: span 1;
     }
@@ -426,6 +410,14 @@ nav {
     }
     .links-wrapper .links li {
         padding: 0 .5rem;
+    }
+}
+@media screen and (orientation: landscape) and (max-width: 960px) {
+    .lightbox {
+        width: 80%;
+    }
+    .lightbox .btn i {
+        display: none;
     }
 }
 /* dark mode */
@@ -439,10 +431,10 @@ nav {
     body {
         background: var(--clr-blk);
     }
-    .grid-container .title {
+    .gallery .title {
         color: var(--clr-offWhite);
     }
-    .grid-container img {
+    .gallery img {
         color: var(--clr-white);
     }
     .img-focus {
