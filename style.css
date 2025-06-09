@@ -332,7 +332,7 @@ nav {
     border-radius: 5px;
     background: var(--clr-charcoal);
 }
-.banner .btn a {
+.banner .btn p {
     color: var(--clr-white);
     text-decoration: none;
 }
@@ -593,7 +593,7 @@ footer .container .section.social i {
     .banner .btn {
         background: var(--clr-darkGrey);
     }
-    .banner .btn a {
+    .banner .btn p {
         color: var(--clr-white);
     }
 }
