@@ -29,7 +29,7 @@
                 <!-- logo -->
                 <div class="logo">
                     <img draggable="false" src="../assets/logo/logo.svg" alt="logo">
-                    <h1><a class="logo" href="../index.html">Sharland's</a></h1>
+                    <h2><a class="logo" href="../index.html">Sharland's</a></h2>
                 </div>
                 <!-- links -->
                 <div class="links-wrapper">
@@ -74,18 +74,22 @@
                     <p>Don't hesitate to get in touch, our team is always happy to help</p>
                 </div>
                 <div class="contact-form">
-                    <div class="left"></div>
+                    <div class="left">
+                        <img fetchpriority="high" width="2560" height="1440" draggable="false" src="../assets/contact/contact_form.webp" alt="bridal registry">
+                    </div>
                     <div class="right">
                         <div class="contact">
                             <img draggable="false" src="../assets/contact/wedding_rings.svg" alt="">
                             <h2>get in touch</h2>
                             <img draggable="false" src="../assets/contact/wedding_rings.svg" alt="">
                         </div>
-                        <input class="input" type="text" placeholder="Name:">
-                        <input class="input" type="email" placeholder="Email:">
-                        <input class="input" type="text" placeholder="Number:">
-                        <textarea class="input" placeholder="Insert your message here:" maxlength="500"></textarea>
-                        <button>submit</button>
+                        <form>
+                            <input name="name" class="input" type="text" placeholder="Name:" autocomplete="off">
+                            <input name="email" class="input" type="email" placeholder="Email:" autocomplete="off">
+                            <input name="phone number" class="input" type="text" placeholder="Number:" autocomplete="off">
+                            <textarea name="insert your message" class="input" placeholder="Insert your message here:" maxlength="500"></textarea>
+                            <button>submit</button>
+                        </form>
                     </div>
                 </div>
             </div>

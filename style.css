@@ -61,7 +61,7 @@ nav {
     text-decoration: none;
     z-index: 2;
 }
-.logo h1 {
+.logo h2 {
     font-size: 1rem;
     font-weight: 400;
     margin-left: 1.5rem;
@@ -420,7 +420,7 @@ footer .container .section.social i {
         max-width: 100%;
         padding: 0 25px;
     }
-    .logo h1 {
+    .logo h2 {
         margin-left: 0;
     }
     .logo img {
