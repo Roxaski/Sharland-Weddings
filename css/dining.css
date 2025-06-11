@@ -208,7 +208,7 @@ nav {
     text-align: center;
     grid-column: span 2;
 }
-.title h1 {
+.title h2 {
     font-size: clamp(1.85rem, 3vw, 2.25rem);
     font-weight: 400;
 }
