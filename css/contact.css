@@ -272,9 +272,6 @@ nav {
     margin: 3px auto;
     border-radius: 5px;
 }
-.contact-form .right .input:focus {
-    outline: solid 2px var(--clr-grey);
-}
 .contact-form .right textarea {
     resize: none;
     min-height: 100px;
@@ -458,8 +455,5 @@ nav {
     }
     .contact-form .right .input {
         background: var(--clr-cream);
-    }
-    .contact-form .right .input:focus {
-        outline: solid 2px var(--clr-lightPurple);
     }
 }
