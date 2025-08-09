@@ -362,8 +362,6 @@ nav {
 }
 /* footer */
 footer {
-    width: 100%;
-    height: auto;
     padding: 30px 100px;
     color: var(--clr-chalk);
     background: var(--clr-darkGrey);
