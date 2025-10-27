@@ -262,6 +262,10 @@ nav {
     font-size: clamp(1.2rem, 3vw, 1.3rem);
     font-weight: 300;
 }
+.contact-form .right .input,
+.contact-form .right textarea {
+    -webkit-tap-highlight-color: transparent;
+}
 .contact-form .right .input {
     width: 100%;
     padding: .5rem .25rem;
