@@ -35,7 +35,6 @@ body {
 .wrapper {
     max-width: 90rem;
 }
-/* nav */
 .nav-overlay {
     display: none;
 }
@@ -195,7 +194,6 @@ nav {
 .transparent-overlay {
     display: none;
 }
-/* gallery */
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -266,7 +264,6 @@ nav {
     background: var(--clr-blk);
     z-index: 2;
 }
-/* media query's*/
 @media screen and (max-width: 1145px) {
     ::-webkit-scrollbar {
         display: none;
@@ -421,7 +418,6 @@ nav {
         display: none;
     }
 }
-/* dark mode */
 @media screen and (prefers-color-scheme: dark) {
     ::-webkit-scrollbar-track {
         background: var(--clr-blk);

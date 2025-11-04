@@ -29,7 +29,6 @@ body {
 .wrapper {
     max-width: 90rem;
 }
-/* nav */
 .nav-overlay {
     display: none;
 }
@@ -189,7 +188,6 @@ nav {
 .transparent-overlay {
     display: none;
 }
-/* title */
 .title {
     text-align: center;
 }
@@ -202,7 +200,6 @@ nav {
     font-weight: 300;
     margin: 0 auto 15px;
 }
-/* contact form */
 .contact-container {
     display: flex;
     justify-content: center;
@@ -295,7 +292,6 @@ nav {
     transition: 200ms ease-in;
     border-radius: 5px;
 }
-/* media query's*/
 @media screen and (max-width: 1145px) {
     ::-webkit-scrollbar {
         display: none;
@@ -442,7 +438,6 @@ nav {
         top: .25rem;
     }
 }
-/* dark mode */
 @media screen and (prefers-color-scheme: dark) {
     body {
         background: var(--clr-blk);

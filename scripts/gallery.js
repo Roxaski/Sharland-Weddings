@@ -4,32 +4,33 @@ const previousBtn = document.querySelector('.previous');
 const nextBtn = document.querySelector('.next');
 const overlay = document.querySelector('.overlay');
 
-// Stores the index of the currently displayed image
+// stores the index of the currently displayed image
 let currentImage;
 
-// loop through each image in the gallery
-gallery.forEach((img, index) => {
-
-    img.addEventListener('click', () => {
-        currentImage = index;
+// listens out for a click on the gallery
+gallery.addEventListener('click', (e) => {
+    // check if the click is on a gallery image
+    if (e.target.tagName === 'IMG') {
+        // checks which image was clicked from the array of gallery images
+        currentImage = Array.from(galleryImgs).indexOf(e.target);
 
         displayOverlay();
         imagePreview();
-        preload(currentImage +1);
-        preload(currentImage -1);
-    });
+        preload(currentImage + 1);
+        preload(currentImage - 1);
+    };
+});
 
-    // opens the selected image when pressing enter on keyboard
-    img.addEventListener('keydown', (e) => {
-        if(e.key === 'Enter') {
-            currentImage = index;
+// listens out for the enter key on the gallery
+gallery.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && e.target.tagName === 'IMG') {
+        currentImage = Array.from(galleryImgs).indexOf(e.target);
 
-            displayOverlay();
-            imagePreview();
-            preload(currentImage +1);
-            preload(currentImage -1);
-        };
-    });
+        displayOverlay();
+        imagePreview();
+        preload(currentImage + 1);
+        preload(currentImage - 1);
+    };
 });
 
 // preloads the previous and next image
@@ -43,7 +44,7 @@ function preload(imageIndex) {
 
 // displays an overlay
 function displayOverlay() {
-    document.querySelector('body').style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
     overlay.style.display = 'block';
 };
 
@@ -86,7 +87,7 @@ previousBtn.addEventListener('click', () => {
 
 // removes overlay, image and buttons
 function closeOverlay() {
-    document.querySelector('body').style.overflow = 'auto';
+    document.body.style.overflow = 'auto';
     lightbox.classList.remove('active');
     overlay.style.display = 'none';
     nextBtn.style.display = 'none';
