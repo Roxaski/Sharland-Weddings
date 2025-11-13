@@ -1,6 +1,6 @@
 # Sharland-Weddings
 
-![Sharland_Weddings](https://github.com/user-attachments/assets/06fe451e-dc1a-4c2f-ad7d-6703b9d826dc)
+<img width="1920" height="1080" alt="github_read me" src="https://github.com/user-attachments/assets/b2b96c46-f607-4ec9-adc1-b001e35b14bc" />
 
 ## Welcome to Sharlad Weddings
 
