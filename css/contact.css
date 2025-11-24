@@ -7,6 +7,7 @@
     --clr-white: #fefefe;
     --clr-offWhite: #c6c5c5;
     --clr-chalk: #dbdada;
+    --clr-chevronWhite: #d6d4d4;
     --clr-cream: #ededed;
     --clr-blk: #000000;
     --clr-grey: #a9a8a8;
@@ -108,7 +109,7 @@ nav {
 }
 .links-wrapper .links li .arrow {
     text-align: center;
-    color: var(--clr-white);
+    color: var(--clr-chevronWhite);
     width: 22px;
     height: 100%;
     line-height: 70px;
