@@ -1,3 +1,32 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Great Vibes';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/great-vibes-v21-latin-regular.woff2') format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 200;
+  src: url('../assets/fonts/poppins-v24-latin-200.woff2') format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../assets/fonts/poppins-v24-latin-300.woff2') format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/poppins-v24-latin-regular.woff2') format('woff2');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -196,23 +225,25 @@ nav {
 .overlay {
     display: none;
 }
-main {
-    position: relative;
-}
 .banner {
+    position: relative;
+    width: 100%;
+    height: 185px;
+}
+.banner img {
     position: absolute;
     max-width: 700px;
     width: 100%;
-    top: 9rem;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -18%);
     height: auto;
 }
 .img-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 155px auto 0;
+    margin: clamp(50px, 10vw, 0) auto 0;
 }
 .img-wrapper img {
     position: relative;
@@ -224,7 +255,7 @@ main {
 }
 .img-wrapper .border {
     position: absolute;
-    max-width: 295px;
+    max-width: 330px;
     width: 100%;
 }
 .border.light {
@@ -379,6 +410,14 @@ main {
     }
     .links-wrapper .links li {
         padding: 0 .5rem;
+    }
+}
+@media screen and (max-width: 325px) {
+    .img-wrapper img {
+        max-width: 205px;
+    }
+    .img-wrapper .border {
+        max-width: 305px;
     }
 }
 @media screen and (prefers-color-scheme: dark) {
