@@ -74,11 +74,16 @@
 
                 <div class="contact-form">
                     <div class="left">
-                        <img fetchpriority="high" width="2560" height="1440" draggable="false" 
-                        src="../assets/contact/contact_form.webp"
-                        srcset=""
-                        sizes=""
-                        alt="bridal registry">
+                        <img fetchpriority="high" width="1920" height="1080" draggable="false" 
+                        src="../assets/contact/contact_form_extra_large.webp"
+                        srcset="../assets/contact/contact_form_small.webp 480w,
+                                ../assets/contact/contact_form_medium.webp 800w,
+                                ../assets/contact/contact_form_large.webp 1200w,
+                                ../assets/contact/contact_form_extra_large.webp 1920w"
+                        sizes="(max-width: 965px) 100vw, 
+                               (max-width: 1440px) 50vw, 
+                               450px"
+                        alt="bridal gifts">
                     </div>
 
                     <div class="right">
@@ -92,13 +97,9 @@
 
                         <form>
                             <input name="name" class="input" type="text" placeholder="Name:" autocomplete="off">
-
                             <input name="email" class="input" type="email" placeholder="Email:" autocomplete="off">
-
                             <input name="phone number" class="input" type="text" placeholder="Number:" autocomplete="off">
-
                             <textarea name="insert your message" class="input" placeholder="Insert your message here:" maxlength="500"></textarea>
-                            
                             <button type="button">submit</button>
                         </form>
                     </div>
