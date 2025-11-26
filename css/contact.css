@@ -12,7 +12,6 @@
     --clr-blk: #000000;
     --clr-grey: #a9a8a8;
     --clr-lightGrey: #c5c4c1;
-    --clr-lightCharcoal: #393838;
     --clr-charcoal: #4a4a4a;
     --clr-darkGrey: #2c2c2c;
     --clr-purple: #5d0f9c;
@@ -448,10 +447,10 @@ nav {
     }
     .contact-form {
         color: var(--clr-cream);
-        background-color: var(--clr-charcoal);
+        background-color: var(--clr-darkGrey);
     }
     .contact-form .right button {
-        background: var(--clr-lightCharcoal);
+        background: var(--clr-charcoal);
     }
     .contact-form .right .input {
         background: var(--clr-cream);
