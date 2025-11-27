@@ -237,15 +237,15 @@ nav {
     flex-direction: column;
 }
 .grid-container .img-container .title h2 {
-    text-transform: uppercase;
+    text-transform: capitalize;
     color: var(--clr-darkGrey);
     background: var(--clr-white);
     font-size: clamp(1rem, 3vw, 1.2rem);
     font-weight: 300;
     padding: .45rem .75rem;
     border-radius: 5px;
-    margin: 20px auto;
     cursor: pointer;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, .5);
 }
 @media screen and (max-width: 1145px) {
     ::-webkit-scrollbar {
