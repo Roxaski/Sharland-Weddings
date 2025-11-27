@@ -479,6 +479,9 @@ nav {
         color: var(--clr-cream);
         background-color: var(--clr-darkGrey);
     }
+    .contact-form .right h2 {
+        color: var(--clr-cream);
+    }
     .contact-form .right button {
         background: var(--clr-charcoal);
     }
