@@ -12,6 +12,7 @@
     --clr-blk: #000000;
     --clr-grey: #a9a8a8;
     --clr-lightGrey: #c5c4c1;
+    --clr-lightCharcoal: #585858;
     --clr-charcoal: #4a4a4a;
     --clr-darkGrey: #2c2c2c;
     --clr-purple: #5d0f9c;
@@ -217,7 +218,7 @@ nav {
     max-width: 900px;
     margin: 15px auto;
     color: var(--clr-white);
-    background-color: var(--clr-lightGrey);
+    background-color: var(--clr-chalk);
     border-radius: 5px;
     box-shadow: 1px 3px 5px rgba(0, 0, 0, .4);
 }
@@ -255,9 +256,9 @@ nav {
     position: relative;
     bottom: .65rem;
     text-transform: capitalize;
-    color: var(--clr-white);
+    color: var(--clr-lightCharcoal);
     font-size: clamp(1.2rem, 3vw, 1.3rem);
-    font-weight: 300;
+    font-weight: 400;
 }
 .contact-form .right .input,
 .contact-form .right textarea {
