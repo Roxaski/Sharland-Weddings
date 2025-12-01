@@ -231,7 +231,7 @@ nav {
 .menu-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: .6rem;
     padding: 0 1rem;
 }
 .menu-container .title {
@@ -301,13 +301,14 @@ nav {
 }
 .menu-container .menu {
     border-radius: 5px;
-    box-shadow: 1px 2px 5px rgba(0, 0, 0, .4);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, .2);
 }
 .menu-container .menu img {
-    width: 125px;
+    width: 145px;
     height: auto;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    object-fit: contain;
 }
 .menu-container .menu .content {
     display: flex;
@@ -350,10 +351,10 @@ nav {
     text-align: center;
 }
 .price-container .content {
-    background: var(--clr-purple);
-    padding: 2.75rem 0;
+    background: var(--clr-white);
     border-radius: 5px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, .5);
+    padding: 2.75rem 0;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, .2);
 }
 .price-container.package-advert .content {
     padding: 3.5rem 0;
@@ -365,11 +366,12 @@ nav {
     font-weight: 200;
     text-align: center;
     text-transform: capitalize;
-    color: var(--clr-white);
+    color: var(--clr-darkGrey);
     padding: 0 .5rem;
 }
 .price-container.package-advert .content .title p {
     letter-spacing: 1px;
+    color: var(--clr-darkGrey);
 }
 .price-container .content .package-price {
     margin: 20px auto 0;
@@ -386,14 +388,14 @@ nav {
     letter-spacing: 1.5px;
     text-align: center;
     font-weight: 300;
-    color: var(--clr-milkWhite);
+    color: var(--clr-charcoal);
 }
 .package-container .content,
 .package-container.packages .content {
     display: grid;
-    margin: 10px auto 0;
+    margin: .6rem auto 0;
     padding: 0 1rem;
-    gap: .5rem;
+    gap: .6rem;
 }
 .package-container .content {
     grid-template-columns: repeat(2, 1fr);
@@ -406,14 +408,14 @@ nav {
 .package-container .content .right {
     margin: 0 auto;
     text-align: center;
-    background: var(--clr-purple);
+    background: var(--clr-white);
     border-radius: 5px;
     width: 100%;
     padding: 3rem;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, .5);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, .2);
 }
 .package-container .content h4 {
-    color: var(--clr-white);
+    color: var(--clr-charcoal);
     font-weight: 200;
     text-transform: capitalize;
     letter-spacing: 1px;
@@ -424,18 +426,18 @@ nav {
 }
 .package-container .content .btn a {
     padding: .5rem .75rem;
-    background: var(--clr-lightPurple);
+    background: var(--clr-coolGrey);
     color: var(--clr-white);
     font-weight: 300;
     text-transform: capitalize;
     letter-spacing: 1.5px;
     text-decoration: none;
     border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, .1);
     transition: 200ms ease-out;
 }
 .package-container .content .btn a:hover {
-    background: var(--clr-darkPurple);
+    background: var(--clr-shadowGrey);
 }
 @media screen and (max-width: 1145px) {
     ::-webkit-scrollbar {
@@ -539,7 +541,7 @@ nav {
         transform: rotate(315deg);
     }
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 900px) {
     .menu-container {
         grid-template-columns: repeat(3, 1fr);
         gap: .75rem;
@@ -561,6 +563,7 @@ nav {
         width: 100%;
         margin: 0;
         padding: .55rem;
+        border-radius: 0;
     }
     .price-container.package-advert {
         padding: 0 1rem;
@@ -573,11 +576,6 @@ nav {
         padding: 0 1rem;
     }
 }
-@media screen and (max-width: 835px) {
-    .package-container.packages .content {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 @media screen and (max-width: 786px) {
     .menu-container {
         grid-template-columns: repeat(2, 1fr);
@@ -586,8 +584,11 @@ nav {
         grid-column: span 2;
     }
 }
-@media screen and (max-width: 735px) {
+@media screen and (max-width: 675px) {
     .package-container .content {
+        grid-template-columns: 1fr;
+    }
+    .package-container.packages .content {
         grid-template-columns: 1fr;
     }
 }
@@ -601,14 +602,8 @@ nav {
     .img-container {
         display: none;
     }
-    .package-container.packages .content {
-        grid-template-columns: 1fr;
-    }
     .menu-container {
         grid-template-columns: 1fr;
-    }
-    .menu-container .menu .description {
-        border-radius: 5px;
     }
     .menu-container .title {
         grid-column: span 1;
