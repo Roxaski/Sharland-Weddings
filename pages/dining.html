@@ -3,17 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sharland's | Wedding Planners | Dining Menu</title>
-    <meta name="description" content="Come take a look at our extensive menus and all the delicious food they have to offer, with a wide selection that caters to everyone's needs">
+    <title>Sharland's Wedding Planners | Dining Menus</title>
+    <meta name="description" content="Browse our complete dining menus, choose from appetizers, vegetarian, pescatarian, desserts and more. Premium packages for weddings & events.">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:site_name" content="Sharland's Wedding Planners"/>
+    <meta property="og:title" content="Sharland's Wedding Planners | Dining Menus">
+    <meta property="og:description" content="Browse our complete dining menus, choose from appetizers, vegetarian, pescatarian, desserts and more. Premium packages for weddings & events.">
+    <meta property="og:image" content="https://roxaski.github.io/Sharland-Weddings/assets/open_graph/og_dining.jpg">
+    <meta property="og:image:alt" content="Sharland's Wedding Planners | Dining Menus">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://roxaski.github.io/Sharland-Weddings/"/>
+    <meta property="og:type" content="website"/>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sharland's Wedding Planners | Dining Menus">
+    <meta name="twitter:description" content="Browse our complete dining menus, choose from appetizers, vegetarian, pescatarian, desserts and more. Premium packages for weddings & events.">
+    <meta name="twitter:image" content="https://roxaski.github.io/Sharland-Weddings/assets/open_graph/og_dining.jpg">
+    <meta name="twitter:image:alt" content="Sharland's Wedding Planners | Dining Menus">
     <link rel="icon" type="image/png" href="../favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
     <link rel="shortcut icon" href="../favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
     <link rel="manifest" href="../site.webmanifest" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <script async defer src="https://kit.fontawesome.com/2d21b2aa33.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/dining.css">
     <script defer src="../script.js"></script>
 </head>
@@ -64,7 +76,7 @@
             </nav>
         </header>
 
-        <section>
+        <main>
             <div class="grid-container">
                 <div class="title">
                     <h2>Dining Experience</h2>
@@ -72,7 +84,16 @@
                 </div>
 
                 <div class="img-container">
-                    <img fetchpriority="high" width="2560" height="1440" draggable="false" src="../assets/dining/standard.webp" alt="stir fry">
+                    <img fetchpriority="high" width="1920" height="1080" draggable="false" 
+                    src="../assets/dining/standard_extra_large.webp" 
+                    srcset="../assets/dining/standard_small.webp 480w,
+                            ../assets/dining/standard_medium.webp 800w,
+                            ../assets/dining/standard_large.webp 1200w,
+                            ../assets/dining/standard_extra_large.webp 1920w"
+                    sizes="(max-width: 768px) 100vw, 
+                           (max-width: 1145px) 50vw, 
+                           50vw"
+                    alt="stir fry">
 
                     <div class="title">
                         <a href="./menu_standard_package.html"><h2>standard package</h2></a>
@@ -80,15 +101,33 @@
                 </div>
 
                 <div class="img-container">
-                    <img width="2560" height="1440" draggable="false" src="../assets/dining/deluxe.webp" alt="meat platter">
+                    <img fetchpriority="high" width="1920" height="1080" draggable="false" 
+                    src="../assets/dining/deluxe_extra_large.webp" 
+                    srcset="../assets/dining/deluxe_small.webp 480w,
+                            ../assets/dining/deluxe_medium.webp 800w,
+                            ../assets/dining/deluxe_large.webp 1200w,
+                            ../assets/dining/deluxe_extra_large.webp 1920w"
+                    sizes="(max-width: 768px) 100vw, 
+                           (max-width: 1145px) 50vw, 
+                           50vw"
+                    alt="meat platter">
 
                     <div class="title">
-                        <a href="./menu_deluxe_package.html"><h2>deluxe package</h2>                    </a>
+                        <a href="./menu_deluxe_package.html"><h2>deluxe package</h2></a>
                     </div>
                 </div>
 
                 <div class="img-container">
-                    <img width="2560" height="1440" draggable="false" src="../assets/dining/premium.webp" alt="food buffet">
+                    <img loading="lazy" width="1920" height="1080" draggable="false" 
+                    src="../assets/dining/premium_extra_large.webp" 
+                    srcset="../assets/dining/premium_small.webp 480w,
+                            ../assets/dining/premium_medium.webp 800w,
+                            ../assets/dining/premium_large.webp 1200w,
+                            ../assets/dining/premium_extra_large.webp 1920w"
+                    sizes="(max-width: 768px) 100vw, 
+                           (max-width: 1145px) 50vw, 
+                           50vw"
+                    alt="food buffet">
 
                     <div class="title">
                         <a href="./menu_premium_package.html"><h2>premium package</h2></a>
@@ -96,46 +135,91 @@
                 </div>
 
                 <div class="img-container">
-                    <img width="2560" height="1440" draggable="false" src="../assets/dining/appetizer.webp" alt="wine and cheeseboard">
+                    <img loading="lazy" width="1920" height="1080" draggable="false" 
+                    src="../assets/dining/appetizers_extra_large.webp"
+                    srcset="../assets/dining/appetizers_small.webp 480w,
+                            ../assets/dining/appetizers_medium.webp 800w,
+                            ../assets/dining/appetizers_large.webp 1200w,
+                            ../assets/dining/appetizers_extra_large.webp 1920w"
+                    sizes="(max-width: 768px) 100vw, 
+                           (max-width: 1145px) 50vw, 
+                           50vw"
+                    alt="wine and cheeseboard">
 
                     <div class="title">
-                        <a href="./menu_appetizers.html"><h2>appetizers</h2></a>
+                        <a href="./menu_appetizers.html"><h2>appetizers menu</h2></a>
                     </div>
                 </div>
 
                 <div class="img-container">
-                    <img width="2560" height="1440" draggable="false" src="../assets/dining/vegetarian.webp" alt="stuffed mushrooms">
+                    <img loading="lazy" width="1920" height="1080" draggable="false" 
+                    src="../assets/dining/vegetarian_extra_large.webp" 
+                    srcset="../assets/dining/vegetarian_small.webp 480w,
+                            ../assets/dining/vegetarian_medium.webp 800w,
+                            ../assets/dining/vegetarian_large.webp 1200w,
+                            ../assets/dining/vegetarian_extra_large.webp 1920w"
+                    sizes="(max-width: 768px) 100vw, 
+                           (max-width: 1145px) 50vw, 
+                           50vw"
+                    alt="stuffed mushrooms">
 
                     <div class="title">
-                        <a href="./menu_vegetarian.html"><h2>vegetarian</h2></a>
+                        <a href="./menu_vegetarian.html"><h2>vegetarian menu</h2></a>
                     </div>
                 </div>
 
                 <div class="img-container">
-                    <img width="2560" height="1440" draggable="false" src="../assets/dining/pescatarian.webp" alt="sushi">
+                    <img loading="lazy" width="1920" height="1080" draggable="false" 
+                    src="../assets/dining/pescatarian_extra_large.webp" 
+                    srcset="../assets/dining/pescatarian_small.webp 480w,
+                            ../assets/dining/pescatarian_medium.webp 800w,
+                            ../assets/dining/pescatarian_large.webp 1200w,
+                            ../assets/dining/pescatarian_extra_large.webp 1920w"
+                    sizes="(max-width: 768px) 100vw, 
+                           (max-width: 1145px) 50vw, 
+                           50vw"
+                    alt="sushi">
 
                     <div class="title">
-                        <a href="./menu_pescatarian.html"><h2>pescatarian</h2></a>
+                        <a href="./menu_pescatarian.html"><h2>pescatarian menu</h2></a>
                     </div>
                 </div>
 
                 <div class="img-container">
-                    <img width="2560" height="1440" draggable="false"  src="../assets/dining/dessert.webp" alt="tiramisu">
+                    <img loading="lazy" width="1920" height="1080" draggable="false"  
+                    src="../assets/dining/desserts_extra_large.webp" 
+                    srcset="../assets/dining/desserts_small.webp 480w,
+                            ../assets/dining/desserts_medium.webp 800w,
+                            ../assets/dining/desserts_large.webp 1200w,
+                            ../assets/dining/desserts_extra_large.webp 1920w"
+                    sizes="(max-width: 768px) 100vw, 
+                           (max-width: 1145px) 50vw, 
+                           50vw"
+                    alt="tiramisu">
 
                     <div class="title">
-                        <a href="./menu_desserts.html"><h2>desserts</h2></a>
+                        <a href="./menu_desserts.html"><h2>desserts menu</h2></a>
                     </div>
                 </div>
 
                 <div class="img-container">
-                    <img width="2560" height="1440" draggable="false"  src="../assets/dining/beverages.webp" alt="orange juices">
+                    <img loading="lazy" width="1920" height="1080" draggable="false"  
+                    src="../assets/dining/beverages_extra_large.webp" 
+                    srcset="../assets/dining/beverages_small.webp 480w,
+                            ../assets/dining/beverages_medium.webp 800w,
+                            ../assets/dining/beverages_large.webp 1200w,
+                            ../assets/dining/beverages_extra_large.webp 1920w"
+                    sizes="(max-width: 768px) 100vw, 
+                           (max-width: 1145px) 50vw, 
+                           50vw"
+                    alt="orange juices">
                     
                     <div class="title">
-                        <a href="./menu_beverages.html"><h2>beverages</h2></a>
+                        <a href="./menu_beverages.html"><h2>beverages menu</h2></a>
                     </div>
                 </div>
             </div>
-        </section>
+        </main>
     </div>
 </body>
 </html>

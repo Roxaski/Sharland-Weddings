@@ -3,17 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sharland's | Wedding Planners | Standard Dining Package</title>
-    <meta name="description" content="Check out our Standard Package, come and browse all the delicious food we have on offer">
+    <title>Sharland's Wedding Planners | Standard Package Menu</title>
+    <meta name="description" content="Sharland's Wedding Planners Standard Package features premium dining with fresh seafood, grilled meats, artisan desserts & more. We offer catering for up to 75+ wedding guests.">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:site_name" content="Sharland's Wedding Planners"/>
+    <meta property="og:title" content="Sharland's Wedding Planners | Standard Package Menu">
+    <meta property="og:description" content="Sharland's Wedding Planners Standard Package features premium dining with fresh seafood, grilled meats, artisan desserts & more. We offer catering for up to 75+ wedding guests.">
+    <meta property="og:image" content="https://roxaski.github.io/Sharland-Weddings/assets/open_graph/og_standard_menu.jpg">
+    <meta property="og:image:alt" content="Sharland's Wedding Planners | Standard Package Menu">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://roxaski.github.io/Sharland-Weddings/"/>
+    <meta property="og:type" content="website"/>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sharland's Wedding Planners | Standard Package Menu">
+    <meta name="twitter:description" content="Sharland's Wedding Planners Standard Package features premium dining with fresh seafood, grilled meats, artisan desserts & more. We offer catering for up to 75+ wedding guests.">
+    <meta name="twitter:image" content="https://roxaski.github.io/Sharland-Weddings/assets/open_graph/og_standard_menu.jpg">
+    <meta name="twitter:image:alt" content="Sharland's Wedding Planners | Standard Package Menu">
     <link rel="icon" type="image/png" href="../favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
     <link rel="shortcut icon" href="../favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
     <link rel="manifest" href="../site.webmanifest" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <script async defer src="https://kit.fontawesome.com/2d21b2aa33.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/menu.css">
     <script defer src="../script.js"></script>
 </head>
@@ -64,7 +76,14 @@
 
         <main>
             <div class="img-container">
-                <img fetchpriority="high" width="2560" height="600" draggable="false" src="../assets/menu/banners/standard.webp" alt="margherita pizza">
+                <img fetchpriority="high" width="1920" height="450" draggable="false" 
+                src="../assets/menu/banners/standard_extra_large.webp" 
+                srcset="../assets/menu/banners/standard_small.webp 480w,
+                        ../assets/menu/banners/standard_medium.webp 768w,
+                        ../assets/menu/banners/standard_large.webp 1280w,
+                        ../assets/menu/banners/standard_extra_large.webp 1920w"
+                sizes="100vw"
+                alt="margherita pizza">
 
                 <div class="banner-title">
                     <h1>standard package</h1>
@@ -79,18 +98,17 @@
 
                 <div class="menu">
                     <div class="content">
-                        <img width="800" height="800" draggable="false" src="../assets/menu/dishes/appetizers/greek_salad.webp" alt="greek salad">
-                        <div class="description">
-
-                            <h3>greek salad</h3>
-                            <p>Classic greek salad consisting of a wide variety of fresh vegetables, such as bell peppers, onions, olives, feta cheese and romaine lettuce</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="menu">
-                    <div class="content">
-                        <img width="800" height="800" draggable="false" src="../assets/menu/dishes/appetizers/tempura_prawns.webp" alt="tempura prawns">
+                        <img loading="lazy" width="1200" height="1200" draggable="false" 
+                        src="../assets/menu/dishes/appetizers/tempura_prawns_extra_large.webp"
+                        srcset="../assets/menu/dishes/appetizers/tempura_prawns_small.webp 400w,
+                                ../assets/menu/dishes/appetizers/tempura_prawns_medium.webp 600w,
+                                ../assets/menu/dishes/appetizers/tempura_prawns_large.webp 800w,
+                                ../assets/menu/dishes/appetizers/tempura_prawns_extra_large.webp 1200w"
+                        sizes="(max-width: 575px) 100vw,
+                               (max-width: 786px) 50vw,
+                               (max-width: 900px) 33vw,
+                               50vw" 
+                        alt="tempura prawns">
 
                         <div class="description">
                             <h3>tempura prawns</h3>
@@ -101,9 +119,37 @@
 
                 <div class="menu">
                     <div class="content">
-                        <img width="800" height="800" draggable="false" src="../assets/menu/dishes/appetizers/spring_rolls.webp" alt="spring rolls">
-                        <div class="description">
+                        <img loading="lazy" width="1200" height="1200" draggable="false" 
+                        src="../assets/menu/dishes/appetizers/hanamaki.webp" 
+                        srcset="../assets/menu/dishes/appetizers/hanamaki_small.webp 400w,
+                                ../assets/menu/dishes/appetizers/hanamaki_medium.webp 600w,
+                                ../assets/menu/dishes/appetizers/hanamaki_large.webp 800w,
+                                ../assets/menu/dishes/appetizers/hanamaki_extra_large.webp 1200w"
+                        sizes=""
+                        alt="hanamaki">
 
+                        <div class="description">
+                            <h3>hanamaki</h3>
+                            <p>Steaming hot and freshly made to order, they can be made to either be sweet or traditional, comes stuffed beetroot or purple sweet potato</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu">
+                    <div class="content">
+                        <img loading="lazy" width="1200" height="1200" draggable="false" 
+                        src="../assets/menu/dishes/appetizers/spring_rolls_extra_large.webp" 
+                        srcset="../assets/menu/dishes/appetizers/spring_rolls_small.webp 400w,
+                                ../assets/menu/dishes/appetizers/spring_rolls_medium.webp 600w,
+                                ../assets/menu/dishes/appetizers/spring_rolls_large.webp 800w,
+                                ../assets/menu/dishes/appetizers/spring_rolls_extra_large.webp 1200w"
+                        sizes="(max-width: 575px) 100vw,
+                               (max-width: 786px) 50vw,
+                               (max-width: 900px) 33vw,
+                               50vw"
+                        alt="spring rolls">
+
+                        <div class="description">
                             <h3>spring rolls</h3>
                             <p>Lightly fried pastry, filled with a healthy dose of salad, spring onions, red onion, and carrots, comes with sweet or spicy dipping sauces</p>
                         </div>
@@ -112,11 +158,21 @@
 
                 <div class="menu">
                     <div class="content">
-                        <img width="800" height="800" draggable="false" src="../assets/menu/dishes/appetizers/hanamaki.webp" alt="hanamaki">
-                        <div class="description">
+                        <img loading="lazy" width="1200" height="1200" draggable="false" 
+                        src="../assets/menu/dishes/appetizers/greek_salad_extra_large.webp" 
+                        srcset="../assets/menu/dishes/appetizers/greek_salad_small.webp 400w,
+                                ../assets/menu/dishes/appetizers/greek_salad_medium.webp 600w,
+                                ../assets/menu/dishes/appetizers/greek_salad_large.webp 800w,
+                                ../assets/menu/dishes/appetizers/greek_salad_extra_large.webp 1200w"
+                        sizes="(max-width: 575px) 100vw,
+                               (max-width: 786px) 50vw,
+                               (max-width: 900px) 33vw,
+                               50vw"
+                        alt="greek salad">
 
-                            <h3>hanamaki</h3>
-                            <p>Steaming hot and freshly made to order, they can be made to either be sweet or traditional, comes stuffed beetroot or purple sweet potato</p>
+                        <div class="description">
+                            <h3>greek salad</h3>
+                            <p>Classic greek salad consisting of a wide variety of fresh vegetables, such as bell peppers, onions, olives, feta cheese and romaine lettuce</p>
                         </div>
                     </div>
                 </div>
@@ -127,7 +183,17 @@
 
                 <div class="menu">
                     <div class="content">
-                        <img width="800" height="800" draggable="false" src="../assets/menu/dishes/main/chargrill_chicken.webp" alt="chargrill chicken">
+                        <img loading="lazy" width="1200" height="1200" draggable="false" 
+                        src="../assets/menu/dishes/main/chargrill_chicken_extra_large.webp"
+                        srcset="../assets/menu/dishes/main/chargrill_chicken_small.webp 400w,
+                                ../assets/menu/dishes/main/chargrill_chicken_medium.webp 600w,
+                                ../assets/menu/dishes/main/chargrill_chicken_large.webp 800w,
+                                ../assets/menu/dishes/main/chargrill_chicken_extra_large.webp 1200w"
+                        sizes="(max-width: 575px) 100vw,
+                               (max-width: 786px) 50vw,
+                               (max-width: 900px) 33vw,
+                               50vw"
+                        alt="chargrill chicken">
 
                         <div class="description">
                             <h3>chargrill chicken</h3>
@@ -138,9 +204,19 @@
 
                 <div class="menu">
                     <div class="content">
-                        <img width="800" height="800" draggable="false" src="../assets/menu/dishes/main/brazen_cod.webp" alt="brazen cod">
-                        <div class="description">
+                        <img loading="lazy" width="1200" height="1200" draggable="false" 
+                        src="../assets/menu/dishes/main/brazen_cod_extra_large.webp" 
+                        srcset="../assets/menu/dishes/main/brazen_cod_small.webp 400w,
+                                ../assets/menu/dishes/main/brazen_cod_medium.webp 600w,
+                                ../assets/menu/dishes/main/brazen_cod_large.webp 800w,
+                                ../assets/menu/dishes/main/brazen_cod_extra_large.webp 1200w"
+                        sizes="(max-width: 575px) 100vw,
+                               (max-width: 786px) 50vw,
+                               (max-width: 900px) 33vw,
+                               50vw"
+                        alt="brazen cod">
 
+                        <div class="description">
                             <h3>brazen cod</h3>
                             <p>Deep fried cod served on a ded of mashed potato, with a variety of seasonal vegetables, along with potato crisps and onions</p>
                         </div>
@@ -149,7 +225,17 @@
 
                 <div class="menu">
                     <div class="content">
-                        <img width="800" height="800" draggable="false" src="../assets/menu/dishes/main/plant_based_burgers.webp" alt="plant based burgers">
+                        <img loading="lazy" width="1200" height="1200" draggable="false" 
+                        src="../assets/menu/dishes/main/plant_based_burgers_extra_large.webp" 
+                        srcset="../assets/menu/dishes/main/plant_based_burgers_small.webp 400w,
+                                ../assets/menu/dishes/main/plant_based_burgers_medium.webp 600w,
+                                ../assets/menu/dishes/main/plant_based_burgers_large.webp 800w,
+                                ../assets/menu/dishes/main/plant_based_burgers_extra_large.webp 1200w"
+                        sizes="(max-width: 575px) 100vw,
+                               (max-width: 786px) 50vw,
+                               (max-width: 900px) 33vw,
+                               50vw"
+                        alt="plant based burgers">
 
                         <div class="description">
                             <h3>plant based burgers</h3>
@@ -160,7 +246,17 @@
 
                 <div class="menu">
                     <div class="content">
-                        <img width="800" height="800" draggable="false" src="../assets/menu/dishes/main/vegetable_skewer.webp" alt="vegetable skewer">
+                        <img loading="lazy" width="1200" height="1200" draggable="false" 
+                        src="../assets/menu/dishes/main/vegetable_skewer_extra_large.webp"
+                        srcset="../assets/menu/dishes/main/vegetable_skewer_small.webp 400w,
+                                ../assets/menu/dishes/main/vegetable_skewer_medium.webp 600w,
+                                ../assets/menu/dishes/main/vegetable_skewer_large.webp 800w,
+                                ../assets/menu/dishes/main/vegetable_skewer_extra_large.webp 1200w"
+                        sizes="(max-width: 575px) 100vw,
+                               (max-width: 786px) 50vw,
+                               (max-width: 900px) 33vw,
+                               50vw"
+                        alt="vegetable skewer">
 
                         <div class="description">
                             <h3>vegetable skewers</h3>
@@ -175,7 +271,17 @@
 
                 <div class="menu">
                     <div class="content">
-                        <img width="800" height="800" draggable="false" src="../assets/menu/dishes/desserts/fruity_cupcake.webp" alt="fruity cupcake">
+                        <img loading="lazy" width="1200" height="1200" draggable="false" 
+                        src="../assets/menu/dishes/desserts/fruity_cupcake_extra_large.webp"
+                        srcset="../assets/menu/dishes/desserts/fruity_cupcake_small.webp 400w,
+                                ../assets/menu/dishes/desserts/fruity_cupcake_medium.webp 600w,
+                                ../assets/menu/dishes/desserts/fruity_cupcake_large.webp 800w,
+                                ../assets/menu/dishes/desserts/fruity_cupcake_extra_large.webp 1200w"
+                        sizes="(max-width: 575px) 100vw,
+                               (max-width: 786px) 50vw,
+                               (max-width: 900px) 33vw,
+                               50vw" 
+                        alt="fruity cupcake">
 
                         <div class="description">
                             <h3>fruity cupcake</h3>
@@ -186,9 +292,19 @@
 
                 <div class="menu">
                     <div class="content">
-                        <img width="800" height="800" draggable="false" src="../assets/menu/dishes/desserts/banana_split.webp" alt="banana split">
-                        <div class="description">
+                        <img loading="lazy" width="1200" height="1200" draggable="false" 
+                        src="../assets/menu/dishes/desserts/banana_split_extra_large.webp" 
+                        srcset="../assets/menu/dishes/desserts/banana_split_small.webp 400w,
+                                ../assets/menu/dishes/desserts/banana_split_medium.webp 600w,
+                                ../assets/menu/dishes/desserts/banana_split_large.webp 800w,
+                                ../assets/menu/dishes/desserts/banana_split_extra_large.webp 1200w"
+                        sizes="(max-width: 575px) 100vw,
+                               (max-width: 786px) 50vw,
+                               (max-width: 900px) 33vw,
+                               50vw"
+                        alt="banana split">
 
+                        <div class="description">
                             <h3>banana split</h3>
                             <p>Two bananas served with vanilla icecream, topped with either chocolate or caramel sauce, whipped cream, pistachios and a cherry on top</p>
                         </div>
@@ -197,20 +313,40 @@
 
                 <div class="menu">
                     <div class="content">
-                        <img width="800" height="800" draggable="false" src="../assets/menu/dishes/desserts/pancakes.webp" alt="pancakes">
-                        <div class="description">
+                        <img loading="lazy" width="1200" height="1200" draggable="false" 
+                        src="../assets/menu/dishes/desserts/pancakes_extra_large.webp" 
+                        srcset="../assets/menu/dishes/desserts/pancakes_small.webp 400w,
+                                ../assets/menu/dishes/desserts/pancakes_medium.webp 600w,
+                                ../assets/menu/dishes/desserts/pancakes_large.webp 800w,
+                                ../assets/menu/dishes/desserts/pancakes_extra_large.webp 1200w"
+                        sizes="(max-width: 575px) 100vw,
+                               (max-width: 786px) 50vw,
+                               (max-width: 900px) 33vw,
+                               50vw"
+                        alt="pancakes">
 
+                        <div class="description">
                             <h3>pancakes</h3>
-                            <p>Traditional pancakes served with butter, real maple syrup or chocolate sauce, can be served with either fresh fruit or whipped cream</p>
+                            <p>Traditional pancakes made with flour, butter and maple syrup, topped with a variety of fresh fruit or freshly whipped cream</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="menu">
                     <div class="content">
-                        <img width="800" height="800" draggable="false" src="../assets/menu/dishes/desserts/macha_cake.webp" alt="macha cake">
-                        <div class="description">
+                        <img loading="lazy" width="1200" height="1200" draggable="false" 
+                        src="../assets/menu/dishes/desserts/macha_cake_extra_large.webp"
+                        srcset="../assets/menu/dishes/desserts/macha_cake_small.webp 400w,
+                                ../assets/menu/dishes/desserts/macha_cake_medium.webp 600w,
+                                ../assets/menu/dishes/desserts/macha_cake_large.webp 800w,
+                                ../assets/menu/dishes/desserts/macha_cake_extra_large.webp 1200w"
+                        sizes="(max-width: 575px) 100vw,
+                               (max-width: 786px) 50vw,
+                               (max-width: 900px) 33vw,
+                               50vw"
+                        alt="macha cake">
 
+                        <div class="description">
                             <h3>macha cake</h3>
                             <p>Green macha tea sourced from Japan, and a zesty lemon make up the flavour for this creamy layered cake, served with some cream</p>
                         </div>
@@ -223,9 +359,19 @@
 
                 <div class="menu">
                     <div class="content">
-                        <img width="800" height="800" draggable="false" src="../assets/menu/dishes/drinks/wine.webp" alt="wine">
-                        <div class="description">
+                        <img loading="lazy" width="1200" height="1200" draggable="false" 
+                        src="../assets/menu/beverages/wine_extra_large.webp"
+                        srcset="../assets/menu/beverages/wine_small.webp 400w,
+                                ../assets/menu/beverages/wine_medium.webp 600w,
+                                ../assets/menu/beverages/wine_large.webp 800w,
+                                ../assets/menu/beverages/wine_extra_large.webp 1200w"
+                        sizes="(max-width: 575px) 100vw,
+                               (max-width: 786px) 50vw,
+                               (max-width: 900px) 33vw,
+                               50vw"
+                        alt="wine">
 
+                        <div class="description">
                             <h3>wine</h3>
                             <p>Choose from either red or white varieties, both have a vanilla and oaky flavour to them with a hint of ripe grapes and a mild sweet taste</p>
                         </div>
@@ -234,9 +380,19 @@
 
                 <div class="menu">
                     <div class="content">
-                        <img width="800" height="800" draggable="false" src="../assets/menu/dishes/drinks/beer.webp" alt="beer">
-                        <div class="description">
+                        <img loading="lazy" width="1200" height="1200" draggable="false" 
+                        src="../assets/menu/beverages/beer_extra_large.webp"
+                        srcset="../assets/menu/beverages/beer_small.webp 400w,
+                                ../assets/menu/beverages/beer_medium.webp 600w,
+                                ../assets/menu/beverages/beer_large.webp 800w,
+                                ../assets/menu/beverages/beer_extra_large.webp 1200w"
+                        sizes="(max-width: 575px) 100vw,
+                               (max-width: 786px) 50vw,
+                               (max-width: 900px) 33vw,
+                               50vw"
+                        alt="beer">
 
+                        <div class="description">
                             <h3>beer on tap</h3>
                             <p>Serving you all the major brands of beer from all major manufacturers, served to you directly from a varity of kegs</p>
                         </div>
@@ -245,20 +401,40 @@
 
                 <div class="menu">
                     <div class="content">
-                        <img width="800" height="800" draggable="false" src="../assets/menu/dishes/drinks/juice_variety.webp" alt="variety of juices">
+                        <img loading="lazy" width="1200" height="1200" draggable="false" 
+                        src="../assets/menu/dishes/drinks/juice_variety.webp"
+                        srcset="../assets/menu/beverages/juice_variety_small.webp 400w,
+                                ../assets/menu/beverages/juice_variety_medium.webp 600w,
+                                ../assets/menu/beverages/juice_variety_large.webp 800w,
+                                ../assets/menu/beverages/juice_variety_extra_large.webp 1200w"
+                        sizes="(max-width: 575px) 100vw,
+                               (max-width: 786px) 50vw,
+                               (max-width: 900px) 33vw,
+                               50vw"
+                        alt="variety of juices">
 
                         <div class="description">
                             <h3>fruit juice</h3>
-                            <p>Choose from a wide range of juices, all of which are made with fresh fruit. Options are orange, mango, kiwi and berry's</p>
+                            <p>Choose from a wide range of juices, all of which are made with fresh fruit. Available options are orange, mango, kiwi and berry's</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="menu">
                     <div class="content">
-                        <img width="800" height="800" draggable="false" src="../assets/menu/dishes/drinks/espresso.webp" alt="espresso">
-                        <div class="description">
+                        <img loading="lazy" width="1200" height="1200" draggable="false" 
+                        src="../assets/menu/beverages/espresso_extra_large.webp"
+                        srcset="../assets/menu/beverages/espresso_small.webp 400w,
+                                ../assets/menu/beverages/espresso_medium.webp 600w,
+                                ../assets/menu/beverages/espresso_large.webp 800w,
+                                ../assets/menu/beverages/espresso_extra_large.webp 1200w"
+                        sizes="(max-width: 575px) 100vw,
+                               (max-width: 786px) 50vw,
+                               (max-width: 900px) 33vw,
+                               50vw"
+                        alt="espresso">
 
+                        <div class="description">
                             <h3>espresso</h3>
                             <p>A very strong concentrated coffee, it's full of flavour and aroma, our brew is made with the finest fresh ground coffee beans</p>
                         </div>
