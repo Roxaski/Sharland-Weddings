@@ -249,7 +249,7 @@ nav {
     color: var(--clr-white);
     background-color: var(--clr-chalk);
     border-radius: 5px;
-    box-shadow: 1px 3px 5px rgba(0, 0, 0, .4);
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, .2);
 }
 .contact-form .left img {
     width: 100%;
