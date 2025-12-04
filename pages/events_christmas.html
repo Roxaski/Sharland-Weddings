@@ -3,17 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sharland's | Wedding Planners | Christmas Venues</title>
-    <meta name="description" content="Come check out our christmas events, if you want to throw the best christmas party around then look no further than what we have to offer">
+    <title>Sharland's Wedding Planners | Christmas Events</title>
+    <meta name="description" content="Create magical Christmas memories with our seasonal menus, festive decor, and entertainment for both corporate and family holiday celebrations">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:site_name" content="Sharland's Wedding Planners"/>
+    <meta property="og:title" content="Sharland's Wedding Planners | Christmas Events">
+    <meta property="og:description" content="Create magical Christmas memories with our seasonal menus, festive decor, and entertainment for both corporate and family holiday celebrations">
+    <meta property="og:image" content="https://roxaski.github.io/Sharland-Weddings/assets/open_graph/og_christmas_events.jpg">
+    <meta property="og:image:alt" content="Sharland's Wedding Planners | Christmas Events">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://roxaski.github.io/Sharland-Weddings/"/>
+    <meta property="og:type" content="website"/>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sharland's Wedding Planners | Christmas Events">
+    <meta name="twitter:description" content="Create magical Christmas memories with our seasonal menus, festive decor, and entertainment for both corporate and family holiday celebrations">
+    <meta name="twitter:image" content="https://roxaski.github.io/Sharland-Weddings/assets/open_graph/og_christmas_events.jpg">
+    <meta name="twitter:image:alt" content="Sharland's Wedding Planners | Christmas Events">
     <link rel="icon" type="image/png" href="../favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
     <link rel="shortcut icon" href="../favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
     <link rel="manifest" href="../site.webmanifest" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <script async defer src="https://kit.fontawesome.com/2d21b2aa33.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/events.css">
     <script defer src="../script.js"></script>
 </head>
@@ -63,10 +75,17 @@
         </header>
 
         <main>
-            <div class="img-container">
-                <img draggable="false" width="2560" height="600" src="../assets/events/banners/christmas_banner.webp" alt="christmas treats and decorations on a table">
+            <div class="banner">
+                <img fetchpriority="high" width="1920" height="450" draggable="false"
+                src="../assets/events/banners/christmas_banner_extra_large.webp"
+                srcset="../assets/events/banners/christmas_banner_small.webp 480w,
+                        ../assets/events/banners/christmas_banner_medium.webp 768w,
+                        ../assets/events/banners/christmas_banner_large.webp 1280w,
+                        ../assets/events/banners/christmas_banner_extra_large.webp 1920w"
+                sizes="100vw"
+                alt="snowman">
 
-                <div class="banner-title">
+                <div class="title">
                     <h1>christmas events</h1>
                     <p>experience the magic of christmas</p>
                 </div>
@@ -75,7 +94,15 @@
             <div class="event-container">
                 <div class="grid-container">
                     <div class="left img-one">
-                        <img fetchpriority="high" width="2560" height="1440" draggable="false" src="../assets/events/christmas/dinner.webp" alt="christmas dinner">
+                        <img fetchpriority="high" width="1920" height="1080" draggable="false" 
+                        src="../assets/events/christmas/christmas_dinner_extra_large.webp"
+                        srcset="../assets/events/christmas/christmas_dinner_small.webp 480w,
+                                ../assets/events/christmas/christmas_dinner_medium.webp 800w,
+                                ../assets/events/christmas/christmas_dinner_large.webp 1200w,
+                                ../assets/events/christmas/christmas_dinner_extra_large.webp 1920w"
+                        sizes="(max-width: 1100px) 100vw,
+                               50vw"
+                        alt="christmas dinner">
                     </div>
 
                     <div class="right content-one">
@@ -99,11 +126,27 @@
                     </div>
 
                     <div class="right img-two">
-                        <img width="2560" height="1440" draggable="false" src="../assets/events/christmas/presents.webp" alt="christmas presents">
+                        <img loading="lazy" width="1920" height="1080" draggable="false" 
+                        src="../assets/events/christmas/christmas_presents_extra_large.webp" 
+                        srcset="../assets/events/christmas/christmas_presents_small.webp 480w,
+                                ../assets/events/christmas/christmas_presents_medium.webp 800w,
+                                ../assets/events/christmas/christmas_presents_large.webp 1200w,
+                                ../assets/events/christmas/christmas_presents_extra_large.webp 1920w"
+                        sizes="(max-width: 1100px) 100vw,
+                               50vw"
+                        alt="christmas presents">
                     </div>
 
                     <div class="left img-three">
-                        <img width="2560" height="1440" draggable="false" src="../assets/events/christmas/treats.webp" alt="christmas treats">
+                        <img loading="lazy" width="1920" height="1080" draggable="false" 
+                        src="../assets/events/christmas/treats_extra_large.webp"
+                        srcset="../assets/events/christmas/christmas_treats_small.webp 480w,
+                                ../assets/events/christmas/christmas_treats_medium.webp 800w,
+                                ../assets/events/christmas/christmas_treats_large.webp 1200w,
+                                ../assets/events/christmas/christmas_treats_extra_large.webp 1920w"
+                        sizes="(max-width: 1100px) 100vw,
+                               50vw"
+                        alt="christmas treats">
                     </div>
 
                     <div class="right content-three">

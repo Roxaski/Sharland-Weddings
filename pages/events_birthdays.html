@@ -3,17 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sharland's | Wedding Planners | Birthday Venues</title>
-    <meta name="description" content="Come check out our birthday venues, we cater for all birthday events from your little ones first birthday all the way to sweet sixteens, the party never ends">
+    <title>Sharland's Wedding Planners | Birthday Events</title>
+    <meta name="description" content="Plan the perfect birthday with customizable packages, entertainment and stunning venues. Choose from children's parties to milestone celebrations">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:site_name" content="Sharland's Wedding Planners"/>
+    <meta property="og:title" content="Sharland's Wedding Planners | Birthday Events">
+    <meta property="og:description" content="Plan the perfect birthday with customizable packages, entertainment and stunning venues. Choose from children's parties to milestone celebrations">
+    <meta property="og:image" content="https://roxaski.github.io/Sharland-Weddings/assets/open_graph/og_events_birthday.jpg">
+    <meta property="og:image:alt" content="Sharland's Wedding Planners | Birthday Events">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://roxaski.github.io/Sharland-Weddings/"/>
+    <meta property="og:type" content="website"/>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sharland's Wedding Planners | Birthday Events">
+    <meta name="twitter:description" content="Plan the perfect birthday with customizable packages, entertainment and stunning venues. Choose from children's parties to milestone celebrations">
+    <meta name="twitter:image" content="https://roxaski.github.io/Sharland-Weddings/assets/open_graph/og_events_birthday.jpg">
+    <meta name="twitter:image:alt" content="Sharland's Wedding Planners | Birthday Events">
     <link rel="icon" type="image/png" href="../favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
     <link rel="shortcut icon" href="../favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
     <link rel="manifest" href="../site.webmanifest" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <script async defer src="https://kit.fontawesome.com/2d21b2aa33.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/events.css">
     <script defer src="../script.js"></script>
 </head>
@@ -63,10 +75,17 @@
         </header>
 
         <main>
-            <div class="img-container">
-                <img draggable="false" width="2560" height="600" src="../assets/events/banners/birthday_banner.webp" alt="typing on computer with ribbons around">
+            <div class="banner">
+                <img fetchpriority="high" width="1920" height="450" draggable="false"
+                src="../assets/events/banners/birthday_banner_extra_large.webp"
+                srcset="../assets/events/banners/birthday_banner_small.webp 480w,
+                        ../assets/events/banners/birthday_banner_medium.webp 768w,
+                        ../assets/events/banners/birthday_banner_large.webp 1280w,
+                        ../assets/events/banners/birthday_banner_extra_large.webp 1920w"
+                sizes="100vw" 
+                alt="typing on computer with ribbons around">
 
-                <div class="banner-title">
+                <div class="title">
                     <h1>birthday events</h1>
                     <p>Celebrate your birthday in style</p>
                 </div>
@@ -75,7 +94,15 @@
             <div class="event-container">
                 <div class="grid-container">
                     <div class="left img-left">
-                        <img fetchpriority="high" width="2560" height="1440" draggable="false" src="../assets/events/birthdays/cake.webp" alt="birthday cake">
+                        <img fetchpriority="high" width="1920" height="1080" draggable="false" 
+                        src="../assets/events/birthdays/birthday_cake_extra_large.webp" 
+                        srcset="../assets/events/birthdays/birthday_cake_small.webp 480w,
+                                ../assets/events/birthdays/birthday_cake_medium.webp 800w,
+                                ../assets/events/birthdays/birthday_cake_large.webp 1200w,
+                                ../assets/events/birthdays/birthday_cake_extra_large.webp 1920w"
+                        sizes="(max-width: 1100px) 100vw,
+                               50vw"
+                        alt="birthday cake">
                     </div>
 
                     <div class="right content-one">
@@ -95,15 +122,31 @@
 
                         <p>We have bars at both of our venues, though do be aware that you will need to provide identification in order to purchase any alcohol</p>
 
-                        <p>Celebrating your 18th birthday? We offer you a small bottle of our luxurious pink champagne</p>
+                        <p>Celebrating your 18th birthday? We offer you a small bottle of our luxurious pink champagne to help you celebrate your big day</p>
                     </div>
 
                     <div class="right img-two">
-                        <img width="2560" height="1440" draggable="false" src="../assets/events/birthdays/drinks.webp" alt="pink champagne">
+                        <img loading="lazy" width="1920" height="1080" draggable="false" 
+                        src="../assets/events/birthdays/birthday_drinks_extra_large.webp" 
+                        srcset="../assets/events/birthdays/birthday_drinks_small.webp 480w,
+                                ../assets/events/birthdays/birthday_drinks_medium.webp 800w,
+                                ../assets/events/birthdays/birthday_drinks_large.webp 1200w,
+                                ../assets/events/birthdays/birthday_drinks_extra_large.webp 1920w"
+                        sizes="(max-width: 1100px) 100vw,
+                               50vw"
+                        alt="birthday table setting">
                     </div>
 
                     <div class="left img-three">
-                        <img width="2560" height="1440" draggable="false" src="../assets/events/birthdays/treats.webp" alt="birthday treats">
+                        <img loading="lazy" width="1920" height="1080" draggable="false" 
+                        src="../assets/events/birthdays/birthday_treats_extra_large.webp" 
+                        srcset="../assets/events/birthdays/birthday_treats_small.webp 480w,
+                                ../assets/events/birthdays/birthday_treats_medium.webp 800w,
+                                ../assets/events/birthdays/birthday_treats_large.webp 1200w,
+                                ../assets/events/birthdays/birthday_treats_extra_large.webp 1920w"
+                        sizes="(max-width: 1100px) 100vw,
+                               50vw"
+                        alt="birthday treats">
                     </div>
 
                     <div class="right content-three">

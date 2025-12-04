@@ -3,17 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sharland's | Wedding Planners | Business Venues</title>
-    <meta name="description" content="Come check out our business venues, we cater for every type of business event and provide catering, along with offering various team building sports events">
+    <title>Sharland's Wedding Planners | Business Events</title>
+    <meta name="description" content="Book professional business event spaces. Modern conference venues, tailored catering options, and exciting team building exercises across two of our locations">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:site_name" content="Sharland's Wedding Planners"/>
+    <meta property="og:title" content="Sharland's Wedding Planners | Business Events">
+    <meta property="og:description" content="Book professional business event spaces. Modern conference venues, tailored catering options, and exciting team building exercises across two of our locations">
+    <meta property="og:image" content="https://roxaski.github.io/Sharland-Weddings/assets/open_graph/og_events_business.jpg">
+    <meta property="og:image:alt" content="Sharland's Wedding Planners | Business Events">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://roxaski.github.io/Sharland-Weddings/"/>
+    <meta property="og:type" content="website"/>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sharland's Wedding Planners | Business Events">
+    <meta name="twitter:description" content="Book professional business event spaces. Modern conference venues, tailored catering options, and exciting team building exercises across two of our locations">
+    <meta name="twitter:image" content="https://roxaski.github.io/Sharland-Weddings/assets/open_graph/og_events_business.jpg">
+    <meta name="twitter:image:alt" content="Sharland's Wedding Planners | Business Events">
     <link rel="icon" type="image/png" href="../favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
     <link rel="shortcut icon" href="../favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
     <link rel="manifest" href="../site.webmanifest" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <script async defer src="https://kit.fontawesome.com/2d21b2aa33.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/events.css">
     <script defer src="../script.js"></script>
 </head>
@@ -63,10 +75,17 @@
         </header>
 
         <main>
-            <div class="img-container">
-                <img draggable="false" width="2560" height="600" src="../assets/events/banners/business_banner.webp" alt="books, phone and newspaper on a table">
+            <div class="banner">
+                <img fetchpriority="high" width="1920" height="450" draggable="false"
+                src="../assets/events/banners/business_banner_extra_large.webp"
+                srcset="../assets/events/banners/business_banner_small.webp 480w,
+                        ../assets/events/banners/business_banner_medium.webp 768w,
+                        ../assets/events/banners/business_banner_large.webp 1280w,
+                        ../assets/events/banners/business_banner_extra_large.webp 1920w"
+                sizes="100vw" 
+                alt="books, phone and newspaper on a table">
 
-                <div class="banner-title">
+                <div class="title">
                     <h1>business events</h1>
                     <p>making the important matter</p>
                 </div>
@@ -76,7 +95,15 @@
                 <div class="grid-container">
 
                     <div class="left img-one">
-                        <img fetchpriority="high" width="2560" height="1440" draggable="false" src="../assets/events/business/conference_room.webp" alt="conference room">
+                        <img fetchpriority="high" width="1920" height="1080" draggable="false" 
+                        src="../assets/events/business/conferences_extra_large.webp" 
+                        srcset="../assets/events/business/conferences_small.webp 480w,
+                                ../assets/events/business/conferences_medium.webp 800w,
+                                ../assets/events/business/conferences_large.webp 1200w,
+                                ../assets/events/business/conferences_extra_large.webp 1920w"
+                        sizes="(max-width: 1100px) 100vw,
+                               50vw"
+                        alt="conference room">
                     </div>
 
                     <div class="right content-one">
@@ -100,11 +127,27 @@
                     </div>
 
                     <div class="right img-two">
-                        <img width="2560" height="1440" draggable="false" src="../assets/events/business/catering.webp" alt="table with food">
+                        <img loading="lazy" width="1920" height="1080" draggable="false" 
+                        src="../assets/events/business/catering_extra_large.webp" 
+                        srcset="../assets/events/business/catering_small.webp 480w,
+                                ../assets/events/business/catering_medium.webp 800w,
+                                ../assets/events/business/catering_large.webp 1200w,
+                                ../assets/events/business/catering_extra_large.webp 1920w"
+                        sizes="(max-width: 1100px) 100vw,
+                               50vw"
+                        alt="table with food">
                     </div>
 
                     <div class="left img-three">
-                        <img width="2560" height="1440" draggable="false" src="../assets/events/business/sports.webp" alt="white water rafting">
+                        <img loading="lazy" width="1920" height="1080" draggable="false" 
+                        src="../assets/events/business/activities_extra_large.webp" 
+                        srcset="../assets/events/business/activities_small.webp 480w,
+                                ../assets/events/business/activities_medium.webp 800w,
+                                ../assets/events/business/activities_large.webp 1200w,
+                                ../assets/events/business/activities_extra_large.webp 1920w"
+                        sizes="(max-width: 1100px) 100vw,
+                               50vw"
+                        alt="white water rafting">
                     </div>
 
                     <div class="right content-three">
