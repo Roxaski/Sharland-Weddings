@@ -231,15 +231,16 @@ nav {
 .wrapper.active .hamburger-menu .bars::after {
     transform: translateY(0) rotate(-45deg);
 }
-.img-container {
+.banner {
     position: relative;
+    bottom: 1.5px;
 }
-.img-container img {
+.banner img {
     width: 100%;
     height: auto;
     filter: brightness(45%);
 }
-.img-container .banner-title {
+.banner .title {
     position: absolute;
     inset: 0;
     display: flex;
@@ -249,12 +250,12 @@ nav {
     color: var(--clr-milkWhite);
     text-transform: capitalize;
 }
-.img-container .banner-title h1 {
+.banner .title h1 {
     text-transform: capitalize;
     font-size: clamp(1.75rem, 3vw, 3.5rem);
     font-weight: 200;
 }
-.img-container .banner-title p {
+.banner .title p {
     font-size: clamp(1.25rem, 3vw, 1.75rem);
     font-weight: 200;
 }
@@ -628,7 +629,7 @@ nav {
     .links-wrapper .links li {
         padding: 0 .5rem;
     }
-    .img-container {
+    .banner {
         display: none;
     }
     .menu-container {
@@ -651,7 +652,7 @@ nav {
     body {
         background: var(--clr-blk);
     }
-    .img-container .banner-title {
+    .banner .title {
         color: var(--clr-chalk);
     }
     .menu-container .title h2 {

@@ -231,6 +231,7 @@ nav {
 }
 .banner {
     position: relative;
+    bottom: 1.5px;
 }
 .banner img {
     width: 100%;
