@@ -234,6 +234,7 @@ nav {
 }
 .img-container {
     position: relative;
+    bottom: 1.5px
 }
 .img-container img {
     width: 100%;
