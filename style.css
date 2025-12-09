@@ -564,6 +564,11 @@ footer .container .section.social i {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+@media screen and (max-width: 745px) {
+    .banner {
+        height: 60vh;
+    }
+}
 @media screen and (max-width: 575px) {
     .links-wrapper {
         max-width: 100%;
@@ -573,6 +578,9 @@ footer .container .section.social i {
     }
 }
 @media screen and (max-width: 500px) {
+    .banner {
+        height: 55vh;
+    }
     .banner .content {
         padding-top: 1.75rem;
     }
