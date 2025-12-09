@@ -407,6 +407,9 @@ nav {
     .links-wrapper .links li {
         padding: 0 .5rem;
     }
+    .grid-container .img-container .title h2 {
+        min-width: 175px;
+    }
 }
 @media screen and (prefers-color-scheme: dark) {
     ::-webkit-scrollbar-track {
