@@ -262,12 +262,11 @@ nav {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: .5rem 0 .5rem 0;
-    gap: .75rem;
     grid-template-areas: 
         'img-one content-one'
         'content-two img-two'
         'img-three content-three';
+    padding: .5rem 0;
 }
 .grid-container .img-one {
     grid-area: img-one;
@@ -301,17 +300,19 @@ nav {
                 rgba(0, 0, 0, 1) 50%, 
                 transparent 90%);
 }
+.grid-container .left,
+.grid-container .right {
+    padding: 0;
+}
 .grid-container .left h2,
 .grid-container .right h2 {
     text-transform: capitalize;
     font-weight: 400;
     margin: 15px auto 0;
-    width: 95%;
 }
 .grid-container .left p,
 .grid-container .right p {
     margin: 15px auto;
-    width: 95%;
 }
 .other-events {
     margin: 15px auto 0;

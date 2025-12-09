@@ -250,7 +250,7 @@ nav {
     'catering-two-content catering-two-img'
     'events events';
     margin: 15px auto;
-    padding: 0 1rem;
+    gap: 1rem;
 }
 .grid-container .venue-one-img {
     grid-area: venue-one-img;
@@ -299,28 +299,28 @@ nav {
 .grid-container .right h2:nth-child(1) {
     margin: 0 auto;
 }
-.grid-container .right h2,
-.grid-container .right p {
-    width: 95%;
+.grid-container .left,
+.grid-container .right {
+    padding: 0 1rem;
 }
 .grid-container .left h2,
 .grid-container .right h2 {
     text-transform: capitalize;
     font-weight: 400;
-    margin: 15px auto 0;
+    margin: 15px 0 0;
 }
 .grid-container .left p,
 .grid-container .right p {
-    margin: 15px auto 0;
+    margin: 15px 0 0;
 }
 .banner-container {
     width: 100%;
+    padding: 1rem;
 }
 .banner {
     position: relative;
     width: 100%;
     height: 90vh;
-    margin-bottom: 3px;
 }
 .banner img {
     position: absolute;
@@ -329,6 +329,7 @@ nav {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     z-index: 0;
 }
 .banner .content {
@@ -387,6 +388,7 @@ nav {
 }
 .events-container {
     text-align: center;
+    padding: 0 1rem;
 }
 .events-container h2 {
     text-transform: capitalize;
@@ -394,7 +396,7 @@ nav {
     font-weight: 400;
 }
 .events-container p {
-    padding: 0 .75rem;
+    padding: 0;
 }
 footer {
     padding: 30px 100px;
@@ -552,28 +554,11 @@ footer .container .section.social i {
                     rgba(0, 0, 0, 1) 50%, 
                     transparent 90%);
     }
-    .grid-container .right h2,
-    .grid-container .right p {
-        width: 100%;
-    }
-    .grid-container .left h2,
-    .grid-container .right h2 {
-        margin: 0 auto;
-    }
-    .banner-container {
-        margin: 0 auto;
-    }
     .events-container {
         text-align: left;
     }
-    .events-container h2 {
-        margin-left: .5rem;
-    }
-    .events-container p {
-        padding: 0 .5rem;
-    }
     footer {
-        padding: 20px 30px;
+        padding: 1rem;
     }
     footer .container {
         grid-template-columns: repeat(2, 1fr);

@@ -262,12 +262,13 @@ nav {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: .5rem 1rem;
+    padding: .5rem;
     grid-template-areas: 
         'img-one content-one'
         'content-two img-two'
         'img-three content-three'
         'content-four img-four';
+    gap: 1rem;
 }
 .grid-container .img-one {
     grid-area: img-one;
@@ -310,19 +311,19 @@ nav {
 .grid-container .right h2:nth-child(1) {
     margin: 0 auto;
 }
-.grid-container .right h2,
-.grid-container .right p {
-    width: 95%;
+.grid-container .left,
+.grid-container .right {
+    padding: 0 .5rem;
 }
 .grid-container .left h2,
 .grid-container .right h2 {
     text-transform: capitalize;
     font-weight: 400;
-    margin: 15px auto 0;
+    margin: 15px 0 0;
 }
 .grid-container .left p,
 .grid-container .right p {
-    margin: 15px auto;
+    margin: 15px 0 0;
 }
 .grid-container ul li {
     list-style: none;
@@ -591,10 +592,6 @@ nav {
         mask-image: linear-gradient(180deg, 
                     rgba(0, 0, 0, 1) 50%, 
                     transparent 90%);
-    }
-    .grid-container .right h2,
-    .grid-container .right p {
-        width: 100%;
     }
     .grid-container ul li {
         margin: 20px auto;
