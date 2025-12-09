@@ -647,7 +647,8 @@ nav {
         max-width: 100%;
     }
     .grid-container {
-        padding: .5rem 0;
+        padding: 0;
+        margin: .5rem 0;
     }
     .banner {
         display: none;
