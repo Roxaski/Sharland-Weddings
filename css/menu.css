@@ -656,13 +656,13 @@ nav {
         display: none;
     }
     .menu-container .menu .content .description h3 {
-        font-size: clamp(1rem, 3vw, 1.1rem);
+        font-size: clamp(0.9rem, 3vw, 1rem);
     }
     .menu-container .menu .content .description h3 span {
-        font-size: clamp(.9rem, 3vw, 1.05rem);
+        font-size: clamp(0.8rem, 3vw, 0.9rem);
     }
     .menu-container .menu .content .description p {
-        font-size: clamp(.9rem, 3vw, 1rem);
+        font-size: clamp(0.85rem, 3vw, 0.95rem);
     }
     .menu-container .title h2 {
         font-size: clamp(1.3rem, 3vw, 1.6rem);
