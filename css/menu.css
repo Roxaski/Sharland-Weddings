@@ -656,16 +656,13 @@ nav {
         display: none;
     }
     .menu-container .menu .content .description h3 {
-        font-size: clamp(0.9rem, 1.5vw, 1.1rem);
-    }
-    .menu-container .menu .content .description h3 span {
-        font-size: clamp(0.8rem, 1.4vw, 1.05rem);
+        font-size: clamp(1.1rem, 1.5vw, 1.25rem);
     }
     .menu-container .menu .content .description p {
-        font-size: clamp(0.85rem, 1.4vw, 1rem);
+        font-size: clamp(0.9rem, 1.4vw, 1rem);
     }
     .menu-container .title h2 {
-        font-size: clamp(1.5rem, 2vw, 2.1rem);
+        font-size: clamp(1.5rem, 2vw, 2rem);
     }
 }
 @media screen and (prefers-color-scheme: dark) {
