@@ -643,10 +643,13 @@ nav {
     }
 }
 @media screen and (max-width: 932px) and (orientation: landscape) {
-    .banner {
-        display: none;
+    .wrapper {
+        max-width: 100%;
     }
-    .menu-container .menu .content img {
+    .grid-container {
+        padding: .5rem 0;
+    }
+    .banner {
         display: none;
     }
 }
