@@ -515,6 +515,11 @@ nav {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+@media screen and (max-width: 932px) and (orientation: landscape) {
+    .banner {
+        display: none;
+    }
+}
 @media screen and (prefers-color-scheme: dark) {
     ::-webkit-scrollbar-track {
         background: var(--clr-blk);
