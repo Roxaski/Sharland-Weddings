@@ -519,8 +519,8 @@ nav {
     .wrapper {
         max-width: 100%;
     }
-    .grid-container {
-        padding: .5rem 0;
+    .event-container {
+        padding: 0 .5rem;
     }
     .banner {
         display: none;
