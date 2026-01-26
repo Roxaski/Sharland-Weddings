@@ -102,6 +102,12 @@ nav {
     font-weight: 400;
     margin-left: 1.5rem;
 }
+.logo h2 a:focus {
+    outline: none;
+}
+.logo h2 a:focus-visible {
+    outline: 2px solid var(--clr-chalk);
+}
 .logo img {
     position: relative;
     bottom: .35rem;
@@ -112,6 +118,18 @@ nav {
 }
 .hamburger-menu {
     display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 1.2rem;
+    right: 1.7em;
+    height: 2rem;
+    width: 1.25rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    z-index: 2;
 }
 .links-wrapper {
     position: relative;
@@ -150,6 +168,12 @@ nav {
     letter-spacing: .5px;
     color: var(--clr-white);
 }
+.links-wrapper .links li a:focus {
+    outline: none;
+}
+.links-wrapper .links li a:focus-visible {
+    outline: solid 2px var(--clr-chalk);
+}
 .links-wrapper .links li .arrow {
     text-align: center;
     color: var(--clr-chevronWhite);
@@ -160,6 +184,10 @@ nav {
 }
 .links-wrapper .links li:hover .packages-arrow,
 .links-wrapper .links li:hover .events-arrow {
+    transform: rotate(90deg);
+}
+.links-wrapper .links .packages:focus-within .packages-arrow,
+.links-wrapper .links .events:focus-within .events-arrow {
     transform: rotate(90deg);
 }
 .links-wrapper .links .sub-menu {
@@ -186,19 +214,9 @@ nav {
 .links-wrapper .links li:hover .events-sub-menu {
     display: block;
 }
-.hamburger-menu {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 1.2rem;
-    right: 1.2em;
-    height: 2rem;
-    width: 1.25rem;
-    background-color: transparent;
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
-    z-index: 2;
+.links-wrapper .links .packages:focus-within .packages-sub-menu,
+.links-wrapper .links .events:focus-within .events-sub-menu {
+    display: block;
 }
 .bars {
     position: relative;
@@ -257,7 +275,7 @@ nav {
     font-weight: 200;
 }
 .event-container {
-    padding: 0 1rem;
+    padding: 0 .75rem;
 }
 .grid-container {
     display: grid;
@@ -358,9 +376,8 @@ nav {
     font-weight: 200;
 }
 .other-events .btn {
+    display: inline-block;
     margin: 30px auto 0;
-}
-.other-events .btn a {
     color: var(--clr-white);
     background: var(--clr-coolGrey);
     padding: .5rem .75rem;
@@ -372,8 +389,14 @@ nav {
     transition: 200ms ease-out;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, .1);
 }
-.other-events .btn a:hover {
+.other-events .btn:hover {
     background: var(--clr-shadowGrey);
+}
+.other-events .btn:focus {
+    outline: none;
+}
+.other-events .btn:focus-visible {
+    outline: 4px solid var(--clr-lilac);
 }
 @media screen and (max-width: 1145px) {
     ::-webkit-scrollbar {
@@ -443,9 +466,11 @@ nav {
         color: var(--clr-offWhite);
         font-weight: 300;
     }
-    .links-wrapper .links li:hover .packages-sub-menu {
-        display: none;
+    .links-wrapper .links .packages > a,
+    .links-wrapper .links .events > a {
+        pointer-events: none;
     }
+    .links-wrapper .links li:hover .packages-sub-menu,
     .links-wrapper .links li:hover .events-sub-menu {
         display: none;
     }
@@ -453,17 +478,15 @@ nav {
     .links-wrapper .links li:hover .events-arrow {
         transform: rotate(0deg);
     }
-    .links-wrapper.active-packages-menu .links .sub-menu.packages-sub-menu {
-        display: block;
-    }
-    .links-wrapper.active-events-menu .links .sub-menu.events-sub-menu {
+    .links-wrapper.packages-menu-open .links .sub-menu.packages-sub-menu,
+    .links-wrapper.events-menu-open .links .sub-menu.events-sub-menu {
         display: block;
     }
     .links-wrapper .links li:hover {
         background: transparent;
     }
-    .links-wrapper.active-packages-menu .links li .packages-arrow,
-    .links-wrapper.active-events-menu .links li .events-arrow {
+    .links-wrapper.packages-menu-open .links li .packages-arrow,
+    .links-wrapper.events-menu-open .links li .events-arrow {
         transform: rotate(90deg);
         line-height: 0;
     }
@@ -550,10 +573,17 @@ nav {
     .other-events .content p {
         color: var(--clr-grey);
     }
-    .other-events .btn a {
+    .other-events .btn {
+        color: var(--clr-white);
         background: var(--clr-shadowGrey);
     }
-    .other-events .btn a:hover {
+    .other-events .btn:hover {
         background: var(--clr-mediumGrey);
+    }
+    .other-events .btn:focus {
+        outline: none;
+    }
+    .other-events .btn:focus-visible {
+        outline: 4px solid var(--clr-chalk);
     }
 }

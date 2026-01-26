@@ -5,6 +5,7 @@ const lightboxSizes = '(max-width: 865px) 90vw, 800px';
 const previousBtn = document.querySelector('.previous');
 const nextBtn = document.querySelector('.next');
 const overlay = document.querySelector('.overlay');
+const nav = document.querySelectorAll('nav a, nav button');
 
 // stores the index of the currently displayed image
 let currentImage;
@@ -53,6 +54,16 @@ function preload(imageIndex) {
 function displayOverlay() {
     document.body.style.overflow = 'hidden';
     overlay.style.display = 'block';
+
+    // prevents the gallery images from being focused while the lightbox is open
+    galleryImgs.forEach(img => {
+        img.setAttribute('tabindex', '-1');
+    });
+
+    // prevents the nav from being focused while the lightbox is open
+    nav.forEach(element => {
+        element.setAttribute('tabindex', '-1');
+    });
 };
 
 // displays image & buttons
@@ -73,15 +84,15 @@ function imagePreview() {
 // removes the buttons from the first and last lightbox images
 function displayGalleryBtns() {
     if(currentImage == 0) {
-        previousBtn.style.display = 'none';
+        previousBtn.classList.remove('visible');
     } else {
-        previousBtn.style.display = 'block';
+        previousBtn.classList.add('visible');
     };
 
     if(currentImage == galleryImgs.length - 1) {
-        nextBtn.style.display = 'none';
+        nextBtn.classList.remove('visible');
     } else {
-        nextBtn.style.display = 'block';
+        nextBtn.classList.add('visible');
     };
 };
 
@@ -101,14 +112,24 @@ previousBtn.addEventListener('click', () => {
 
 // removes overlay, image buttons, src and srcset along with alt
 function closeOverlay() {
-    document.querySelector('body').style.overflow = 'auto';
+    document.body.style.overflow = 'auto';
     lightbox.src = '';
     lightbox.srcset = '';
     lightbox.alt = '';
     lightbox.classList.remove('active');
     overlay.style.display = 'none';
-    nextBtn.style.display = 'none';
-    previousBtn.style.display = 'none';
+    nextBtn.classList.remove('visible');
+    previousBtn.classList.remove('visible');
+
+    // allows the gallery images to be focused
+    galleryImgs.forEach(img => {
+        img.setAttribute('tabindex', '0');
+    });
+
+    // allows the nav to be focused
+    nav.forEach(element => {
+        element.removeAttribute('tabindex');
+    });
 };
 
 // closes the overlay
@@ -168,7 +189,7 @@ lightbox.addEventListener('touchend', (e) => {
         currentImage ++;
         imagePreview();
         preload(currentImage + 1);
-    // Else if you swipe to the right and aren't on the first image, then it displays the previous image
+    // else if you swipe to the right and aren't on the first image, then it displays the previous image
     } else if (swipeToChangeImg < -minSwipe && currentImage > 0) {
         currentImage --;
         imagePreview();
@@ -178,15 +199,29 @@ lightbox.addEventListener('touchend', (e) => {
 
 // image navigation using the arrows keys
 window.addEventListener('keydown', (e) => {
-    if(overlay.style.display == 'block' && e.key == 'ArrowRight' &&  currentImage < galleryImgs.length - 1) {
-        currentImage ++;
-        imagePreview();
-        preload(currentImage + 1);
-    } else if (overlay.style.display == 'block' && e.key == 'ArrowLeft' && currentImage > 0) {
-        currentImage --;
-        imagePreview();
-        preload(currentImage - 1);
-    } else if (e.key == 'Escape') {
-        closeOverlay();
+    // checks if the overlay is open, if so it runs the navigation code below
+    if(overlay.style.display == 'block') {
+        // navigates to the next image using the righ arrow, enter or space bar keys ( space bar works when the buttons are focused )
+        if ((e.key === 'ArrowRight' || ((e.key === 'Enter' || e.key === ' ') 
+            && document.activeElement === nextBtn)) 
+            && currentImage < galleryImgs.length - 1) {
+            e.preventDefault();
+            currentImage++;
+            imagePreview();
+            preload(currentImage + 1);
+        } 
+        // navigates to the previous image using the righ arrow, enter or space bar keys ( space bar works when the buttons are focused )
+        else if ((e.key === 'ArrowLeft' || ((e.key === 'Enter' || e.key === ' ')
+            && document.activeElement === previousBtn)) 
+            && currentImage > 0) {
+            e.preventDefault();
+            currentImage--;
+            imagePreview();
+            preload(currentImage - 1);
+        }
+        // closes the overlay with the escape key
+        else if (e.key === 'Escape') {
+            closeOverlay();
+        };
     };
 });

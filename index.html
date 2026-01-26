@@ -40,11 +40,15 @@
                     
                     <h2><a class="logo" href="./index.html">Sharland's</a></h2>
                 </div>
+
+                <button class="hamburger-menu" aria-label="opens navigation menu">
+                    <div class="bars"></div>
+                </button>
                 
                 <div class="links-wrapper">
                     <ul class="links">
-                        <li>
-                            <a class="packages" href="#">packages</a>
+                        <li class="packages">
+                            <a href="#" aria-label="packages submenu">packages</a>
                             <i class="fa-solid fa-chevron-right arrow packages-arrow"></i>
                             <ul class="sub-menu packages-sub-menu">
                                 <li><a href="./pages/packages_silver.html">silver</a></li>
@@ -52,9 +56,11 @@
                                 <li><a href="./pages/packages_platinum.html">platinum</a></li>
                             </ul>
                         </li>
+
                         <li><a href="./pages/gallery.html">gallery</a></li>
-                        <li>
-                            <a class="events" href="#">events</a>
+
+                        <li class="events">
+                            <a href="#" aria-label="events submenu">events</a>
                             <i class="fa-solid fa-chevron-right arrow events-arrow"></i>
                             <ul class="sub-menu events-sub-menu">
                                 <li><a href="./pages/events_business.html">business</a></li>
@@ -62,14 +68,11 @@
                                 <li><a href="./pages/events_christmas.html">christmas</a></li>
                             </ul>
                         </li>
+
                         <li><a href="./pages/dining.html">dining</a></li>
                         <li><a href="./pages/contact.html">contact</a></li>
                         <li><a href="./pages/about.html">about</a></li>
                     </ul>
-                </div>
-
-                <div aria-label="opens navigation menu" role="button" class="hamburger-menu">
-                    <div class="bars"></div>
                 </div>
             </nav>
         </header>
@@ -158,7 +161,7 @@
                     src="./assets/index/catering_extra_large.webp" 
                     srcset="./assets/index/catering_small.webp 480w,
                             ./assets/index/catering_medium.webp 800w,
-                            ./assets/index/catering_large.webp 800w,
+                            ./assets/index/catering_large.webp 1200w,
                             ./assets/index/catering_extra_large.webp 1920w"
                     sizes="(max-width: 1100px) 100vw,
                            50vw"
@@ -189,7 +192,8 @@
                             ./assets/index/catering_vegetarian_medium.webp 800w,
                             ./assets/index/catering_vegetarian_large.webp 1200w,
                             ./assets/index/catering_vegetarian_extra_large.webp 1920w"
-                    sizes=""
+                    sizes="(max-width: 1100px) 100vw,
+                           50vw"
                     alt="vegetarian dishes">
                 </div>
 

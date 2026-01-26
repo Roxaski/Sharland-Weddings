@@ -105,6 +105,12 @@ nav {
     font-weight: 400;
     margin-left: 1.5rem;
 }
+.logo h2 a:focus {
+    outline: none;
+}
+.logo h2 a:focus-visible {
+    outline: 2px solid var(--clr-chalk);
+}
 .logo img {
     position: relative;
     bottom: .35rem;
@@ -115,6 +121,18 @@ nav {
 }
 .hamburger-menu {
     display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 1.2rem;
+    right: 1.7em;
+    height: 2rem;
+    width: 1.25rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    z-index: 2;
 }
 .links-wrapper {
     position: relative;
@@ -153,6 +171,12 @@ nav {
     letter-spacing: .5px;
     color: var(--clr-white);
 }
+.links-wrapper .links li a:focus {
+    outline: none;
+}
+.links-wrapper .links li a:focus-visible {
+    outline: solid 2px var(--clr-chalk);
+}
 .links-wrapper .links li .arrow {
     text-align: center;
     color: var(--clr-chevronWhite);
@@ -163,6 +187,10 @@ nav {
 }
 .links-wrapper .links li:hover .packages-arrow,
 .links-wrapper .links li:hover .events-arrow {
+    transform: rotate(90deg);
+}
+.links-wrapper .links .packages:focus-within .packages-arrow,
+.links-wrapper .links .events:focus-within .events-arrow {
     transform: rotate(90deg);
 }
 .links-wrapper .links .sub-menu {
@@ -189,19 +217,9 @@ nav {
 .links-wrapper .links li:hover .events-sub-menu {
     display: block;
 }
-.hamburger-menu {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 1.2rem;
-    right: 1.2em;
-    height: 2rem;
-    width: 1.25rem;
-    background-color: transparent;
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
-    z-index: 2;
+.links-wrapper .links .packages:focus-within .packages-sub-menu,
+.links-wrapper .links .events:focus-within .events-sub-menu {
+    display: block;
 }
 .bars {
     position: relative;
@@ -313,7 +331,7 @@ nav {
 }
 .grid-container .left,
 .grid-container .right {
-    padding: 0 .5rem;
+    padding: 0 .3rem;
 }
 .grid-container .left h2,
 .grid-container .right h2 {
@@ -341,7 +359,7 @@ nav {
 .package-container .content {
     display: grid;
     margin: 10px auto 0;
-    padding: 0 1rem;
+    padding: 0 .75rem;
     gap: .5rem;
 }
 .package-container .content {
@@ -365,9 +383,8 @@ nav {
     font-size: clamp(1.2rem, 3vw, 1.4rem);
 }
 .package-container .content .btn {
+    display: inline-block;
     margin: 30px auto 0;
-}
-.package-container .content .btn a {
     padding: .5rem .75rem;
     background: var(--clr-coolGrey);
     color: var(--clr-white);
@@ -379,12 +396,18 @@ nav {
     box-shadow: 2px 2px 3px rgba(0, 0, 0, .1);
     transition: 200ms ease-out;
 }
-.package-container .content .btn a:hover {
+.package-container .content .btn:hover {
     background: var(--clr-shadowGrey);
+}
+.package-container .content .btn:focus {
+    outline: none;
+}
+.package-container .content .btn:focus-visible {
+    outline: 4px solid var(--clr-lilac);
 }
 .price-container {
     margin: 10px auto 0;
-    padding: 0 1rem;
+    padding: 0 .75rem;
 }
 .price-container .content {
     background: var(--clr-white);
@@ -421,7 +444,7 @@ nav {
 }
 .bookings-container {
     margin: 10px auto 0;
-    padding: 0 1rem;
+    padding: 0 .75rem;
 }
 .bookings-container .content {
     background: var(--clr-white);
@@ -468,6 +491,13 @@ nav {
     color: var(--clr-charcoal);
     text-decoration: underline;
     cursor: pointer;
+}
+.bookings-container .content .availability ul li a:focus {
+    border: none;
+}
+.bookings-container .content .availability ul li a:focus-visible {
+    outline: 4px solid var(--clr-lilac);
+    border-radius: 5px;
 }
 @media screen and (max-width: 1145px) {
     ::-webkit-scrollbar {
@@ -537,9 +567,11 @@ nav {
         color: var(--clr-offWhite);
         font-weight: 300;
     }
-    .links-wrapper .links li:hover .packages-sub-menu {
-        display: none;
+    .links-wrapper .links .packages > a,
+    .links-wrapper .links .events > a {
+        pointer-events: none;
     }
+    .links-wrapper .links li:hover .packages-sub-menu,
     .links-wrapper .links li:hover .events-sub-menu {
         display: none;
     }
@@ -547,17 +579,15 @@ nav {
     .links-wrapper .links li:hover .events-arrow {
         transform: rotate(0deg);
     }
-    .links-wrapper.active-packages-menu .links .sub-menu.packages-sub-menu {
-        display: block;
-    }
-    .links-wrapper.active-events-menu .links .sub-menu.events-sub-menu {
+    .links-wrapper.packages-menu-open .links .sub-menu.packages-sub-menu,
+    .links-wrapper.events-menu-open .links .sub-menu.events-sub-menu {
         display: block;
     }
     .links-wrapper .links li:hover {
         background: transparent;
     }
-    .links-wrapper.active-packages-menu .links li .packages-arrow,
-    .links-wrapper.active-events-menu .links li .events-arrow {
+    .links-wrapper.packages-menu-open .links li .packages-arrow,
+    .links-wrapper.events-menu-open .links li .events-arrow {
         transform: rotate(90deg);
         line-height: 0;
     }
@@ -658,6 +688,12 @@ nav {
     .bookings-container .content .availability ul li .available {
         color: var(--clr-grey);
     }
+    .bookings-container .content .availability ul li a:focus {
+        border: none;
+    }
+    .bookings-container .content .availability ul li a:focus-visible {
+        outline: 4px solid var(--clr-chalk);
+    }
     .price-container .content {
         background: var(--clr-charcoal);
     }
@@ -674,10 +710,16 @@ nav {
     .package-container .content h3 {
         color: var(--clr-alabasterWhite);
     }
-    .package-container .content .btn a {
+    .package-container .content .btn {
         background: var(--clr-shadowGrey);
     }
-    .package-container .content .btn a:hover {
+    .package-container .content .btn:hover {
         background: var(--clr-mediumGrey);
+    }
+    .package-container .content .btn:focus {
+        outline: none;
+    }
+    .package-container .content .btn:focus-visible {
+        outline: 4px solid var(--clr-chalk);
     }
 }
