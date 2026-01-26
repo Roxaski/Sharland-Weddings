@@ -294,7 +294,6 @@ nav {
     height: auto;
     left: 0;
     bottom: 13px;
-    transform: scaleX(-1);
 }
 .contact-form .right h2 {
     position: relative;
