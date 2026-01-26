@@ -575,6 +575,9 @@ footer .container .section.social i {
     .events-container {
         text-align: left;
     }
+    .events-container img {
+        height: auto;
+    }
     footer {
         padding: 1rem;
     }
