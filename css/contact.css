@@ -41,6 +41,7 @@
     --clr-blk: #000000;
     --clr-grey: #a9a8a8;
     --clr-lightGrey: #c5c4c1;
+    --clr-gold: #b9985b;
     --clr-lightCharcoal: #585858;
     --clr-charcoal: #4a4a4a;
     --clr-darkGrey: #2c2c2c;
@@ -274,38 +275,18 @@ nav {
     border-bottom-left-radius: 5px;
 }
 .contact-form .right {
-    padding: 1.5rem;
+    padding: 1.25rem;
 }
 .contact-form .right .contact {
     position: relative;
 }
-.contact-form .right img {
-    position: absolute;
-    max-width: 40px;
-    width: 100%;
-    height: auto;
-    right: 0;
-    bottom: 13px;
-}
-.contact-form .right img:nth-child(1) {
-    position: absolute;
-    max-width: 40px;
-    width: 100%;
-    height: auto;
-    left: 0;
-    bottom: 13px;
-}
 .contact-form .right h2 {
     position: relative;
-    bottom: .65rem;
+    bottom: .5rem;
     text-transform: capitalize;
     color: var(--clr-lightCharcoal);
     font-size: clamp(1.2rem, 3vw, 1.3rem);
     font-weight: 400;
-}
-.contact-form .right .input,
-.contact-form .right textarea {
-    -webkit-tap-highlight-color: transparent;
 }
 .contact-form .right .input {
     width: 100%;
@@ -321,9 +302,22 @@ nav {
     resize: none;
     min-height: 100px;
 }
+.contact-form .right .input,
+.contact-form .right textarea {
+    -webkit-tap-highlight-color: transparent;
+}
+.contact-form .right .input:focus,
+.contact-form .right textarea:focus {
+    outline: none;
+}
+.contact-form .right .input:focus-visible,
+.contact-form .right textarea:focus-visible {
+    outline: 2.5px solid var(--clr-gold);
+    border-radius: 5px;
+}
 .contact-form .right button {
     position: relative;
-    top: .5rem;
+    top: .3rem;
     width: 100%;
     padding: .5rem 1rem;
     text-transform: uppercase;
@@ -451,6 +445,15 @@ nav {
         border-top-right-radius: 5px;
         border-bottom-left-radius: 0;
     }
+    .contact-form .right {
+        padding: .75rem;
+    }
+    .contact-form .right h2 {
+        bottom: .25rem;
+    }
+    .contact-form .right button {
+        top: .15rem;
+    }
 }
 @media screen and (max-width: 650px) {
     .title {
@@ -463,15 +466,6 @@ nav {
     }
     .links-wrapper .links li {
         padding: 0 .5rem;
-    }
-}
-@media screen and (max-width: 535px) {
-    .contact-form .right img,
-    .contact-form .right img:nth-child(1) {
-        max-width: 32px;
-    }
-    .contact-form .right button {
-        top: .25rem;
     }
 }
 @media screen and (prefers-color-scheme: dark) {
@@ -493,5 +487,10 @@ nav {
     }
     .contact-form .right .input {
         background: var(--clr-cream);
+    }
+    .contact-form .right .input:focus-visible,
+    .contact-form .right textarea:focus-visible {
+        outline: 3px solid var(--clr-gold);
+        border-radius: 5px;
     }
 }
