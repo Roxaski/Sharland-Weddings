@@ -1,6 +1,6 @@
 # Sharland-Weddings
 
-<img width="1920" height="1080" alt="github_read me" src="https://github.com/user-attachments/assets/b2b96c46-f607-4ec9-adc1-b001e35b14bc" />
+<img width="1920" height="1080" alt="github_read me" src="https://github.com/user-attachments/assets/f384247f-b048-446b-9b4a-52614dbc4e26" />
 
 ## Welcome to Sharlad Weddings
 
