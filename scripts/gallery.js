@@ -1,5 +1,6 @@
 const gallery = document.querySelector('.gallery');
 const galleryImgs = document.querySelectorAll('.gallery img');
+const galleryImgsArray = Array.from(galleryImgs);
 const lightbox = document.querySelector('.lightbox img');
 const lightboxSizes = '(max-width: 865px) 90vw, 800px';
 const previousBtn = document.querySelector('.previous');
@@ -9,13 +10,15 @@ const nav = document.querySelectorAll('nav a, nav button');
 
 // stores the index of the currently displayed image
 let currentImage;
+// stores the value of wether the lightbox is open or not
+let isLightboxOpen = false;
 
 // listens out for a click on the gallery
 gallery.addEventListener('click', (e) => {
     // check if the click is on a gallery image
     if (e.target.tagName === 'IMG') {
         // checks which image was clicked from the array of gallery images
-        currentImage = Array.from(galleryImgs).indexOf(e.target);
+        currentImage = galleryImgsArray.indexOf(e.target);
 
         displayOverlay();
         imagePreview();
@@ -27,7 +30,7 @@ gallery.addEventListener('click', (e) => {
 // listens out for the enter key on the gallery
 gallery.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' && e.target.tagName === 'IMG') {
-        currentImage = Array.from(galleryImgs).indexOf(e.target);
+        currentImage = galleryImgsArray.indexOf(e.target);
 
         displayOverlay();
         imagePreview();
@@ -52,6 +55,7 @@ function preload(imageIndex) {
 
 // displays an overlay
 function displayOverlay() {
+    isLightboxOpen = true;
     document.body.style.overflow = 'hidden';
     overlay.style.display = 'block';
 
@@ -112,6 +116,7 @@ previousBtn.addEventListener('click', () => {
 
 // removes overlay, image buttons, src and srcset along with alt
 function closeOverlay() {
+    isLightboxOpen = false;
     document.body.style.overflow = 'auto';
     lightbox.src = '';
     lightbox.srcset = '';
@@ -145,7 +150,7 @@ window.addEventListener('resize', () => {
     clearTimeout(timeoutID);
 
     // triggers the timeout only if the lightbox is displayed
-    if(overlay.style.display == 'block') {
+    if (isLightboxOpen) {
         // added active class to gallery to help with flickering during resize
         gallery.classList.add('active');
 
@@ -200,7 +205,7 @@ lightbox.addEventListener('touchend', (e) => {
 // image navigation using the arrows keys
 window.addEventListener('keydown', (e) => {
     // checks if the overlay is open, if so it runs the navigation code below
-    if(overlay.style.display == 'block') {
+    if (isLightboxOpen) {
         // navigates to the next image using the righ arrow, enter or space bar keys ( space bar works when the buttons are focused )
         if ((e.key === 'ArrowRight' || ((e.key === 'Enter' || e.key === ' ') 
             && document.activeElement === nextBtn)) 
