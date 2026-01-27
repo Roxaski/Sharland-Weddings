@@ -427,7 +427,7 @@ nav {
 }
 .price-container .content .package-price ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(190px, 4fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 4fr));
     gap: 2rem;
 }
 .price-container .content .package-price ul li {
