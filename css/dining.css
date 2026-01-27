@@ -123,7 +123,7 @@ nav {
     justify-content: center;
     position: absolute;
     top: 1.2rem;
-    right: 1.7rem;
+    right: 1.25rem;
     height: 2rem;
     width: 1.25rem;
     border: none;
@@ -252,7 +252,7 @@ nav {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 7px;
-    padding: 0 .7rem;
+    padding: 0 .5rem;
     margin: 25px auto 0;
 }
 .title {
@@ -293,7 +293,7 @@ nav {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 40%;
+    width: 42%;
     height: auto;
     border: 18px solid var(--clr-blk);
     border-image: url(../assets/dining/border_dark.svg) 10% repeat;
@@ -343,10 +343,10 @@ nav {
         padding: 0 25px;
     }
     .logo h2 {
-        margin-left: 0;
+        margin-left: -.5rem;
     }
     .logo img {
-        left: -.6rem;
+        left: -1.1rem;
     }
     .links-wrapper {
         display: block;
