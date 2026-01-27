@@ -124,7 +124,7 @@ nav {
     justify-content: center;
     position: absolute;
     top: 1.2rem;
-    right: 1.25rem;
+    right: 1.5rem;
     height: 2rem;
     width: 1.25rem;
     border: none;
@@ -281,7 +281,7 @@ nav {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: .6rem;
-    padding: 0 1rem;
+    padding: 0 .75rem;
 }
 .menu-container .title {
     grid-column: span 2;
@@ -391,7 +391,7 @@ nav {
 }
 .price-container {
     margin: 20px auto 0;
-    padding: 0 1rem;
+    padding: 0 .75rem;
 }
 .price-container.package-advert {
     font-size: clamp(1.1rem, 3vw, 1.2rem);
@@ -442,7 +442,7 @@ nav {
 .package-container.packages .content {
     display: grid;
     margin: .6rem auto 0;
-    padding: 0 1rem;
+    padding: 0 .75rem;
     gap: .6rem;
 }
 .package-container .content {

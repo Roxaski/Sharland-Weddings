@@ -114,7 +114,7 @@ nav {
     justify-content: center;
     position: absolute;
     top: 1.2rem;
-    right: 1.25rem;
+    right: 1.5rem;
     height: 2rem;
     width: 1.25rem;
     border: none;
@@ -244,7 +244,7 @@ nav {
     grid-template-columns: repeat(3, 1fr);
     gap: 8px;
     margin: 25px auto 0;
-    padding: 0 .5rem;
+    padding: 0 .75rem;
 }
 .gallery .title {
     text-align: center;
