@@ -4,7 +4,6 @@ const menu = document.querySelector('.hamburger-menu');
 const packagesMenu = document.querySelector('.packages');
 const eventsMenu = document.querySelector('.events');
 const mobileQuery = window.matchMedia('(max-width: 1145px)');
-let lastOpenedSubMenu = null;
 
 menu.addEventListener('click', toggleHamburgerMenu);
 menu.addEventListener('keydown', toggleHamburgerMenu);
@@ -12,6 +11,7 @@ linksWrapper.addEventListener('click', toggleSubmenu);
 linksWrapper.addEventListener('keydown', toggleSubmenu);
 document.addEventListener('keydown', handleEscape);
 
+// focus event listeners for keyboard users
 if (packagesMenu) {
     packagesMenu.addEventListener('focusin', menuFocus);
     packagesMenu.addEventListener('focusout', menuBlur);
@@ -29,15 +29,6 @@ function closeMenu(menuType) {
     } else {
         linksWrapper.classList.remove('events-menu-open');
     };
-    
-    // checks which sub menu is still opened and updates the variable accordingly
-    if (linksWrapper.classList.contains('packages-menu-open')) {
-        lastOpenedSubMenu = 'packages';
-    } else if (linksWrapper.classList.contains('events-menu-open')) {
-        lastOpenedSubMenu = 'events';
-    } else {
-        lastOpenedSubMenu = null;
-    };
 };
 
 // checks which submenu is focused and updates the variable accordingly
@@ -46,10 +37,8 @@ function menuFocus(e) {
     
     if (e.currentTarget.classList.contains('packages')) {
         linksWrapper.classList.add('packages-menu-open');
-        lastOpenedSubMenu = 'packages';
     } else {
         linksWrapper.classList.add('events-menu-open');
-        lastOpenedSubMenu = 'events';
     };
 };
 
@@ -78,14 +67,15 @@ function toggleHamburgerMenu(e) {
 
 // toggles the sub menu when clicking, using enter or space keys
 function toggleSubmenu(e) {
+    const clickedPackages = e.target.closest('.packages');
+    const clickedEvents = e.target.closest('.events');
+
     // allows the links inside the sub menu's to be clickable
     if (e.target.closest('.sub-menu')) return;
 
     if (e.type !== 'click' && e.key !== 'Enter' && e.key !== ' ') return;
-    
-    const clickedPackages = e.target.closest('.packages');
-    const clickedEvents = e.target.closest('.events');
 
+    // prevents the submenu logic from running if clicking on other links
     if (!clickedPackages && !clickedEvents) return;
     
     e.preventDefault();
@@ -96,35 +86,27 @@ function toggleSubmenu(e) {
     } else {
         linksWrapper.classList.toggle('events-menu-open');
     };
-    
-    // updates the variable with whichever sub menu is still opened or closed
-    if (linksWrapper.classList.contains('packages-menu-open')) {
-        lastOpenedSubMenu = 'packages';
-    } else if (linksWrapper.classList.contains('events-menu-open')) {
-        lastOpenedSubMenu = 'events';
-    } else {
-        lastOpenedSubMenu = null;
-    };
 };
 
 // closes the sub menu's and the hamburger menu when using the escape key
 function handleEscape(e) {
     if (e.key !== 'Escape') return;
 
-    const isInsidePackagesMenu = packagesMenu && packagesMenu.contains(document.activeElement);
-    const isInsideEventsMenu = eventsMenu && eventsMenu.contains(document.activeElement);
+    const activeElement = document.activeElement;
+    const isInsidePackagesMenu = packagesMenu && packagesMenu.contains(activeElement);
+    const isInsideEventsMenu = eventsMenu && eventsMenu.contains(activeElement);
     
     // checks if the user is focused on something inside the packages or events sub menu's
     if (isInsidePackagesMenu) {
         e.preventDefault();
-        document.activeElement.blur();
+        activeElement.blur();
         closeMenu('packages');
         return;
     };
     
     if (isInsideEventsMenu) {
         e.preventDefault();
-        document.activeElement.blur();
+        activeElement.blur();
         closeMenu('events');
         return;
     };
@@ -147,6 +129,5 @@ function handleEscape(e) {
         e.preventDefault();
         wrapper.classList.remove('active');
         document.body.classList.remove('no-scroll');
-        lastOpenedSubMenu = null;
     };
 };
