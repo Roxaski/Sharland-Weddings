@@ -404,7 +404,7 @@ nav {
 }
 .price-container {
     margin: .5rem auto 0;
-    padding: 0 .75rem;
+    padding: 0 .5rem;
 }
 .price-container .content {
     background: var(--clr-white);
@@ -441,7 +441,7 @@ nav {
 }
 .bookings-container {
     margin: .5rem auto 0;
-    padding: 0 .75rem;
+    padding: 0 .5rem;
 }
 .bookings-container .content {
     background: var(--clr-white);

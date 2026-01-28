@@ -586,7 +586,6 @@ nav {
     .menu-container {
         grid-template-columns: repeat(3, 1fr);
         gap: .75rem;
-        padding: 0 .55rem;
     }
     .menu-container .title {
         grid-column: span 3;
@@ -605,18 +604,11 @@ nav {
         padding: .55rem;
         border-radius: 5px;
     }
-    .price-container {
-        padding: 0 .55rem;
-    }
     .price-container.package-advert {
         padding: 0 1rem;
     }
     .price-container.package-advert .content p {
         padding: 0 1.5rem;
-    }
-    .package-container .content,
-    .package-container.packages .content {
-        padding: 0 .55rem;
     }
 }
 @media screen and (max-width: 786px) {
