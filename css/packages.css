@@ -348,12 +348,11 @@ nav {
     text-transform: capitalize;
     letter-spacing: 1.5px;
 }
-.grid-container ul li i {
-    color: var(--clr-green);
-    margin-right: 1rem;
-}
-.grid-container ul li .not-included {
-    color: var(--clr-red);
+.grid-container ul li img {
+    position: relative;
+    top: .3rem;
+    width: clamp(17px, 3vw, 22px);
+    height: auto;
 }
 .package-container .content {
     display: grid;
@@ -663,9 +662,6 @@ nav {
         color: var(--clr-chalk);
     }
     .grid-container {
-        color: var(--clr-chalk);
-    }
-    .grid-container ul li i {
         color: var(--clr-chalk);
     }
     .grid-container ul li .not-included {
