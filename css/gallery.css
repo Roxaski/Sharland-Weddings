@@ -164,11 +164,13 @@ nav {
     outline: solid 2px var(--clr-chalk);
 }
 .links-wrapper .links li .arrow {
+    position: relative;
+    top: .1rem;
+    left: .2rem;
     text-align: center;
     color: var(--clr-chevronWhite);
     width: 22px;
     height: 100%;
-    line-height: 70px;
     transition: 250ms ease-in-out all;
 }
 .links-wrapper .links li:hover .packages-arrow,
@@ -389,6 +391,9 @@ nav {
     .links-wrapper .links li:hover .events-sub-menu {
         display: none;
     }
+    .links-wrapper .links li .arrow {
+        top: .42rem;
+    }
     .links-wrapper .links li:hover .packages-arrow,
     .links-wrapper .links li:hover .events-arrow {
         transform: rotate(0deg);
@@ -403,7 +408,6 @@ nav {
     .links-wrapper.packages-menu-open .links li .packages-arrow,
     .links-wrapper.events-menu-open .links li .events-arrow {
         transform: rotate(90deg);
-        line-height: 0;
     }
     .hamburger-menu {
         display: flex;
