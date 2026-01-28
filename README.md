@@ -1,8 +1,8 @@
-# Sharland-Weddings
+# Sharland-Wedding's
 
 <img width="1920" height="1080" alt="github_read me" src="https://github.com/user-attachments/assets/f384247f-b048-446b-9b4a-52614dbc4e26" />
 
-## Welcome to Sharlad Weddings
+## Welcome to Sharland's Weddings
 
 Sharland Weddings was created as a way to showcase all the different facets that go into planning a wedding. You can find everything that you need to plan a wedding right here, we have different locations to choose from, including package deals. You can choose from a range of cuisine packages options as well as an extensive menu to choose from, as we provide a wide variety of options including options for vegetarians, vegans and so on.
 
