@@ -26,13 +26,6 @@
   font-weight: 400;
   src: url('../assets/fonts/poppins-v24-latin-regular.woff2') format('woff2');
 }
-@font-face {
-  font-display: swap;
-  font-family: 'Dancing Script';
-  font-style: normal;
-  font-weight: 500;
-  src: url('../assets/fonts/dancing-script-v29-latin-500.woff2') format('woff2');
-}
 
 * {
     margin: 0;
@@ -293,17 +286,17 @@ nav {
     left: 50%;
     transform: translate(-50%, -50%);
     height: auto;
-    min-width: clamp(180px, 35vw, 225px);
+    min-width: clamp(185px, 35vw, 225px);
     padding: 1rem;
     text-align: center;
     text-transform: capitalize;
-    font-size: clamp(1.35rem, 3vw, 1.85rem);
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    font-weight: 300;
     box-shadow: 2px 4px 7px rgba(0, 0, 0, .3);
     color: var(--clr-fontGrey);
-    border: solid 3px var(--clr-fontGrey);
+    border: solid 1.5px var(--clr-fontGrey);
     background: var(--clr-white);
     border-radius: 8px;
-    font-family: 'Dancing Script', sans-serif;
     cursor: pointer;
 }
 .grid-container .img-container .title.border a:focus {
