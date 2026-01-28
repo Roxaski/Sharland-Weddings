@@ -297,7 +297,7 @@ nav {
     padding: 1rem;
     text-align: center;
     text-transform: capitalize;
-    font-size: clamp(1.3rem, 3vw, 1.85rem);
+    font-size: clamp(1.35rem, 3vw, 1.85rem);
     box-shadow: 2px 4px 7px rgba(0, 0, 0, .3);
     color: var(--clr-fontGrey);
     border: solid 3px var(--clr-fontGrey);
