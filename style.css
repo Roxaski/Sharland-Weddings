@@ -441,10 +441,15 @@ footer .container .section ul li {
     margin: 5px auto;
     font-weight: 300;
 }
-footer .container .section.social i {
+footer .container .section.social .icons {
     margin-top: 1rem;
     margin-right: 1.5rem;
     font-size: clamp(1rem, 3vw, 1.1rem);
+}
+footer .container .section.social .icons img {
+    width: 20px;
+    height: auto;
+    margin-right: 1rem;
 }
 @media screen and (max-width: 1145px) {
     ::-webkit-scrollbar {
