@@ -283,7 +283,6 @@ nav {
     text-transform: capitalize;
     font-size: clamp(1rem, 3vw, 1.15rem);
     font-weight: 300;
-    box-shadow: 2px 4px 7px rgba(0, 0, 0, .3);
     color: var(--clr-fontGrey);
     background: var(--clr-fadedWhite);
     border-radius: 8px;
@@ -296,9 +295,6 @@ nav {
     outline: 4px solid var(--clr-lilac);
 }
 @media screen and (max-width: 1145px) {
-    ::-webkit-scrollbar {
-        display: none;
-    }
     .no-scroll {
         position: fixed;
         overflow-y: hidden;

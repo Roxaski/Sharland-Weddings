@@ -330,9 +330,6 @@ nav {
     border-radius: 5px;
 }
 @media screen and (max-width: 1145px) {
-    ::-webkit-scrollbar {
-        display: none;
-    }
     .no-scroll {
         position: fixed;
         overflow-y: hidden;
