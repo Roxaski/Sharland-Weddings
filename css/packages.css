@@ -338,11 +338,21 @@ nav {
     text-transform: capitalize;
     letter-spacing: 1.5px;
 }
-.grid-container ul li img {
+.grid-container ul li.included::before,
+.grid-container ul li.not-included::before {
+    content: '';
+    display: inline-block;
     position: relative;
-    top: .3rem;
-    width: clamp(17px, 3vw, 22px);
-    height: auto;
+    top: .23rem;
+    width: 20px;
+    height: 20px;
+    margin-right: 1rem;
+}
+.grid-container ul li.included::before {
+    background-image: url('../assets/svg/included.svg');
+}
+.grid-container ul li.not-included::before {
+    background-image: url('../assets/svg/not_included.svg');
 }
 .package-container .content {
     display: grid;
