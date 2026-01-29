@@ -276,7 +276,7 @@ nav {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: .75rem 0;
+    padding-top: .35rem;
     grid-template-areas: 
         'img-one content-one'
         'content-two img-two'
@@ -316,7 +316,7 @@ nav {
 }
 .grid-container .left,
 .grid-container .right {
-    padding: 0 .75rem;
+    padding-inline: 1rem;
 }
 .grid-container .left h2,
 .grid-container .right h2 {
@@ -330,7 +330,7 @@ nav {
 }
 .other-events {
     margin: 15px auto 0;
-    padding: 0 .75rem;
+    padding-inline: 1rem;
 }
 .other-events .content {
     display: grid;
@@ -415,7 +415,7 @@ nav {
         margin-left: -.5rem;
     }
     .logo img {
-        left: -1.1rem;
+        left: -.8rem;
     }
     .links-wrapper {
         display: block;
@@ -493,6 +493,8 @@ nav {
 @media screen and (max-width: 1100px) {
     .grid-container {
         grid-template-columns: 1fr;
+        padding-top: 0;
+        overflow: hidden;
         grid-template-areas: 
         'img-one'
         'content-one'
@@ -500,8 +502,6 @@ nav {
         'content-two'
         'img-three'
         'content-three';
-        padding-top: 0;
-        overflow: hidden;
     }
     .grid-container .left img,
     .grid-container .right img {
@@ -512,6 +512,7 @@ nav {
     .grid-container .img-one {
         margin: 0 -0.75rem;
         width: calc(100% + 1.5rem);
+        padding-inline: 0;
     }
     .grid-container .right h2,
     .grid-container .right p {

@@ -37,6 +37,7 @@
     --clr-chalk: #dbdada;
     --clr-offWhite: #c6c5c5;
     --clr-chevronWhite: #d6d4d4;
+    --clr-fadedWhite: #ebebeb;
     --clr-blk: #000000;
     --clr-darkGrey: #2c2c2c;
     --clr-fontGrey: #434343;
@@ -244,7 +245,7 @@ nav {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 7px;
-    padding: 0 .75rem;
+    padding-inline: 1rem;
     margin: 25px auto 0;
 }
 .title {
@@ -286,15 +287,15 @@ nav {
     left: 50%;
     transform: translate(-50%, -50%);
     height: auto;
-    min-width: clamp(185px, 35vw, 230px);
-    padding: 1rem;
+    min-width: clamp(180px, 35vw, 200px);
+    padding: .75rem;
     text-align: center;
     text-transform: capitalize;
-    font-size: clamp(1rem, 3vw, 1.3rem);
+    font-size: clamp(1rem, 3vw, 1.15rem);
     font-weight: 300;
     box-shadow: 2px 4px 7px rgba(0, 0, 0, .3);
     color: var(--clr-fontGrey);
-    background: var(--clr-white);
+    background: var(--clr-fadedWhite);
     border-radius: 8px;
     cursor: pointer;
 }
@@ -324,7 +325,7 @@ nav {
         margin-left: -.5rem;
     }
     .logo img {
-        left: -1.1rem;
+        left: -.8rem;
     }
     .links-wrapper {
         display: block;

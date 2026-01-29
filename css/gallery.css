@@ -243,7 +243,7 @@ nav {
     grid-template-columns: repeat(3, 1fr);
     gap: 8px;
     margin: 25px auto 0;
-    padding: 0 .75rem;
+    padding-inline: 1rem;
 }
 .gallery .title {
     text-align: center;
@@ -344,7 +344,7 @@ nav {
         margin-left: -.5rem;
     }
     .logo img {
-        left: -1.1rem;
+        left: -.8rem;
     }
     .links-wrapper {
         display: block;

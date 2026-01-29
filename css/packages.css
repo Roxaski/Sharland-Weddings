@@ -279,13 +279,13 @@ nav {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: .75rem 0;
+    padding-top: .35rem;
+    gap: 1rem;
     grid-template-areas: 
         'img-one content-one'
         'content-two img-two'
         'img-three content-three'
         'content-four img-four';
-    gap: 1rem;
 }
 .grid-container .img-one {
     grid-area: img-one;
@@ -330,7 +330,7 @@ nav {
 }
 .grid-container .left,
 .grid-container .right {
-    padding: 0 .75rem;
+    padding-inline: 1rem;
 }
 .grid-container .left h2,
 .grid-container .right h2 {
@@ -357,7 +357,7 @@ nav {
 .package-container .content {
     display: grid;
     margin: .5rem auto 0;
-    padding: 0 .5rem;
+    padding-inline: 1rem;
     gap: .5rem;
 }
 .package-container .content {
@@ -405,7 +405,7 @@ nav {
 }
 .price-container {
     margin: .5rem auto 0;
-    padding: 0 .5rem;
+    padding-inline: 1rem;
 }
 .price-container .content {
     background: var(--clr-white);
@@ -442,7 +442,7 @@ nav {
 }
 .bookings-container {
     margin: .5rem auto 0;
-    padding: 0 .5rem;
+    padding-inline: 1rem;
 }
 .bookings-container .content {
     background: var(--clr-white);
@@ -517,7 +517,7 @@ nav {
         margin-left: -.5rem;
     }
     .logo img {
-        left: -1.1rem;
+        left: -.8rem;
     }
     .links-wrapper {
         display: block;
@@ -598,6 +598,8 @@ nav {
 @media screen and (max-width: 1100px) {
     .grid-container {
         grid-template-columns: 1fr;
+        padding-top: 0;
+        overflow: hidden;
         grid-template-areas: 
             'img-one'
             'content-one'
@@ -607,8 +609,6 @@ nav {
             'content-three'
             'img-four'
             'content-four';
-            padding-top: 0;
-            overflow: hidden;
     }
     .grid-container .left img,
     .grid-container .right img {
@@ -619,9 +619,13 @@ nav {
     .grid-container .img-one {
         margin: 0 -.75rem;
         width: calc(100% + 1.5rem);
+        padding-inline: 0;
     }
     .grid-container ul li {
         margin: 20px auto;
+    }
+    .bookings-container {
+        margin: 2rem auto 0;
     }
 }
 @media screen and (max-width: 735px) {

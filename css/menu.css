@@ -280,7 +280,7 @@ nav {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: .6rem;
-    padding: 0 .75rem;
+    padding-inline: 1rem;
 }
 .menu-container .title {
     grid-column: span 2;
@@ -390,7 +390,7 @@ nav {
 }
 .price-container {
     margin: 20px auto 0;
-    padding: 0 .75rem;
+    padding-inline: 1rem;
 }
 .price-container.package-advert {
     font-size: clamp(1.1rem, 3vw, 1.2rem);
@@ -441,7 +441,7 @@ nav {
 .package-container.packages .content {
     display: grid;
     margin: .6rem auto 0;
-    padding: 0 .75rem;
+    padding-inline: 1rem;
     gap: .6rem;
 }
 .package-container .content {
@@ -511,7 +511,7 @@ nav {
         margin-left: -.5rem;
     }
     .logo img {
-        left: -1.1rem;
+        left: -.8rem;
     }
     .links-wrapper {
         display: block;
