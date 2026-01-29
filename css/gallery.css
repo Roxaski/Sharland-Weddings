@@ -283,13 +283,16 @@ nav {
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 3rem;
     background: var(--clr-blk);
     border: none;
     color: var(--clr-white);
     cursor: pointer;
     visibility: hidden;
     pointer-events: none;
+}
+.lightbox .btn .chevron {
+    width: 2rem;
+    height: auto;
 }
 .lightbox .btn.visible {
     visibility: visible;
@@ -300,10 +303,10 @@ nav {
     border-radius: 5px;
 }
 .lightbox .previous {
-    left: -4rem;
+    left: -5rem;
 }
 .lightbox .next {
-    right: -4rem;
+    right: -5rem;
 }
 .overlay {
     display: none;
@@ -416,14 +419,14 @@ nav {
     .gallery .title {
         grid-column: span 2;
     }
+    .lightbox .btn .chevron {
+        display: none;
+    }
 }
 @media screen and (max-width: 865px) {
     .lightbox img {
         max-width: 90%;
         margin: 0 auto;
-    }
-    .lightbox .btn i {
-        display: none;
     }
 }
 @media screen and (max-width: 768px) {
