@@ -43,16 +43,6 @@
     --clr-mauve: #8f6ca9;
     --clr-lilac: #861cdc;
 }
-::-webkit-scrollbar {
-    width: 8px;
-}
-::-webkit-scrollbar-track {
-    background: var(--clr-white);
-}
-::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    background: var(--clr-lilac);
-}
 body {
     color: var(--clr-darkGrey);
     background: var(--clr-white);
@@ -462,12 +452,6 @@ nav {
     }
 }
 @media screen and (prefers-color-scheme: dark) {
-    ::-webkit-scrollbar-track {
-        background: var(--clr-blk);
-    }
-    ::-webkit-scrollbar-thumb {
-        background: var(--clr-chalk);
-    }
     body {
         background: var(--clr-blk);
     }
