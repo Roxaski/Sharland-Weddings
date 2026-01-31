@@ -137,7 +137,7 @@ nav {
     position: relative;
     list-style: none;
     padding: 0 25px;
-    transition: 250ms ease;
+    transition: background-color 250ms ease;
 }
 .links-wrapper .links li:hover {
     background: var(--clr-lilac);
@@ -172,7 +172,7 @@ nav {
     color: var(--clr-chevronWhite);
     width: 22px;
     height: 100%;
-    transition: 250ms ease-in-out all;
+    transition: transform 250ms ease-in-out;
 }
 .links-wrapper .links li:hover .packages-arrow,
 .links-wrapper .links li:hover .events-arrow {
@@ -225,7 +225,7 @@ nav {
     width: 100%;
     border-radius: 5px;
     background-color: var(--clr-white);
-    transition: 350ms ease;
+    transition: transform 350ms ease;
 }
 .bars::before {
     transform: translateY(-4px);
@@ -391,8 +391,8 @@ nav {
     letter-spacing: 1.5px;
     text-decoration: none;
     border-radius: 5px;
+    transition: background-color 200ms ease-out;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, .1);
-    transition: 200ms ease-out;
 }
 .package-container .content .btn:hover {
     background: var(--clr-shadowGrey);
@@ -525,7 +525,7 @@ nav {
         max-width: 300px;
         width: 100%;
         transform: translateX(100%);
-        transition: 250ms ease-in-out;
+        transition: transform 250ms ease-in-out;
         padding: 15px;
         -webkit-tap-highlight-color: transparent;
         overflow-y: auto;

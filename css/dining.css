@@ -37,7 +37,7 @@
     --clr-chalk: #dbdada;
     --clr-offWhite: #c6c5c5;
     --clr-chevronWhite: #d6d4d4;
-    --clr-fadedWhite: #ebebeb;
+    --clr-fadedWhite: #f8f8f8;
     --clr-blk: #000000;
     --clr-darkGrey: #2c2c2c;
     --clr-fontGrey: #434343;
@@ -129,7 +129,7 @@ nav {
     position: relative;
     list-style: none;
     padding: 0 25px;
-    transition: 250ms ease;
+    transition: background-color 250ms ease;
 }
 .links-wrapper .links li:hover {
     background: var(--clr-lilac);
@@ -164,7 +164,7 @@ nav {
     color: var(--clr-chevronWhite);
     width: 22px;
     height: 100%;
-    transition: 250ms ease-in-out all;
+    transition: transform 250ms ease-in-out;
 }
 .links-wrapper .links li:hover .packages-arrow,
 .links-wrapper .links li:hover .events-arrow {
@@ -217,7 +217,7 @@ nav {
     width: 100%;
     border-radius: 5px;
     background-color: var(--clr-white);
-    transition: 350ms ease;
+    transition: transform 350ms ease;
 }
 .bars::before {
     transform: translateY(-4px);
@@ -285,7 +285,7 @@ nav {
     font-weight: 300;
     color: var(--clr-fontGrey);
     background: var(--clr-fadedWhite);
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
 }
 .grid-container .img-container .title.border a:focus {
@@ -322,7 +322,7 @@ nav {
         max-width: 300px;
         width: 100%;
         transform: translateX(100%);
-        transition: 250ms ease-in-out;
+        transition: transform 250ms ease-in-out;
         padding: 15px;
         -webkit-tap-highlight-color: transparent;
         overflow-y: auto;
@@ -422,7 +422,6 @@ nav {
     .grid-container .img-container .title.border h2 {
         color: var(--clr-chalk);
         background: var(--clr-darkGrey);
-        border: solid 2px var(--clr-chalk);
     }
     .grid-container .img-container .title.border a:focus-visible h2 {
         outline: 4px solid var(--clr-chalk);
