@@ -86,12 +86,6 @@ nav {
     font-weight: 400;
     margin-left: 1.5rem;
 }
-.logo h2 a:focus {
-    outline: none;
-}
-.logo h2 a:focus-visible {
-    outline: 2px solid var(--clr-chalk);
-}
 .logo img {
     position: relative;
     bottom: .35rem;
@@ -151,12 +145,6 @@ nav {
     text-transform: capitalize;
     letter-spacing: .5px;
     color: var(--clr-white);
-}
-.links-wrapper .links li a:focus {
-    outline: none;
-}
-.links-wrapper .links li a:focus-visible {
-    outline: solid 2px var(--clr-chalk);
 }
 .links-wrapper .links li .arrow {
     position: relative;
@@ -304,15 +292,6 @@ nav {
 .contact-form .right .input,
 .contact-form .right textarea {
     -webkit-tap-highlight-color: transparent;
-}
-.contact-form .right .input:focus,
-.contact-form .right textarea:focus {
-    outline: none;
-}
-.contact-form .right .input:focus-visible,
-.contact-form .right textarea:focus-visible {
-    outline: 2.5px solid var(--clr-gold);
-    border-radius: 5px;
 }
 .contact-form .right button {
     position: relative;
@@ -478,10 +457,5 @@ nav {
     }
     .contact-form .right .input {
         background: var(--clr-cream);
-    }
-    .contact-form .right .input:focus-visible,
-    .contact-form .right textarea:focus-visible {
-        outline: 3px solid var(--clr-gold);
-        border-radius: 5px;
     }
 }

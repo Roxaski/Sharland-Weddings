@@ -84,12 +84,6 @@ nav {
     font-weight: 400;
     margin-left: 1.5rem;
 }
-.logo h2 a:focus {
-    outline: none;
-}
-.logo h2 a:focus-visible {
-    outline: 2px solid var(--clr-chalk);
-}
 .logo img {
     position: relative;
     bottom: .35rem;
@@ -149,12 +143,6 @@ nav {
     text-transform: capitalize;
     letter-spacing: .5px;
     color: var(--clr-white);
-}
-.links-wrapper .links li a:focus {
-    outline: none;
-}
-.links-wrapper .links li a:focus-visible {
-    outline: solid 2px var(--clr-chalk);
 }
 .links-wrapper .links li .arrow {
     position: relative;
@@ -288,12 +276,6 @@ nav {
     border-radius: 10px;
     cursor: pointer;
 }
-.grid-container .img-container .title.border a:focus {
-    outline: none;
-}
-.grid-container .img-container .title.border a:focus-visible h2 {
-    outline: 4px solid var(--clr-lilac);
-}
 @media screen and (max-width: 1145px) {
     .no-scroll {
         position: fixed;
@@ -422,9 +404,6 @@ nav {
     .grid-container .img-container .title.border h2 {
         color: var(--clr-chalk);
         background: var(--clr-darkGrey);
-    }
-    .grid-container .img-container .title.border a:focus-visible h2 {
-        outline: 4px solid var(--clr-chalk);
     }
     .grid-container .img-container img {
         color: var(--clr-white);

@@ -91,12 +91,6 @@ nav {
     font-weight: 400;
     margin-left: 1.5rem;
 }
-.logo h2 a:focus {
-    outline: none;
-}
-.logo h2 a:focus-visible {
-    outline: 2px solid var(--clr-chalk);
-}
 .logo img {
     position: relative;
     bottom: .35rem;
@@ -156,12 +150,6 @@ nav {
     text-transform: capitalize;
     letter-spacing: .5px;
     color: var(--clr-white);
-}
-.links-wrapper .links li a:focus {
-    outline: none;
-}
-.links-wrapper .links li a:focus-visible {
-    outline: solid 2px var(--clr-chalk);
 }
 .links-wrapper .links li .arrow {
     position: relative;
@@ -475,12 +463,6 @@ nav {
 .package-container .content .btn:hover {
     background: var(--clr-shadowGrey);
 }
-.package-container .content .btn:focus {
-    outline: none;
-}
-.package-container .content .btn:focus-visible {
-    outline: 4px solid var(--clr-lilac);
-}
 @media screen and (max-width: 1145px) {
     .no-scroll {
         position: fixed;
@@ -731,8 +713,5 @@ nav {
     }
     .package-container .content .btn:hover {
         background: var(--clr-mediumGrey);
-    }
-    .package-container .content .btn:focus-visible {
-        outline: 4px solid var(--clr-chalk);
     }
 }
