@@ -36,7 +36,6 @@
     --clr-white: #fefefe;
     --clr-offWhite: #c6c5c5;
     --clr-chalk: #dbdada;
-    --clr-chevronWhite: #d6d4d4;
     --clr-milkWhite: #fcfbfb;
     --clr-alabasterWhite: #d7d5d5;
     --clr-blk: #000000;
@@ -157,7 +156,6 @@ nav {
     top: .1rem;
     left: .2rem;
     text-align: center;
-    color: var(--clr-chevronWhite);
     width: 22px;
     height: 100%;
     transition: transform 250ms ease-in-out;

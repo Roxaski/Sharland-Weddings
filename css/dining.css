@@ -36,7 +36,6 @@
     --clr-white: #fefefe;
     --clr-chalk: #dbdada;
     --clr-offWhite: #c6c5c5;
-    --clr-chevronWhite: #d6d4d4;
     --clr-fadedWhite: #f8f8f8;
     --clr-blk: #000000;
     --clr-darkGrey: #2c2c2c;
@@ -149,7 +148,6 @@ nav {
     top: .1rem;
     left: .2rem;
     text-align: center;
-    color: var(--clr-chevronWhite);
     width: 22px;
     height: 100%;
     transition: transform 250ms ease-in-out;
