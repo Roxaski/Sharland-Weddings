@@ -251,12 +251,12 @@ nav {
     max-width: 800px;
     z-index: 3;
 }
-.lightbox img {
+.lightbox > img {
     display: none;
     width: 100%;
     height: auto;
 }
-.lightbox img.active {
+.lightbox > img.active {
     display: block;
 }
 .lightbox .btn {
@@ -271,7 +271,7 @@ nav {
     pointer-events: none;
 }
 .lightbox .btn .chevron {
-    width: 2rem;
+    width: 3rem;
     height: auto;
 }
 .lightbox .btn.visible {
