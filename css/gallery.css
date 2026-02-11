@@ -392,7 +392,7 @@ nav {
     .gallery .title {
         grid-column: span 2;
     }
-    .lightbox .btn .chevron {
+    .lightbox .btn {
         display: none;
     }
 }
@@ -423,7 +423,7 @@ nav {
     .lightbox {
         width: 80%;
     }
-    .lightbox .btn i {
+    .lightbox .btn {
         display: none;
     }
 }
