@@ -110,12 +110,12 @@
                             <h2>contact form</h2>
                         </div>
 
-                        <form>
-                            <input name="name" class="input" type="text" placeholder="Name:" autocomplete="off">
-                            <input name="email" class="input" type="email" placeholder="Email:" autocomplete="off">
-                            <input name="phone number" class="input" type="text" placeholder="Number:" autocomplete="off">
-                            <textarea name="insert your message" class="input" placeholder="Insert your message here:" maxlength="500"></textarea>
-                            <button type="button">submit</button>
+                        <form aria-hidden="true" action="#">
+                            <input tabindex="-1" name="name" class="input" type="text" placeholder="Name:" autocomplete="off">
+                            <input tabindex="-1" name="email" class="input" type="email" placeholder="Email:" autocomplete="off">
+                            <input tabindex="-1" name="phone number" class="input" type="text" placeholder="Number:" autocomplete="off">
+                            <textarea tabindex="-1" name="insert your message" class="input" placeholder="Insert your message here:" maxlength="500"></textarea>
+                            <button tabindex="-1" type="button">submit</button>
                         </form>
                     </div>
                 </div>
