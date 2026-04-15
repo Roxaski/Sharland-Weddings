@@ -56,9 +56,6 @@ body {
     font-family: "Poppins", sans-serif;
     cursor: default;
 }
-.wrapper {
-    max-width: 90rem;
-}
 nav {
     position: relative;
     top: 0;
@@ -70,20 +67,16 @@ nav {
     background: var(--clr-purple);
     z-index: 1;
 }
+nav.active .hamburger-menu .bars::before {
+    transform: translateY(0) rotate(45deg);
+}
+nav.active .hamburger-menu .bars::after {
+    transform: translateY(0) rotate(-45deg);
+}
 .logo {
     display: flex;
     align-items: center;
-    color: var(--clr-white);
-    font-family: "Great Vibes", cursive;
-    font-size: clamp(2rem, 3vw, 2.5rem);
-    letter-spacing: .5px;
-    text-decoration: none;
     z-index: 2;
-}
-.logo h2 {
-    font-size: 1rem;
-    font-weight: 400;
-    margin-left: 1.5rem;
 }
 .logo img {
     position: relative;
@@ -92,6 +85,15 @@ nav {
     width: 70px;
     height: auto;
     color: var(--clr-white);
+}
+.logo h2 a {
+    color: var(--clr-white);
+    font-weight: 400;
+    font-family: "Great Vibes", cursive;
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    letter-spacing: .5px;
+    text-decoration: none;
+    margin-left: 1.5rem;
 }
 .hamburger-menu {
     display: none;
@@ -213,11 +215,8 @@ nav {
 .bars::after {
     transform: translateY(4px);
 }
-.wrapper.active .hamburger-menu .bars::before {
-    transform: translateY(0) rotate(45deg);
-}
-.wrapper.active .hamburger-menu .bars::after {
-    transform: translateY(0) rotate(-45deg);
+.wrapper {
+    max-width: 90rem;
 }
 .title {
     text-align: center;
@@ -229,7 +228,7 @@ nav {
 .title p {
     font-size: clamp(1.15rem, 3vw, 1.3rem);
     font-weight: 300;
-    margin: 0 auto 15px;
+    margin: .5rem 0;
 }
 .contact-container {
     display: flex;
@@ -238,7 +237,6 @@ nav {
     flex-direction: column;
     width: 100%;
     height: 100%;
-    padding-inline: .65rem 1rem;
     margin-top: 25px;
 }
 .contact-form {
@@ -260,10 +258,13 @@ nav {
     border-bottom-left-radius: 5px;
 }
 .contact-form .right {
-    padding: 1.25rem;
+    padding: 1rem 1rem .5rem 1rem;
 }
-.contact-form .right .contact {
-    position: relative;
+.contact-form .right .screen-reader-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
 .contact-form .right h2 {
     position: relative;
@@ -273,33 +274,33 @@ nav {
     font-size: clamp(1.2rem, 3vw, 1.3rem);
     font-weight: 400;
 }
-.contact-form .right .input {
+.contact-form .right input,
+.contact-form .right textarea {
+    -webkit-tap-highlight-color: transparent;
     width: 100%;
+    border: none;
+    border-radius: 5px;
+}
+.contact-form .right input,
+.contact-form .right textarea,
+.contact-container .right button {
+    margin: .2rem auto;
+}
+.contact-form .right input {
     padding: .5rem .25rem;
     background: var(--clr-white);
-    font-size: 1rem;
-    outline: none;
-    border: none;
-    margin: 3px auto;
-    border-radius: 5px;
 }
 .contact-form .right textarea {
     resize: none;
     min-height: 100px;
-}
-.contact-form .right .input,
-.contact-form .right textarea {
-    -webkit-tap-highlight-color: transparent;
+    padding: .5rem .25rem;
 }
 .contact-form .right button {
-    position: relative;
-    top: .3rem;
     width: 100%;
     padding: .5rem 1rem;
     text-transform: uppercase;
     color: var(--clr-white);
     background: var(--clr-grey);
-    outline: none;
     border: none;
     font-size: .95rem;
     font-weight: 400;
@@ -310,15 +311,17 @@ nav {
         position: fixed;
         overflow-y: hidden;
     }
-    .wrapper.active .links-wrapper {
-        transform: translateX(0);
-    }
     nav {
         position: relative;
         max-width: 100%;
         padding: 0 25px;
     }
-    .logo h2 {
+    nav.active .links-wrapper {
+        transform: translateX(0);
+        visibility: visible;
+        transition: transform 250ms ease-in-out, visibility 0s;
+    }
+    .logo h2 a {
         margin-left: -.5rem;
     }
     .logo img {
@@ -332,11 +335,12 @@ nav {
         right: 0;
         max-width: 300px;
         width: 100%;
-        transform: translateX(100%);
-        transition: transform 250ms ease-in-out;
         padding: 15px;
+        transform: translateX(100%);
+        transition: transform 250ms ease-in-out, visibility 0s 250ms;
         -webkit-tap-highlight-color: transparent;
         overflow-y: auto;
+        visibility: hidden;
     }
     .links-wrapper .links {
         display: block;
@@ -453,7 +457,8 @@ nav {
     .contact-form .right button {
         background: var(--clr-charcoal);
     }
-    .contact-form .right .input {
+    .contact-form .right input,
+    .contact-form .right textarea {
         background: var(--clr-cream);
     }
 }

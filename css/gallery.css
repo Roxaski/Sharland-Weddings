@@ -51,9 +51,6 @@ body {
     padding-bottom: 1rem;
     cursor: default;
 }
-.wrapper {
-    max-width: 90rem;
-}
 nav {
     position: relative;
     top: 0;
@@ -65,20 +62,16 @@ nav {
     background: var(--clr-purple);
     z-index: 1;
 }
+nav.active .hamburger-menu .bars::before {
+    transform: translateY(0) rotate(45deg);
+}
+nav.active .hamburger-menu .bars::after {
+    transform: translateY(0) rotate(-45deg);
+}
 .logo {
     display: flex;
     align-items: center;
-    color: var(--clr-white);
-    font-family: "Great Vibes", cursive;
-    font-size: clamp(2rem, 3vw, 2.5rem);
-    letter-spacing: .5px;
-    text-decoration: none;
     z-index: 2;
-}
-.logo h2 {
-    font-size: 1rem;
-    font-weight: 400;
-    margin-left: 1.5rem;
 }
 .logo img {
     position: relative;
@@ -87,6 +80,15 @@ nav {
     width: 70px;
     height: auto;
     color: var(--clr-white);
+}
+.logo h2 a {
+    color: var(--clr-white);
+    font-weight: 400;
+    font-family: "Great Vibes", cursive;
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    letter-spacing: .5px;
+    text-decoration: none;
+    margin-left: 1.5rem;
 }
 .hamburger-menu {
     display: none;
@@ -208,11 +210,8 @@ nav {
 .bars::after {
     transform: translateY(4px);
 }
-.wrapper.active .hamburger-menu .bars::before {
-    transform: translateY(0) rotate(45deg);
-}
-.wrapper.active .hamburger-menu .bars::after {
-    transform: translateY(0) rotate(-45deg);
+.wrapper {
+    max-width: 90rem;
 }
 .gallery {
     display: grid;
@@ -236,77 +235,98 @@ nav {
     margin: 0 auto 15px;
 }
 .gallery img {
+    display: block;
     width: 100%;
     height: auto;
-    color: var(--clr-white);
+    color: var(--clr-blk);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, .2);
+    contain: layout;
     cursor: pointer;
 }
 .lightbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: fit-content;
     height: auto;
-    width: 100%;
-    max-width: 800px;
     z-index: 3;
+}
+.lightbox-no-scroll {
+    overflow: hidden;
 }
 .lightbox > img {
     display: none;
-    width: 100%;
+    max-width: 90vw;
+    max-height: 85vh;
+    width: auto;
     height: auto;
+    object-fit: contain;
+    cursor: default;
 }
 .lightbox > img.active {
     display: block;
 }
 .lightbox .btn {
-    position: fixed;
+    position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: var(--clr-blk);
+    background: transparent;
     border: none;
     color: var(--clr-white);
     cursor: pointer;
     visibility: hidden;
     pointer-events: none;
 }
-.lightbox .btn .chevron {
-    width: 3rem;
-    height: auto;
-}
-.lightbox .btn.visible {
+.lightbox .btn.active {
     visibility: visible;
     pointer-events: auto;
 }
+.lightbox .btn .chevron {
+    width: 5rem;
+    height: auto;
+}
 .lightbox .previous {
-    left: -5rem;
+    left: 0;
+    transform: translateY(-50%);
+    margin-left: -5rem;
 }
 .lightbox .next {
-    right: -5rem;
+    right: 0;
+    transform: translateY(-50%);
+    margin-right: -5rem;
 }
 .overlay {
-    display: none;
+    opacity: 0;
+    pointer-events: none;
     position: fixed;
     inset: 0;
-    width: 100%;
-    height: 100%;
     background: var(--clr-blk);
     z-index: 2;
+}
+.overlay.active {
+    opacity: 1;
+    pointer-events: auto;
 }
 @media screen and (max-width: 1145px) {
     .no-scroll {
         position: fixed;
         overflow-y: hidden;
     }
-    .wrapper.active .links-wrapper {
-        transform: translateX(0);
-    }
     nav {
         position: relative;
         max-width: 100%;
         padding: 0 25px;
     }
-    .logo h2 {
+    nav.active .links-wrapper {
+        transform: translateX(0);
+        visibility: visible;
+        transition: transform 250ms ease-in-out, visibility 0s;
+    }
+    .logo h2 a {
         margin-left: -.5rem;
     }
     .logo img {
@@ -320,11 +340,12 @@ nav {
         right: 0;
         max-width: 300px;
         width: 100%;
-        transform: translateX(100%);
-        transition: transform 250ms ease-in-out;
         padding: 15px;
+        transform: translateX(100%);
+        transition: transform 250ms ease-in-out, visibility 0s 250ms;
         -webkit-tap-highlight-color: transparent;
         overflow-y: auto;
+        visibility: hidden;
     }
     .links-wrapper .links {
         display: block;
@@ -392,6 +413,9 @@ nav {
     .gallery .title {
         grid-column: span 2;
     }
+    .lightbox > img {
+        margin: 0 auto;
+    }
     .lightbox .btn {
         display: none;
     }
@@ -421,7 +445,12 @@ nav {
 }
 @media screen and (orientation: landscape) and (max-width: 960px) {
     .lightbox {
-        width: 80%;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80vw;
+        height: auto;
     }
     .lightbox .btn {
         display: none;

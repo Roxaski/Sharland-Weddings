@@ -59,9 +59,6 @@ body {
     padding-bottom: 1rem;
     cursor: default;
 }
-.wrapper {
-    max-width: 90rem;
-}
 nav {
     position: relative;
     top: 0;
@@ -73,20 +70,16 @@ nav {
     background: var(--clr-purple);
     z-index: 1;
 }
+nav.active .hamburger-menu .bars::before {
+    transform: translateY(0) rotate(45deg);
+}
+nav.active .hamburger-menu .bars::after {
+    transform: translateY(0) rotate(-45deg);
+}
 .logo {
     display: flex;
     align-items: center;
-    color: var(--clr-white);
-    font-family: "Great Vibes", cursive;
-    font-size: clamp(2rem, 3vw, 2.5rem);
-    letter-spacing: .5px;
-    text-decoration: none;
     z-index: 2;
-}
-.logo h2 {
-    font-size: 1rem;
-    font-weight: 400;
-    margin-left: 1.5rem;
 }
 .logo img {
     position: relative;
@@ -95,6 +88,15 @@ nav {
     width: 70px;
     height: auto;
     color: var(--clr-white);
+}
+.logo h2 a {
+    color: var(--clr-white);
+    font-weight: 400;
+    font-family: "Great Vibes", cursive;
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    letter-spacing: .5px;
+    text-decoration: none;
+    margin-left: 1.5rem;
 }
 .hamburger-menu {
     display: none;
@@ -216,11 +218,8 @@ nav {
 .bars::after {
     transform: translateY(4px);
 }
-.wrapper.active .hamburger-menu .bars::before {
-    transform: translateY(0) rotate(45deg);
-}
-.wrapper.active .hamburger-menu .bars::after {
-    transform: translateY(0) rotate(-45deg);
+.wrapper {
+    max-width: 90rem;
 }
 .banner {
     position: relative;
@@ -370,15 +369,17 @@ nav {
         position: fixed;
         overflow-y: hidden;
     }
-    .wrapper.active .links-wrapper {
-        transform: translateX(0);
-    }
     nav {
         position: relative;
         max-width: 100%;
         padding: 0 25px;
     }
-    .logo h2 {
+    nav.active .links-wrapper {
+        transform: translateX(0);
+        visibility: visible;
+        transition: transform 250ms ease-in-out, visibility 0s;
+    }
+    .logo h2 a {
         margin-left: -.5rem;
     }
     .logo img {
@@ -392,11 +393,12 @@ nav {
         right: 0;
         max-width: 300px;
         width: 100%;
-        transform: translateX(100%);
-        transition: transform 250ms ease-in-out;
         padding: 15px;
+        transform: translateX(100%);
+        transition: transform 250ms ease-in-out, visibility 0s 250ms;
         -webkit-tap-highlight-color: transparent;
         overflow-y: auto;
+        visibility: hidden;
     }
     .links-wrapper .links {
         display: block;
