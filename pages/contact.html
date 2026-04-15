@@ -23,68 +23,68 @@
     <link rel="icon" type="image/png" href="../favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
     <link rel="shortcut icon" href="../favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
     <link rel="manifest" href="../site.webmanifest" />
     <link rel="stylesheet" href="../css/contact.css">
     <script defer src="../script.js"></script>
 </head>
 <body>
-    <div class="wrapper">
-        <header>
-            <nav>
-                <div class="logo">
-                    <img width="70" height="70" draggable="false" 
-                    src="../assets/logo/logo.svg" 
-                    alt="logo">
-                    
-                    <h2><a class="logo" href="../index.html">Sharland's</a></h2>
-                </div>
+    <header>
+        <nav>
+            <div class="logo">
+                <img width="70" height="70" draggable="false" 
+                src="../assets/logo/logo.svg" 
+                alt="logo">
+                
+                <h2><a href="../index.html">Sharland's</a></h2>
+            </div>
 
-                <button class="hamburger-menu" aria-label="opens navigation menu">
-                    <div class="bars"></div>
-                </button>
+            <button class="hamburger-menu" aria-label="opens navigation menu">
+                <span class="bars"></span>
+            </button>
 
-                <div class="links-wrapper">
-                    <ul class="links">
-                        <li class="packages">
-                            <a href="#" aria-label="packages submenu">packages</a>
+            <div class="links-wrapper">
+                <ul class="links">
+                    <li class="packages">
+                        <a href="#" aria-label="packages submenu">packages</a>
 
-                            <img class="arrow packages-arrow" width="22px" height="22px" loading="lazy" draggable="false"
-                            src="../assets/icons/chevron-right.svg" 
-                            alt="">
+                        <img class="arrow packages-arrow" width="22px" height="22px" loading="lazy" draggable="false"
+                        src="../assets/icons/chevron-right.svg" 
+                        alt="">
 
-                            <ul class="sub-menu packages-sub-menu">
-                                <li><a href="../pages/packages_silver.html">silver</a></li>
-                                <li><a href="../pages/packages_gold.html">gold</a></li>
-                                <li><a href="../pages/packages_platinum.html">platinum</a></li>
-                            </ul>
-                        </li>
+                        <ul class="sub-menu packages-sub-menu">
+                            <li><a href="../pages/packages_silver.html">silver</a></li>
+                            <li><a href="../pages/packages_gold.html">gold</a></li>
+                            <li><a href="../pages/packages_platinum.html">platinum</a></li>
+                        </ul>
+                    </li>
 
-                        <li><a href="../pages/gallery.html">gallery</a></li>
+                    <li><a href="../pages/gallery.html">gallery</a></li>
 
-                        <li class="events">
-                            <a href="#" aria-label="events submenu">events</a>
+                    <li class="events">
+                        <a href="#" aria-label="events submenu">events</a>
 
-                           <img class="arrow events-arrow" width="22px" height="22px" loading="lazy" draggable="false"
-                            src="../assets/icons/chevron-right.svg" 
-                            alt="">
+                        <img class="arrow events-arrow" width="22px" height="22px" loading="lazy" draggable="false"
+                        src="../assets/icons/chevron-right.svg" 
+                        alt="">
 
-                            <ul class="sub-menu events-sub-menu">
-                                <li><a href="../pages/events_business.html">business</a></li>
-                                <li><a href="../pages/events_birthdays.html">birthdays</a></li>
-                                <li><a href="../pages/events_christmas.html">christmas</a></li>
-                            </ul>
-                        </li>
+                        <ul class="sub-menu events-sub-menu">
+                            <li><a href="../pages/events_business.html">business</a></li>
+                            <li><a href="../pages/events_birthdays.html">birthdays</a></li>
+                            <li><a href="../pages/events_christmas.html">christmas</a></li>
+                        </ul>
+                    </li>
 
-                        <li><a href="../pages/dining.html">dining</a></li>
-                        <li><a href="../pages/contact.html">contact</a></li>
-                        <li><a href="../pages/about.html">about</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
+                    <li><a href="../pages/dining.html">dining</a></li>
+                    <li><a href="../pages/contact.html">contact</a></li>
+                    <li><a href="../pages/about.html">about</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-        <main>
+    <main>
+        <div class="wrapper">
             <div class="contact-container">
                 <div class="title">
                     <h1>Question about your perfect day?</h1>
@@ -100,8 +100,8 @@
                                 ../assets/contact/contact_form_large.webp 1200w,
                                 ../assets/contact/contact_form_extra_large.webp 1920w"
                         sizes="(max-width: 965px) 100vw, 
-                               (max-width: 1440px) 50vw, 
-                               450px"
+                                (max-width: 1440px) 50vw, 
+                                450px"
                         alt="bridal gifts">
                     </div>
 
@@ -110,17 +110,25 @@
                             <h2>contact form</h2>
                         </div>
 
-                        <form aria-hidden="true" action="#">
-                            <input tabindex="-1" name="name" class="input" type="text" placeholder="Name:" autocomplete="off">
-                            <input tabindex="-1" name="email" class="input" type="email" placeholder="Email:" autocomplete="off">
-                            <input tabindex="-1" name="phone number" class="input" type="text" placeholder="Number:" autocomplete="off">
-                            <textarea tabindex="-1" name="insert your message" class="input" placeholder="Insert your message here:" maxlength="500"></textarea>
-                            <button tabindex="-1" type="button">submit</button>
+                        <form>
+                            <label for="name" class="screen-reader-only">name</label>
+                            <input id="name" name="name" type="text" placeholder="Name:" autocomplete="name">
+
+                            <label for="email" class="screen-reader-only">email</label>
+                            <input id="email" name="email" type="email" placeholder="Email:" autocomplete="email">
+
+                            <label for="phoneNumber" class="screen-reader-only">phone number</label>
+                            <input id="phoneNumber" name="phoneNumber" type="tel" placeholder="Number:" autocomplete="tel">
+
+                            <label for="contactMessage" class="screen-reader-only">contact message</label>
+                            <textarea id="contactMessage" name="contactMessage" placeholder="Insert your message here:" maxlength="500"></textarea>
+
+                            <button type="button">submit</button>
                         </form>
                     </div>
                 </div>
             </div>
-        </main>
-    </div>
+        </div>
+    </main>
 </body>
 </html>
