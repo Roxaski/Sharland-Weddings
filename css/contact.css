@@ -276,6 +276,7 @@ nav.active .hamburger-menu .bars::after {
 }
 .contact-form .right input,
 .contact-form .right textarea {
+    font-size: 1rem;
     -webkit-tap-highlight-color: transparent;
     width: 100%;
     border: none;
