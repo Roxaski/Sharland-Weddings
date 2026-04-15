@@ -1,208 +1,236 @@
+const nav = document.querySelectorAll('nav a');
 const gallery = document.querySelector('.gallery');
 const galleryImgs = document.querySelectorAll('.gallery img');
-const galleryImgsArray = Array.from(galleryImgs);
-const lightbox = document.querySelector('.lightbox img');
-const lightboxSizes = '(max-width: 865px) 90vw, 800px';
+const overlay = document.querySelector('.overlay');
+const lightboxImg = document.querySelector('.lightbox img');
 const previousBtn = document.querySelector('.previous');
 const nextBtn = document.querySelector('.next');
-const overlay = document.querySelector('.overlay');
-const nav = document.querySelectorAll('nav a, nav button');
 
-// stores the index of the currently displayed image
-let currentImage;
-// stores the value of whether the lightbox is open or not
-let isLightboxOpen = false;
+// keeps track of which image was clicked
+let currentImg = 0;
 
-// listens out for a click on the gallery
-gallery.addEventListener('click', (e) => {
-    // check if the click is on a gallery image
-    if (e.target.tagName === 'IMG') {
-        // checks which image was clicked from the array of gallery images
-        currentImage = galleryImgsArray.indexOf(e.target);
+// creates new image variables in order to preload them when the lightbox is active
+let preloadPreviousImg = new Image();
+let preloadNextImg = new Image();
 
-        displayOverlay();
-        imagePreview();
-        preload(currentImage + 1);
-        preload(currentImage - 1);
-    };
-});
+// creates an array of the images within the gallery
+const galleryImgArray = Array.from(galleryImgs);
 
-// listens out for the enter key on the gallery
-gallery.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' && e.target.tagName === 'IMG') {
-        currentImage = galleryImgsArray.indexOf(e.target);
-
-        displayOverlay();
-        imagePreview();
-        preload(currentImage + 1);
-        preload(currentImage - 1);
-    };
-});
-
-// preloads the previous and next image
-function preload(imageIndex) {
-    // checks if the image is within the length of the gallery 
-    if (imageIndex >= 0 && imageIndex < galleryImgs.length) {
-        const img = galleryImgs[imageIndex];
-        const preloadImg = new Image();
-
-        // sets the image src, srcset and size for the browser to preload
-        preloadImg.srcset = img.srcset;
-        preloadImg.sizes = lightboxSizes;
-        preloadImg.src = img.src;
-    };
-};
-
-// displays an overlay
-function displayOverlay() {
-    isLightboxOpen = true;
-    document.body.style.overflow = 'hidden';
-    overlay.style.display = 'block';
-
-    // prevents the gallery images from being focused while the lightbox is open
-    galleryImgs.forEach(img => {
-        img.setAttribute('tabindex', '-1');
-    });
-
-    // prevents the nav from being focused while the lightbox is open
-    nav.forEach(element => {
-        element.setAttribute('tabindex', '-1');
-    });
-};
-
-// displays image & buttons
-function imagePreview() {
-    lightbox.classList.add('active');
-
-    // lightbox should use more appropriate image sizes
-    lightbox.srcset = galleryImgs[currentImage].srcset;
-    lightbox.sizes = lightboxSizes;
-    lightbox.alt = galleryImgs[currentImage].alt;
-
-    // fallback in case srcset and sizes isn't supported on the browser
-    lightbox.src = galleryImgs[currentImage].src;
-
-    displayGalleryBtns();
-};
-
-// removes the buttons from the first and last lightbox images
-function displayGalleryBtns() {
-    if(currentImage == 0) {
-        previousBtn.classList.remove('visible');
-    } else {
-        previousBtn.classList.add('visible');
-    };
-
-    if(currentImage == galleryImgs.length - 1) {
-        nextBtn.classList.remove('visible');
-    } else {
-        nextBtn.classList.add('visible');
-    };
-};
-
-// displays next image
-nextBtn.addEventListener('click', () => {
-    currentImage ++;
-    imagePreview();
-    preload(currentImage +1);
-});
-
-// displays previous image
-previousBtn.addEventListener('click', () => {
-    currentImage --;
-    imagePreview();
-    preload(currentImage - 1);
-});
-
-// removes overlay, image buttons, src and srcset along with alt
-function closeOverlay() {
-    isLightboxOpen = false;
-    document.body.style.overflow = 'auto';
-    lightbox.src = '';
-    lightbox.srcset = '';
-    lightbox.alt = '';
-    lightbox.classList.remove('active');
-    overlay.style.display = 'none';
-    nextBtn.classList.remove('visible');
-    previousBtn.classList.remove('visible');
-
-    // allows the gallery images to be focused
-    galleryImgs.forEach(img => {
-        img.setAttribute('tabindex', '0');
-    });
-
-    // allows the nav to be focused
-    nav.forEach(element => {
-        element.removeAttribute('tabindex');
-    });
-};
-
-// closes the overlay
-overlay.addEventListener('click', () => {
-    closeOverlay();
-});
-
-// stores the value of where the finger touches the screen
-let touchStart;
-
-lightbox.addEventListener('touchstart', (e) => {
-    // stops the default event from happening (swiping from the edge of the screen makes the page go back)
-    e.preventDefault();
+/*
+    waits for the image to be fully decoded before displaying it,
+    this is done to prevent firefox from briefly flashing the previous image if one was clicked on
+*/
+async function setLightboxImg() {
+    const img = galleryImgArray[currentImg];
     
-    // returns the location of where the touch started on the X-axis
-    touchStart = e.touches[0].clientX;
+    lightboxImg.src = img.src;
+    lightboxImg.srcset = img.srcset;
+    
+    await lightboxImg.decode();
+};
+
+/*
+    displays the lightbox along with disabling the scroll while it's open,
+    along with disabling the respective buttons from the first and last lightbox image,
+    and setting the tab index to -1 in order to prevent the gallery images from being tabbed
+*/
+function openLightBox(e) {
+    // checks if the target is an image within the gallery
+    if(e.target.tagName === 'IMG') {
+        document.body.classList.add('lightbox-no-scroll');
+
+        // stores the value of the current image that was clicked on from the array
+        currentImg = galleryImgArray.indexOf(e.target);
+
+        setLightboxImg();
+        
+        overlay.style.transition = 'opacity 150ms ease';
+
+        overlay.classList.add('active');
+        lightboxImg.classList.add('active');
+
+        // loops through each element and sets the tab index accordingly
+        nav.forEach(link => {
+            link.setAttribute('tabIndex', '-1');
+        });
+
+        galleryImgArray.forEach(img => {
+            img.setAttribute('tabIndex', '-1');
+        });
+
+        // only displays the lightbox buttons once the lightbox img is loaded
+        lightboxImg.onload = lightboxBtns;
+    };
+};
+
+// hides one of the lightbox buttons depending on the position of the image within the array
+function lightboxBtns() {
+    if(currentImg === 0) {
+        previousBtn.classList.remove('active');
+    } else {
+        previousBtn.classList.add('active');
+    };
+
+    if(currentImg === galleryImgArray.length - 1) {
+        nextBtn.classList.remove('active');
+    } else {
+        nextBtn.classList.add('active');
+    };
+};
+
+// preloads the adjacent photos within the lightbox
+function preloadAdjacentImgs() {
+    if (currentImg > 0) {
+        preloadPreviousImg.src = galleryImgArray[currentImg - 1].src;
+    };
+
+    if (currentImg < galleryImgArray.length - 1) {
+        preloadNextImg.src = galleryImgArray[currentImg + 1].src;
+    };
+};
+
+/*
+    closes the lightbox by removing the active classes and re-enabling scroll,
+    while also setting the tab index back to 0 to allow the images in the gallery to be tabbed to
+*/
+function closeLightbox () {
+    document.body.classList.remove('lightbox-no-scroll');
+    overlay.style.transition = 'none';
+    overlay.classList.remove('active');
+    lightboxImg.classList.remove('active');
+    lightboxImg.src = '';
+    lightboxImg.srcset = '';
+    previousBtn.classList.remove('active');
+    nextBtn.classList.remove('active');
+
+    // loops through each element and sets the tab index accordingly
+    nav.forEach(link => {
+        link.setAttribute('tabIndex', 0);
+    });
+
+    galleryImgArray.forEach(img => {
+        img.setAttribute('tabIndex', 0);
+    });
+};
+
+// lightbox click event listeners for mouse
+gallery.addEventListener('click', (e) => {
+    openLightBox(e);
+    preloadAdjacentImgs();
 });
 
-//  stores the value of when the finger stops on the screen
-let touchEnd;
+overlay.addEventListener('click', () => {
+    closeLightbox();
+});
 
-lightbox.addEventListener('touchend', (e) => {
-    // returns the location of where touch ended on the X-axis
-    touchEnd = e.changedTouches[0].clientX;
+previousBtn.addEventListener('click', () => {
+    currentImg--;
 
-    // defines the minimum distance needed to swipe for next and previous images
-    const minSwipe = 100;
-    // calculates the value to show the next or previous image
-    const swipeToChangeImg = touchStart - touchEnd;
+    setLightboxImg();
+    lightboxBtns();
+    preloadAdjacentImgs();
+});
 
-    // if you swipe to the left and aren't on the last image, then it displays the next image
-    if(swipeToChangeImg > minSwipe && currentImage < galleryImgs.length - 1) {
-        currentImage ++;
-        imagePreview();
-        preload(currentImage + 1);
-    // else if you swipe to the right and aren't on the first image, then it displays the previous image
-    } else if (swipeToChangeImg < -minSwipe && currentImage > 0) {
-        currentImage --;
-        imagePreview();
-        preload(currentImage - 1);
+nextBtn.addEventListener('click', () => {
+    currentImg++;
+
+    setLightboxImg();
+    lightboxBtns();
+    preloadAdjacentImgs();
+});
+
+// lightbox click event listeners for keyboard
+window.addEventListener('keydown', (e) => {
+    if(e.key === 'Escape' && lightboxImg.classList.contains('active')) {
+        closeLightbox();
+    };
+
+    if(e.key === 'ArrowLeft' && lightboxImg.classList.contains('active')) {
+        if(currentImg === 0) {
+            return;
+        };
+
+        currentImg--;
+
+        setLightboxImg();
+        lightboxBtns();
+        preloadAdjacentImgs();
+
+    } else if (e.key === 'ArrowRight' && lightboxImg.classList.contains('active')) {
+        if(currentImg === galleryImgArray.length - 1) {
+            return;
+        };
+
+        currentImg++;
+
+        setLightboxImg();
+        lightboxBtns();
+        preloadAdjacentImgs();
     };
 });
 
-// image navigation using the arrows keys
-window.addEventListener('keydown', (e) => {
-    // checks if the overlay is open, if so it runs the navigation code below
-    if (isLightboxOpen) {
-        // navigates to the next image using the right arrow, enter or space bar keys ( space bar works when the buttons are focused )
-        if ((e.key === 'ArrowRight' || ((e.key === 'Enter' || e.key === ' ') 
-            && document.activeElement === nextBtn)) 
-            && currentImage < galleryImgs.length - 1) {
-            e.preventDefault();
-            currentImage++;
-            imagePreview();
-            preload(currentImage + 1);
-        } 
-        // navigates to the previous image using the right arrow, enter or space bar keys ( space bar works when the buttons are focused )
-        else if ((e.key === 'ArrowLeft' || ((e.key === 'Enter' || e.key === ' ')
-            && document.activeElement === previousBtn)) 
-            && currentImage > 0) {
-            e.preventDefault();
-            currentImage--;
-            imagePreview();
-            preload(currentImage - 1);
-        }
-        // closes the overlay with the escape key
-        else if (e.key === 'Escape') {
-            closeOverlay();
+gallery.addEventListener('keydown', (e) => {
+    if(e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openLightBox(e);
+        preloadAdjacentImgs();
+    };
+});
+
+// keeps track of where the screen tapping starts and ends, along with setting img zoom to false
+let screenTapStart;
+let screenTapEnd;
+let imgZoom = false;
+
+lightboxImg.addEventListener('touchstart', (e) => {
+    // keeps track of whether more than one finger is on the screen
+    if(e.touches.length > 1) {
+        imgZoom = true;
+        return;
+    } else {
+        imgZoom = false;
+    };
+
+    // the position of the initial tap on the screen
+    screenTapStart = e.touches[0].clientX;
+});
+
+lightboxImg.addEventListener('touchend', (e) => {
+    // if there no fingers on the screen then the variable is set to false
+    if (e.touches.length === 0) {
+        imgZoom = false;
+    };
+
+    // returns early if any fingers are still on the screen or if image zoom is active
+    if (e.touches.length > 0 || imgZoom) {
+        return;
+    };
+
+    // the position of where the finger lifted off the screen
+    screenTapEnd = e.changedTouches[0].clientX;
+
+    // checks if the swipe moved at least 100px to the left
+    if(screenTapEnd - screenTapStart <= -100 && lightboxImg.classList.contains('active')) {
+        
+        if(currentImg === galleryImgArray.length - 1) {
+            return;
         };
+
+        currentImg++;
+
+        setLightboxImg();
+        preloadAdjacentImgs();
+
+    // checks if the swipe moved at least 100px to the right
+    } else if(screenTapEnd - screenTapStart >= 100 && lightboxImg.classList.contains('active')) {
+
+        if(currentImg === 0) {
+            return;
+        };
+
+        currentImg--;
+
+        setLightboxImg();
+        preloadAdjacentImgs();
     };
 });
