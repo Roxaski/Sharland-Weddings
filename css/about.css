@@ -82,7 +82,7 @@ nav.active .hamburger-menu .bars::after {
     height: auto;
     color: var(--clr-white);
 }
-.logo h2 a {
+.logo span a {
     color: var(--clr-white);
     font-weight: 400;
     font-family: "Great Vibes", cursive;
@@ -283,7 +283,7 @@ nav.active .hamburger-menu .bars::after {
         visibility: visible;
         transition: transform 250ms ease-in-out, visibility 0s;
     }
-    .logo h2 a {
+    .logo span a {
         margin-left: -.5rem;
     }
     .logo img {
