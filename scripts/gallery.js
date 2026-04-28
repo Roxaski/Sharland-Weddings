@@ -1,4 +1,4 @@
-const nav = document.querySelectorAll('nav a');
+const navLinks = document.querySelectorAll('nav a');
 const gallery = document.querySelector('.gallery');
 const galleryImgs = document.querySelectorAll('.gallery img');
 const overlay = document.querySelector('.overlay');
@@ -50,7 +50,7 @@ function openLightBox(e) {
         lightboxImg.classList.add('active');
 
         // loops through each element and sets the tab index accordingly
-        nav.forEach(link => {
+        navLinks.forEach(link => {
             link.setAttribute('tabIndex', '-1');
         });
 
@@ -104,7 +104,7 @@ function closeLightbox () {
     nextBtn.classList.remove('active');
 
     // loops through each element and sets the tab index accordingly
-    nav.forEach(link => {
+    navLinks.forEach(link => {
         link.setAttribute('tabIndex', 0);
     });
 
