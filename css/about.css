@@ -74,7 +74,11 @@ nav.active .hamburger-menu .bars::after {
     align-items: center;
     z-index: 2;
 }
+.logo a {
+    text-decoration: none;
+}
 .logo img {
+    display: block;
     position: relative;
     bottom: .35rem;
     left: 1rem;
@@ -82,7 +86,7 @@ nav.active .hamburger-menu .bars::after {
     height: auto;
     color: var(--clr-white);
 }
-.logo span a {
+.logo p {
     color: var(--clr-white);
     font-weight: 400;
     font-family: "Great Vibes", cursive;
@@ -283,11 +287,11 @@ nav.active .hamburger-menu .bars::after {
         visibility: visible;
         transition: transform 250ms ease-in-out, visibility 0s;
     }
-    .logo span a {
-        margin-left: -.5rem;
-    }
     .logo img {
         left: -.8rem;
+    }
+    .logo p {
+        margin-left: -.5rem;
     }
     .links-wrapper {
         display: block;
