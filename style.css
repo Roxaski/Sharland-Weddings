@@ -606,3 +606,12 @@ footer .container .section.social .icons img {
         color: var(--clr-white);
     }
 }
+@media (prefers-reduced-motion: reduce) {
+    nav.active .links-wrapper,
+    .links-wrapper,
+    .links-wrapper .links li .arrow,
+    .bars::before,
+    .bars::after {
+        transition: none;
+    }
+}

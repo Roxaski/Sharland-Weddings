@@ -541,3 +541,12 @@ nav.active .hamburger-menu .bars::after {
         background: var(--clr-mediumGrey);
     }
 }
+@media (prefers-reduced-motion: reduce) {
+    nav.active .links-wrapper,
+    .links-wrapper,
+    .links-wrapper .links li .arrow,
+    .bars::before,
+    .bars::after {
+        transition: none;
+    }
+}
