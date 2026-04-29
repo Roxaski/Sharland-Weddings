@@ -130,11 +130,17 @@ nav.active .hamburger-menu .bars::after {
 .links-wrapper .links li:hover {
     background: var(--clr-lilac);
 }
-.links-wrapper .links li i {
-    position: relative;
-    top: 1.75px;
-    left: .15rem;
-    font-size: .9rem;
+.links-wrapper .links li button {
+    color: var(--clr-white);
+    background: none;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(1rem, 3vw, 1.1rem);
+    font-weight: 200;
+    text-transform: capitalize;
+    letter-spacing: .5px;
+    cursor: pointer;
+    padding: 0;
 }
 .links-wrapper .links li a {
     height: 100%;
@@ -159,10 +165,6 @@ nav.active .hamburger-menu .bars::after {
 .links-wrapper .links li:hover .events-arrow {
     transform: rotate(90deg);
 }
-.links-wrapper .links .packages:focus-within .packages-arrow,
-.links-wrapper .links .events:focus-within .events-arrow {
-    transform: rotate(90deg);
-}
 .links-wrapper .links .sub-menu {
     display: none;
     position: absolute;
@@ -185,10 +187,6 @@ nav.active .hamburger-menu .bars::after {
 }
 .links-wrapper .links li:hover .packages-sub-menu,
 .links-wrapper .links li:hover .events-sub-menu {
-    display: block;
-}
-.links-wrapper .links .packages:focus-within .packages-sub-menu,
-.links-wrapper .links .events:focus-within .events-sub-menu {
     display: block;
 }
 .bars {
@@ -358,9 +356,6 @@ nav.active .hamburger-menu .bars::after {
     }
     .links-wrapper .links li {
         display: block;
-    }
-    .links-wrapper .links li i {
-        top: 0;
     }
     .links-wrapper .links .sub-menu {
         display: none;
