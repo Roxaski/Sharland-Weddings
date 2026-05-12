@@ -6,8 +6,8 @@ const main = document.querySelector('main');
 
 hamburgerMenu.addEventListener('click', toggleHamburgerMenu);
 
+// toggles the sub menus based on which was clicked
 linksWrapper.addEventListener('click', (e) => {
-    // toggles the sub menus based on which was clicked
     if(e.target.closest('.packages')) {
         linksWrapper.classList.toggle('packages-menu-open');
         linksWrapper.classList.remove('events-menu-open');
@@ -18,23 +18,25 @@ linksWrapper.addEventListener('click', (e) => {
 });
 
 function toggleHamburgerMenu() {
+    const hamburgerMenuOpen = nav.classList.contains('hamburger-menu-open');
+
     // toggles nav and disables scrolling accordingly
-    nav.classList.toggle('active');
-    const active = nav.classList.contains('active');
+    nav.classList.toggle('hamburger-menu-open');
     document.body.classList.toggle('no-scroll');
 
     // prevents these elements from being focused, clicked, or read by screen readers
-    main.inert = active;
-    logo.inert = active;
+    main.inert = hamburgerMenuOpen;
+    logo.inert = hamburgerMenuOpen;
 
     // adds or removes the esc key event listener when the hamburger menu is open or closed
-    if (active) {
+    if (hamburgerMenuOpen) {
         document.addEventListener('keydown', escapeKeyPress);
     } else {
         document.removeEventListener('keydown', escapeKeyPress);
     };
 };
 
+// listens for escape key while the hamburger menu is open
 function escapeKeyPress(e) {
     if (e.key === 'Escape') {
         toggleHamburgerMenu();
