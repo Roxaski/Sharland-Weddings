@@ -197,7 +197,9 @@ nav.active .hamburger-menu .bars::after {
     width: 100%;
 }
 .links-wrapper .links li:hover .packages-sub-menu,
-.links-wrapper .links li:hover .events-sub-menu {
+.links-wrapper .links li:focus-within .packages-sub-menu,
+.links-wrapper .links li:hover .events-sub-menu,
+.links-wrapper .links li:focus-within .events-sub-menu {
     display: block;
 }
 .bars {
@@ -541,10 +543,6 @@ nav.active .hamburger-menu .bars::after {
     .links-wrapper .links li:hover .packages-arrow,
     .links-wrapper .links li:hover .events-arrow {
         transform: rotate(0deg);
-    }
-    .links-wrapper.packages-menu-open .links .sub-menu.packages-sub-menu,
-    .links-wrapper.events-menu-open .links .sub-menu.events-sub-menu {
-        display: block;
     }
     .links-wrapper .links li:hover {
         background: transparent;
