@@ -71,10 +71,10 @@ nav {
     max-width: 90rem;
     z-index: 1;
 }
-nav.active .hamburger-menu .bars::before {
+nav.hamburger-menu-open .hamburger-menu .bars::before {
     transform: translateY(0) rotate(45deg);
 }
-nav.active .hamburger-menu .bars::after {
+nav.hamburger-menu-open .hamburger-menu .bars::after {
     transform: translateY(0) rotate(-45deg);
 }
 .logo {
@@ -195,7 +195,9 @@ nav.active .hamburger-menu .bars::after {
     width: 100%;
 }
 .links-wrapper .links li:hover .packages-sub-menu,
-.links-wrapper .links li:hover .events-sub-menu {
+.links-wrapper .links li:focus-within .packages-sub-menu,
+.links-wrapper .links li:hover .events-sub-menu,
+.links-wrapper .links li:focus-within .events-sub-menu {
     display: block;
 }
 .bars {
@@ -361,7 +363,6 @@ nav.active .hamburger-menu .bars::after {
     letter-spacing: .5px;
     text-transform: capitalize;
     border: none;
-    outline: none;
     width: 145px;
     border-radius: 5px;
     color: var(--clr-white);
@@ -442,7 +443,7 @@ footer .container .section.social .icons img {
         max-width: 100%;
         padding: 0 25px;
     }
-    nav.active .links-wrapper {
+    nav.hamburger-menu-open .links-wrapper {
         transform: translateX(0);
         visibility: visible;
         transition: transform 250ms ease-in-out, visibility 0s;
@@ -505,10 +506,6 @@ footer .container .section.social .icons img {
     .links-wrapper .links li:hover .events-arrow {
         transform: rotate(0deg);
     }
-    .links-wrapper.packages-menu-open .links .sub-menu.packages-sub-menu,
-    .links-wrapper.events-menu-open .links .sub-menu.events-sub-menu {
-        display: block;
-    }
     .links-wrapper .links li:hover {
         background: transparent;
     }
@@ -519,10 +516,10 @@ footer .container .section.social .icons img {
     .hamburger-menu {
         display: flex;
     }
-    header.active .hamburger-menu::before {
+    header.hamburger-menu-open .hamburger-menu::before {
         transform: rotate(45deg);
     }
-    header.active .hamburger-menu::after {
+    header.hamburger-menu-open .hamburger-menu::after {
         transform: rotate(315deg);
     }
 }
@@ -607,7 +604,7 @@ footer .container .section.social .icons img {
     }
 }
 @media (prefers-reduced-motion: reduce) {
-    nav.active .links-wrapper,
+    nav.hamburger-menu-open .links-wrapper,
     .links-wrapper,
     .links-wrapper .links li .arrow,
     .bars::before,
