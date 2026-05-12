@@ -82,13 +82,13 @@ nav.active .hamburger-menu .bars::after {
     z-index: 2;
 }
 .logo a {
+    position: relative;
+    bottom: .35rem;
+    left: 1rem;
     text-decoration: none;
 }
 .logo img {
     display: block;
-    position: relative;
-    bottom: .35rem;
-    left: 1rem;
     width: 70px;
     height: auto;
     color: var(--clr-white);
@@ -99,7 +99,6 @@ nav.active .hamburger-menu .bars::after {
     font-family: "Great Vibes", cursive;
     font-size: clamp(2rem, 3vw, 2.5rem);
     letter-spacing: .5px;
-    text-decoration: none;
     margin-left: 1.5rem;
 }
 .hamburger-menu {
