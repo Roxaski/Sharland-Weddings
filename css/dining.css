@@ -189,7 +189,9 @@ nav.active .hamburger-menu .bars::after {
     width: 100%;
 }
 .links-wrapper .links li:hover .packages-sub-menu,
-.links-wrapper .links li:hover .events-sub-menu {
+.links-wrapper .links li:focus-within .packages-sub-menu,
+.links-wrapper .links li:hover .events-sub-menu,
+.links-wrapper .links li:focus-within .events-sub-menu {
     display: block;
 }
 .bars {
@@ -238,33 +240,30 @@ nav.active .hamburger-menu .bars::after {
     font-weight: 300;
     margin: 0 auto 15px;
 }
-.grid-container a {
-    text-decoration: none;
-    -webkit-tap-highlight-color: transparent;
+.grid-container {
+    gap: .5rem;
 }
 .grid-container .img-container {
     position: relative;
 }
+.grid-container .img-container a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
 .grid-container .img-container img {
+    display: block;
     width: 100%;
     height: auto;
     color: var(--clr-blk);
+    cursor: default;
 }
-.grid-container .img-container .title {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-.grid-container .img-container .title.border h2 {
+.grid-container .img-container h2 {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: auto;
     min-width: clamp(180px, 35vw, 200px);
+    height: auto;
     padding: .75rem;
     text-align: center;
     text-transform: capitalize;
@@ -346,10 +345,6 @@ nav.active .hamburger-menu .bars::after {
     .links-wrapper .links li:hover .events-arrow {
         transform: rotate(0deg);
     }
-    .links-wrapper.packages-menu-open .links .sub-menu.packages-sub-menu,
-    .links-wrapper.events-menu-open .links .sub-menu.events-sub-menu {
-        display: block;
-    }
     .links-wrapper .links li:hover {
         background: transparent;
     }
@@ -400,7 +395,7 @@ nav.active .hamburger-menu .bars::after {
         color: var(--clr-chalk);
         background: var(--clr-blk);
     }
-    .grid-container .img-container .title.border h2 {
+    .grid-container .img-container h2 {
         color: var(--clr-chalk);
         background: var(--clr-darkGrey);
     }
