@@ -191,7 +191,9 @@ nav.active .hamburger-menu .bars::after {
     width: 100%;
 }
 .links-wrapper .links li:hover .packages-sub-menu,
-.links-wrapper .links li:hover .events-sub-menu {
+.links-wrapper .links li:focus-within .packages-sub-menu,
+.links-wrapper .links li:hover .events-sub-menu,
+.links-wrapper .links li:focus-within .events-sub-menu {
     display: block;
 }
 .bars {
@@ -260,7 +262,7 @@ nav.active .hamburger-menu .bars::after {
     border-bottom-left-radius: 5px;
 }
 .contact-form .right {
-    padding: 1rem 1rem .5rem 1rem;
+    padding: 1.1rem .75rem .45rem .75rem;
 }
 .contact-form .right .screen-reader-only {
     position: absolute;
@@ -380,10 +382,6 @@ nav.active .hamburger-menu .bars::after {
     .links-wrapper .links li:hover .events-arrow {
         transform: rotate(0deg);
     }
-    .links-wrapper.packages-menu-open .links .sub-menu.packages-sub-menu,
-    .links-wrapper.events-menu-open .links .sub-menu.events-sub-menu {
-        display: block;
-    }
     .links-wrapper .links li:hover {
         background: transparent;
     }
@@ -418,7 +416,7 @@ nav.active .hamburger-menu .bars::after {
         border-bottom-left-radius: 0;
     }
     .contact-form .right {
-        padding: .75rem;
+        padding: .5rem;
     }
     .contact-form .right h2 {
         bottom: .25rem;
