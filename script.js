@@ -16,17 +16,18 @@ linksWrapper.addEventListener('click', (e) => {
 });
 
 function toggleHamburgerMenu() {
-    const hamburgerMenuOpen = nav.classList.contains('hamburger-menu-open');
-
-    // toggles nav and disables scrolling accordingly
+    // toggles the hamburger menu variable to open / closed and enables / disables page scrolling accordingly
     nav.classList.toggle('hamburger-menu-open');
     document.body.classList.toggle('no-scroll');
 
+    // the variable gets updated after it's toggled
+    const hamburgerMenuOpen = nav.classList.contains('hamburger-menu-open');
+
     // prevents main from being focused, clicked, or read by screen readers while hamburger menu is open
-    main.inert = !hamburgerMenuOpen;
+    main.inert = hamburgerMenuOpen;
 
     // adds or removes the esc key event listener when the hamburger menu is open or closed
-    if (!hamburgerMenuOpen) {
+    if (hamburgerMenuOpen) {
         document.addEventListener('keydown', escapeKeyPress);
     } else {
         document.removeEventListener('keydown', escapeKeyPress);
