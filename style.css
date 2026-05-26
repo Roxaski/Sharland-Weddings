@@ -70,6 +70,7 @@ nav {
     width: 100%;
     max-width: 90rem;
     z-index: 1;
+    padding: 0 1rem;
 }
 nav.hamburger-menu-open .hamburger-menu .bars::before {
     transform: translateY(0) rotate(45deg);
@@ -83,9 +84,6 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
     z-index: 2;
 }
 .logo a {
-    position: relative;
-    bottom: .35rem;
-    left: 1rem;
     text-decoration: none;
 }
 .logo img {
@@ -95,19 +93,21 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
     color: var(--clr-white);
 }
 .logo p {
-    color: var(--clr-white);
+    position: relative;
+    top: .25rem;
+    left: .5rem;
     font-weight: 400;
     font-family: "Great Vibes", cursive;
     font-size: clamp(2rem, 3vw, 2.5rem);
+    color: var(--clr-white);
     letter-spacing: .5px;
-    margin-left: 1.5rem;
 }
 .hamburger-menu {
     display: none;
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 1.2rem;
+    top: 1.4rem;
     right: 1.7rem;
     height: 2rem;
     width: 1.25rem;
@@ -440,18 +440,11 @@ footer .container .section.social .icons img {
     nav {
         position: relative;
         max-width: 100%;
-        padding: 0 25px;
     }
     nav.hamburger-menu-open .links-wrapper {
         transform: translateX(0);
         visibility: visible;
-        transition: transform 250ms ease-in-out, visibility 0s;
-    }
-    .logo img {
-        left: -1.1rem;
-    }
-    .logo p {
-        margin-left: -.5rem;
+        transition: transform 150ms ease-in-out, visibility 0s;
     }
     .links-wrapper {
         display: block;
@@ -462,12 +455,12 @@ footer .container .section.social .icons img {
         max-width: 300px;
         width: 100%;
         transform: translateX(100%);
-        transition: transform 250ms ease-in-out;
+        transition: transform 150ms ease-in-out;
         padding: 15px;
         -webkit-tap-highlight-color: transparent;
         overflow-y: auto;
         visibility: hidden;
-        transition: transform 250ms ease-in-out, visibility 0s 250ms;
+        transition: transform 150ms ease-in-out, visibility 0s 150ms;
         z-index: 1;
     }
     .links-wrapper .links {
@@ -490,14 +483,6 @@ footer .container .section.social .icons img {
         color: var(--clr-offWhite);
         font-weight: 300;
     }
-    .links-wrapper .links .packages > a,
-    .links-wrapper .links .events > a {
-        pointer-events: none;
-    }
-    .links-wrapper .links li:hover .packages-sub-menu,
-    .links-wrapper .links li:hover .events-sub-menu {
-        display: none;
-    }
     .links-wrapper .links li .arrow {
         top: .42rem;
     }
@@ -507,6 +492,16 @@ footer .container .section.social .icons img {
     }
     .links-wrapper .links li:hover {
         background: transparent;
+    }
+    .links-wrapper .links li:hover .packages-sub-menu,
+    .links-wrapper .links li:focus-within .packages-sub-menu,
+    .links-wrapper .links li:hover .events-sub-menu,
+    .links-wrapper .links li:focus-within .events-sub-menu {
+        display: none;
+    }
+    .links-wrapper.packages-menu-open .links .sub-menu.packages-sub-menu,
+    .links-wrapper.events-menu-open .links .sub-menu.events-sub-menu {
+        display: block;
     }
     .links-wrapper.packages-menu-open .links li .packages-arrow,
     .links-wrapper.events-menu-open .links li .events-arrow {
