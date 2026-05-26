@@ -23,8 +23,8 @@ function toggleHamburgerMenu() {
     document.body.classList.toggle('no-scroll');
 
     // prevents these elements from being focused, clicked, or read by screen readers
-    main.inert = hamburgerMenuOpen;
-    logo.inert = hamburgerMenuOpen;
+    main.inert = !hamburgerMenuOpen;
+    logo.inert = !hamburgerMenuOpen;
 
     // adds or removes the esc key event listener when the hamburger menu is open or closed
     if (hamburgerMenuOpen) {
