@@ -477,29 +477,27 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
         transform: translateX(0);
         visibility: visible;
         transition: transform 150ms ease-in-out, visibility 0s;
+        pointer-events: auto;
     }
     .links-wrapper {
         display: block;
         position: fixed;
-        background: var(--clr-purple);
-        top: 0;
+        top: 69px;
         right: 0;
         max-width: 300px;
         width: 100%;
         transform: translateX(100%);
         transition: transform 150ms ease-in-out;
         padding: 15px;
+        background: var(--clr-purple);
         -webkit-tap-highlight-color: transparent;
         overflow-y: auto;
         visibility: hidden;
+        pointer-events: none;
         transition: transform 150ms ease-in-out, visibility 0s 150ms;
         z-index: 1;
     }
-    .links-wrapper .links {
-        display: block;
-        position: relative;
-        top: 3rem;
-    }
+    .links-wrapper .links,
     .links-wrapper .links li {
         display: block;
     }
