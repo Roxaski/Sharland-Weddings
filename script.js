@@ -10,10 +10,8 @@ hamburgerMenu.addEventListener('click', toggleHamburgerMenu);
 linksWrapper.addEventListener('click', (e) => {
     if(e.target.closest('.packages')) {
         linksWrapper.classList.toggle('packages-menu-open');
-        linksWrapper.classList.remove('events-menu-open');
     } else if(e.target.closest('.events')) {
         linksWrapper.classList.toggle('events-menu-open');
-        linksWrapper.classList.remove('packages-menu-open');
     };
 });
 
