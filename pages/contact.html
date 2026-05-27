@@ -86,48 +86,46 @@
     </header>
 
     <main>
-        <div class="wrapper">
-            <div class="contact-container">
-                <div class="title">
-                    <h1>Question about your perfect day?</h1>
-                    <p>Don't hesitate to get in touch, our team is always happy to help</p>
+        <div class="contact-container">
+            <div class="title">
+                <h1>Question about your perfect day?</h1>
+                <p>Don't hesitate to get in touch, our team is always happy to help</p>
+            </div>
+
+            <div class="contact-form">
+                <div class="left">
+                    <img fetchpriority="high" width="1920" height="1080" draggable="false" 
+                    src="../assets/contact/contact_form_extra_large.webp"
+                    srcset="../assets/contact/contact_form_small.webp 480w,
+                            ../assets/contact/contact_form_medium.webp 800w,
+                            ../assets/contact/contact_form_large.webp 1200w,
+                            ../assets/contact/contact_form_extra_large.webp 1920w"
+                    sizes="(max-width: 965px) 100vw, 
+                            (max-width: 1440px) 50vw, 
+                            450px"
+                    alt="assortment of white and gold bridal gifts">
                 </div>
 
-                <div class="contact-form">
-                    <div class="left">
-                        <img fetchpriority="high" width="1920" height="1080" draggable="false" 
-                        src="../assets/contact/contact_form_extra_large.webp"
-                        srcset="../assets/contact/contact_form_small.webp 480w,
-                                ../assets/contact/contact_form_medium.webp 800w,
-                                ../assets/contact/contact_form_large.webp 1200w,
-                                ../assets/contact/contact_form_extra_large.webp 1920w"
-                        sizes="(max-width: 965px) 100vw, 
-                                (max-width: 1440px) 50vw, 
-                                450px"
-                        alt="assortment of white and gold bridal gifts">
+                <div class="right">
+                    <div class="contact">
+                        <h2>contact form</h2>
                     </div>
 
-                    <div class="right">
-                        <div class="contact">
-                            <h2>contact form</h2>
-                        </div>
+                    <form>
+                        <label for="name" class="screen-reader-only">name</label>
+                        <input id="name" name="name" type="text" placeholder="Name:" autocomplete="name">
 
-                        <form>
-                            <label for="name" class="screen-reader-only">name</label>
-                            <input id="name" name="name" type="text" placeholder="Name:" autocomplete="name">
+                        <label for="email" class="screen-reader-only">email</label>
+                        <input id="email" name="email" type="email" placeholder="Email:" autocomplete="email">
 
-                            <label for="email" class="screen-reader-only">email</label>
-                            <input id="email" name="email" type="email" placeholder="Email:" autocomplete="email">
+                        <label for="phoneNumber" class="screen-reader-only">phone number</label>
+                        <input id="phoneNumber" name="phoneNumber" type="tel" placeholder="Number:" autocomplete="tel">
 
-                            <label for="phoneNumber" class="screen-reader-only">phone number</label>
-                            <input id="phoneNumber" name="phoneNumber" type="tel" placeholder="Number:" autocomplete="tel">
+                        <label for="contactMessage" class="screen-reader-only">contact message</label>
+                        <textarea id="contactMessage" name="contactMessage" placeholder="Insert your message here:" maxlength="500"></textarea>
 
-                            <label for="contactMessage" class="screen-reader-only">contact message</label>
-                            <textarea id="contactMessage" name="contactMessage" placeholder="Insert your message here:" maxlength="500"></textarea>
-
-                            <button type="button">submit</button>
-                        </form>
-                    </div>
+                        <button type="button">submit</button>
+                    </form>
                 </div>
             </div>
         </div>

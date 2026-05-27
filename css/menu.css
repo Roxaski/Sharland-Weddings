@@ -56,6 +56,7 @@ body {
     color: var(--clr-darkGrey);
     background: var(--clr-white);
     width: 100%;
+    max-width: 90rem;
     min-height: 100vh;
     font-family: "Poppins", sans-serif;
     padding-bottom: 1rem;
@@ -226,9 +227,6 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
 }
 .bars::after {
     transform: translateY(4px);
-}
-.wrapper {
-    max-width: 90rem;
 }
 .banner {
     position: relative;
