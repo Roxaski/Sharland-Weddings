@@ -49,6 +49,7 @@ body {
     max-width: 90rem;
     min-height: 100vh;
     font-family: "Poppins", sans-serif;
+    scrollbar-gutter: stable;
     padding-bottom: 1rem;
     cursor: default;
 }
