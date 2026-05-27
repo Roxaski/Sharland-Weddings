@@ -110,6 +110,9 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
     -webkit-tap-highlight-color: transparent;
     z-index: 2;
 }
+.hamburger-menu:focus:not(:focus-visible) {
+    outline: none;
+}
 .links-wrapper {
     position: relative;
     height: 100%;
