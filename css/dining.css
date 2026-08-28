@@ -50,6 +50,7 @@ body {
     background: var(--clr-white);
     width: 100%;
     max-width: 90rem;
+    margin: 0 auto;
     min-height: 100vh;
     font-family: "Poppins", sans-serif;
     padding-bottom: .6rem;
@@ -255,6 +256,7 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
     display: block;
     width: 100%;
     height: auto;
+    aspect-ratio: 16 / 9;
     color: var(--clr-blk);
     cursor: default;
 }

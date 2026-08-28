@@ -47,6 +47,7 @@ body {
     background: var(--clr-white);
     width: 100%;
     max-width: 90rem;
+    margin: 0 auto;
     min-height: 100vh;
     font-family: "Poppins", sans-serif;
     scrollbar-gutter: stable;
@@ -261,6 +262,7 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
     display: block;
     width: 100%;
     height: auto;
+    aspect-ratio: 16 / 9;
     color: var(--clr-blk);
     box-shadow: 1px 1px 4px rgba(0, 0, 0, .2);
     contain: layout;

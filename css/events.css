@@ -55,6 +55,7 @@ body {
     background: var(--clr-white);
     width: 100%;
     max-width: 90rem;
+    margin: 0 auto;
     min-height: 100vh;
     font-family: "Poppins", sans-serif;
     padding-bottom: 1rem;
@@ -283,6 +284,7 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
 .grid-container img {
     width: 100%;
     height: auto;
+    aspect-ratio: 16 / 9;
 }
 .grid-container .left img {
     mask-image: linear-gradient(90deg, 

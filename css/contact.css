@@ -67,6 +67,7 @@ nav {
     background: var(--clr-purple);
     width: 100%;
     max-width: 90rem;
+    max-width: 0 auto;
     z-index: 1;
     padding: 0 1rem;
 }
