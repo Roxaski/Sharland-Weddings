@@ -49,8 +49,9 @@ body {
     width: 100%;
     max-width: 90rem;
     min-height: 100vh;
-    font-family: "Poppins", sans-serif;
+    margin: 0 auto;
     padding-bottom: 1rem;
+    font-family: "Poppins", sans-serif;
     cursor: default;
 }
 nav {
@@ -62,10 +63,10 @@ nav {
     justify-content: space-between;
     background: var(--clr-purple);
     width: 100%;
+    margin: 0 auto;
     max-width: 90rem;
-    max-width: 0 auto;
-    z-index: 1;
     padding: 0 1rem;
+    z-index: 1;
 }
 nav.hamburger-menu-open .hamburger-menu .bars::before {
     transform: translateY(0) rotate(45deg);
@@ -83,7 +84,7 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
 }
 .logo img {
     display: block;
-    width: 70px;
+    width: 4.375rem;
     height: auto;
     color: var(--clr-white);
 }
@@ -130,7 +131,7 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
     align-items: center;
     position: relative;
     list-style: none;
-    padding: 0 25px;
+    padding: 0 1.5rem;
     transition: background-color 250ms ease;
 }
 .links-wrapper .links li:hover {
@@ -163,7 +164,7 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
     top: .1rem;
     left: .2rem;
     text-align: center;
-    width: 22px;
+    width: 1.375rem;
     height: 100%;
     transition: transform 250ms ease-in-out;
 }
@@ -174,11 +175,11 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
 .links-wrapper .links .sub-menu {
     display: none;
     position: absolute;
-    top: 70px;
+    top: 4.375rem;
     left: 0;
     background: var(--clr-purple);
     line-height: 70px;
-    width: 175px;
+    width: 10.9rem;
     min-width: 100%;
 }
 .links-wrapper .links .sub-menu li {
@@ -199,7 +200,7 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
 }
 .bars {
     position: relative;
-    height: 3px;
+    height: .188rem;
     width: 100%;
     border-radius: 5px;
     background-color: transparent;
@@ -215,19 +216,19 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
     transition: transform 250ms ease;
 }
 .bars::before {
-    transform: translateY(-4px);
+    transform: translateY(-.25rem);
 }
 .bars::after {
-    transform: translateY(4px);
+    transform: translateY(.25rem);
 }
 .banner {
     position: relative;
     width: 100%;
-    height: 185px;
+    height: 11.563rem;
 }
 .banner img {
     position: absolute;
-    max-width: 700px;
+    max-width: 43.75rem;
     width: 100%;
     top: 15%;
     left: 50%;
@@ -238,11 +239,11 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: clamp(50px, 10vw, 0) auto 0;
+    margin: clamp(3.125rem, 10vw, 0) auto 0;
 }
 .img-wrapper img {
     position: relative;
-    max-width: 225px;
+    max-width: 14rem;
     width: 80%;
     height: auto;
     border-radius: 50%;
@@ -250,7 +251,7 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
 }
 .img-wrapper .border {
     position: absolute;
-    max-width: 330px;
+    max-width: 20.625rem;
     width: 100%;
 }
 .border.light {
@@ -262,14 +263,14 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
 .content {
     text-align: center;
     width: 80%;
-    margin: 35px auto 0;
+    margin: 2.188rem auto 0;
     line-height: 1.7;
 }
 .content h1 {
     font-size: clamp(1.5rem, 3vw, 1.9rem);
     font-weight: 400;
     text-transform: capitalize;
-    margin: 13px auto;
+    margin: .813rem auto;
 }
 .content p {
     font-size: clamp(1rem, 3vw, 1.1rem);
@@ -292,13 +293,13 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
     .links-wrapper {
         display: block;
         position: fixed;
-        top: 69px;
+        top: 4.313rem;
         right: 0;
-        max-width: 300px;
+        max-width: 18.75rem;
         width: 100%;
         transform: translateX(100%);
         transition: transform 250ms ease-in-out;
-        padding: 15px;
+        padding: .938rem;
         background: var(--clr-purple);
         -webkit-tap-highlight-color: transparent;
         overflow-y: auto;
@@ -359,7 +360,7 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
 }
 @media screen and (max-width: 1050px) {
     .content p {
-        margin: 25px auto 0;
+        margin: 1.563rem auto 0;
     }
 }
 @media screen and (max-width: 745px) {
@@ -367,7 +368,7 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
         display: none;
     }
     .img-wrapper {
-        margin: 50px auto 0;
+        margin: 3.125rem auto 0;
     }
 }
 @media screen and (max-width: 575px) {
@@ -380,10 +381,10 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
 }
 @media screen and (max-width: 325px) {
     .img-wrapper img {
-        max-width: 205px;
+        max-width: 12.813rem;
     }
     .img-wrapper .border {
-        max-width: 305px;
+        max-width: 19rem;
     }
 }
 @media screen and (prefers-color-scheme: dark) {

@@ -59,8 +59,8 @@ body {
     max-width: 90rem;
     min-height: 100vh;
     margin: 0 auto;
-    font-family: "Poppins", sans-serif;
     padding-bottom: 1rem;
+    font-family: "Poppins", sans-serif;
     cursor: default;
 }
 nav {
@@ -72,9 +72,10 @@ nav {
     justify-content: space-between;
     background: var(--clr-purple);
     width: 100%;
+    margin: 0 auto;
     max-width: 90rem;
-    z-index: 1;
     padding: 0 1rem;
+    z-index: 1;
 }
 nav.hamburger-menu-open .hamburger-menu .bars::before {
     transform: translateY(0) rotate(45deg);
@@ -92,7 +93,7 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
 }
 .logo img {
     display: block;
-    width: 70px;
+    width: 4.375rem;
     height: auto;
     color: var(--clr-white);
 }
@@ -139,7 +140,7 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
     align-items: center;
     position: relative;
     list-style: none;
-    padding: 0 25px;
+    padding: 0 1.5rem;
     transition: background-color 250ms ease;
 }
 .links-wrapper .links li:hover {
@@ -172,7 +173,7 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
     top: .1rem;
     left: .2rem;
     text-align: center;
-    width: 22px;
+    width: 1.375rem;
     height: 100%;
     transition: transform 250ms ease-in-out;
 }
@@ -183,11 +184,11 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
 .links-wrapper .links .sub-menu {
     display: none;
     position: absolute;
-    top: 70px;
+    top: 4.375rem;
     left: 0;
     background: var(--clr-purple);
     line-height: 70px;
-    width: 175px;
+    width: 10.9rem;
     min-width: 100%;
 }
 .links-wrapper .links .sub-menu li {
@@ -208,7 +209,7 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
 }
 .bars {
     position: relative;
-    height: 3px;
+    height: .188rem;
     width: 100%;
     border-radius: 5px;
     background-color: transparent;
@@ -224,14 +225,14 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
     transition: transform 250ms ease;
 }
 .bars::before {
-    transform: translateY(-4px);
+    transform: translateY(-.25rem);
 }
 .bars::after {
-    transform: translateY(4px);
+    transform: translateY(.25rem);
 }
 .banner {
     position: relative;
-    bottom: 1.5px;
+    bottom: .094rem;
 }
 .banner img {
     width: 100%;
@@ -269,7 +270,7 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
     text-transform: capitalize;
     letter-spacing: .5px;
     text-align: center;
-    margin: 35px auto;
+    margin: 2.188rem auto;
 }
 .menu-container .title h2 {
     font-size: clamp(1.5rem, 3vw, 2.1rem);
@@ -279,16 +280,16 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
     content: '';
     position: absolute;
     bottom: 45%;
-    width: 15px;
-    height: 1.25px;
+    width: .938rem;
+    height: .078rem;
     background: var(--clr-darkGrey);
 }
 .menu-container .title h2::after {
     content: '';
     position: absolute;
     bottom: 45%;
-    width: 15px;
-    height: 1.25px;
+    width: .938rem;
+    height: .078rem;
     background: var(--clr-darkGrey);
 }
 .menu-container .title .appetizer::before {
@@ -333,7 +334,7 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, .2);
 }
 .menu-container .menu img {
-    width: 145px;
+    width: 9rem;
     height: auto;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -347,7 +348,7 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
     background: var(--clr-milkWhite);
 }
 .menu-container .menu .content .description {
-    margin: 7px .75rem;
+    margin: .438rem .75rem;
     width: 70%;
     background: var(--clr-milkWhite);
 }
@@ -366,12 +367,12 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
     padding-left: .5rem;
 }
 .menu-container .menu .content .description p {
-    margin: 5px auto;
+    margin: .313rem auto;
     font-size: clamp(.9rem, 3vw, 1rem);
     font-weight: 300;
 }
 .price-container {
-    margin: 20px auto 0;
+    margin: 1.25rem auto 0;
     padding-inline: 1rem;
 }
 .price-container.package-advert {
@@ -403,11 +404,11 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
     color: var(--clr-darkGrey);
 }
 .price-container .content .package-price {
-    margin: 20px auto 0;
+    margin: 1.25rem auto 0;
 }
 .price-container .content .package-price ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 4fr));
+    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 4fr));
     gap: 2rem;
 }
 .price-container .content .package-price ul li {
@@ -452,7 +453,7 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
 }
 .package-container .content .btn {
     display: inline-block;
-    margin: 30px auto 0;
+    margin: 1.875rem auto 0;
     padding: .5rem .75rem;
     background: var(--clr-coolGrey);
     color: var(--clr-white);
@@ -485,13 +486,13 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
     .links-wrapper {
         display: block;
         position: fixed;
-        top: 69px;
+        top: 4.313rem;
         right: 0;
-        max-width: 300px;
+        max-width: 18.75rem;
         width: 100%;
         transform: translateX(100%);
         transition: transform 250ms ease-in-out;
-        padding: 15px;
+        padding: .938rem;
         background: var(--clr-purple);
         -webkit-tap-highlight-color: transparent;
         overflow-y: auto;

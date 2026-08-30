@@ -57,6 +57,7 @@ body {
     width: 100%;
     max-width: 90rem;
     min-height: 100vh;
+    margin: 0 auto;
     font-family: "Poppins", sans-serif;
     cursor: default;
 }
@@ -71,8 +72,8 @@ nav {
     width: 100%;
     margin: 0 auto;
     max-width: 90rem;
-    z-index: 1;
     padding: 0 1rem;
+    z-index: 1;
 }
 nav.hamburger-menu-open .hamburger-menu .bars::before {
     transform: translateY(0) rotate(45deg);
@@ -90,7 +91,7 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
 }
 .logo img {
     display: block;
-    width: 70px;
+    width: 4.375rem;
     height: auto;
     color: var(--clr-white);
 }
@@ -137,7 +138,7 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
     align-items: center;
     position: relative;
     list-style: none;
-    padding: 0 25px;
+    padding: 0 1.5rem;
     transition: background-color 250ms ease;
 }
 .links-wrapper .links li:hover {
@@ -170,7 +171,7 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
     top: .1rem;
     left: .2rem;
     text-align: center;
-    width: 22px;
+    width: 1.375rem;
     height: 100%;
     transition: transform 250ms ease-in-out;
 }
@@ -181,11 +182,11 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
 .links-wrapper .links .sub-menu {
     display: none;
     position: absolute;
-    top: 70px;
+    top: 4.375rem;
     left: 0;
     background: var(--clr-purple);
     line-height: 70px;
-    width: 175px;
+    width: 10.9rem;
     min-width: 100%;
 }
 .links-wrapper .links .sub-menu li {
@@ -206,7 +207,7 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
 }
 .bars {
     position: relative;
-    height: 3px;
+    height: .188rem;
     width: 100%;
     border-radius: 5px;
     background-color: transparent;
@@ -222,10 +223,10 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
     transition: transform 250ms ease;
 }
 .bars::before {
-    transform: translateY(-4px);
+    transform: translateY(-.25rem);
 }
 .bars::after {
-    transform: translateY(4px);
+    transform: translateY(.25rem);
 }
 .hero {
     position: relative;
@@ -247,7 +248,7 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
     'catering-one-img catering-one-content'
     'catering-two-content catering-two-img'
     'events events';
-    margin: 15px auto;
+    margin: .938rem auto;
 }
 .grid-container .venue-one-img {
     grid-area: venue-one-img;
@@ -305,11 +306,11 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
 .grid-container .right h2 {
     text-transform: capitalize;
     font-weight: 400;
-    margin: 15px 0;
+    margin: .938rem 0;
 }
 .grid-container .left p,
 .grid-container .right p {
-    margin: 15px 0;
+    margin: .938rem 0;
 }
 .banner-container {
     width: 100%;
@@ -365,7 +366,7 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
     letter-spacing: .5px;
     text-transform: capitalize;
     border: none;
-    width: 145px;
+    width: 9rem;
     border-radius: 5px;
     color: var(--clr-white);
     background: var(--clr-charcoal);
@@ -375,7 +376,7 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
     color: var(--clr-white);
 }
 .events-container {
-    margin: 10px auto;
+    margin: .625rem auto;
     width: 100%;
 }
 .events-container img {
@@ -392,7 +393,7 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
 }
 .events-container h2 {
     text-transform: capitalize;
-    margin: 0 auto 10px;
+    margin: 0 auto .625rem;
     font-weight: 400;
 }
 .events-container p {
@@ -400,7 +401,7 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
     margin-bottom: 1.5rem;
 }
 footer {
-    padding: 30px 100px;
+    padding: 1.825rem 6.25rem;
     color: var(--clr-chalk);
     background: var(--clr-darkGrey);
 }
@@ -422,7 +423,7 @@ footer .container .section ul li {
     display: flex;
     font-size: clamp(.85rem, 3vw, .9rem);
     list-style: none;
-    margin: 5px auto;
+    margin: .313rem auto;
     font-weight: 300;
 }
 footer .container .section.social .icons {
@@ -431,7 +432,7 @@ footer .container .section.social .icons {
     font-size: clamp(1rem, 3vw, 1.1rem);
 }
 footer .container .section.social .icons img {
-    width: clamp(15px, 3vw, 18px);
+    width: clamp(.938rem, 3vw, 1.125rem);
     height: auto;
     aspect-ratio:  1 / 1;
     margin-right: 1rem;
@@ -454,13 +455,13 @@ footer .container .section.social .icons img {
     .links-wrapper {
         display: block;
         position: fixed;
-        top: 69px;
+        top: 4.313rem;
         right: 0;
-        max-width: 300px;
+        max-width: 18.75rem;
         width: 100%;
         transform: translateX(100%);
         transition: transform 250ms ease-in-out;
-        padding: 15px;
+        padding: .938rem;
         background: var(--clr-purple);
         -webkit-tap-highlight-color: transparent;
         overflow-y: auto;
