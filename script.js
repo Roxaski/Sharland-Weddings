@@ -26,11 +26,19 @@ function toggleHamburgerMenu() {
     // prevents main from being focused, clicked, or read by screen readers while hamburger menu is open
     main.inert = hamburgerMenuOpen;
 
-    // adds or removes the esc key event listener when the hamburger menu is open or closed
+    /*
+        adds or removes the event listener depending on whether the hamburger is open or not,
+        and sets the aria-expanded accordingly for screen reader users
+    */
+   
     if (hamburgerMenuOpen) {
         document.addEventListener('keydown', escapeKeyPress);
+        hamburgerMenu.setAttribute('aria-expanded', 'true');
+        console.log(hamburgerMenu)
     } else {
         document.removeEventListener('keydown', escapeKeyPress);
+        hamburgerMenu.setAttribute('aria-expanded', 'false');
+        console.log(hamburgerMenu)
     };
 };
 
