@@ -263,7 +263,6 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
     margin: 0 auto .938rem;
 }
 .gallery img {
-    display: block;
     width: 100%;
     height: auto;
     aspect-ratio: 16 / 9;
@@ -450,12 +449,6 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
     }
     .gallery .title {
         grid-column: span 2;
-    }
-}
-@media screen and (max-width: 865px) {
-    .lightbox img {
-        max-width: 90%;
-        margin: 0 auto;
     }
 }
 @media screen and (max-width: 768px) {
