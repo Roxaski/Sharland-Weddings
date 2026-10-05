@@ -281,6 +281,7 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
     left: 50%;
     transform: translate(-50%, -50%);
     width: fit-content;
+    touch-action: none;
     height: auto;
     z-index: 3;
 }
@@ -342,6 +343,7 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
     pointer-events: none;
     position: fixed;
     inset: 0;
+    touch-action: none;
     background: var(--clr-blk);
     z-index: 2;
 }
