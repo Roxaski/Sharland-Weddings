@@ -291,13 +291,22 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
     display: none;
     max-width: 90vw;
     max-height: 85vh;
+    aspect-ratio: 16 / 9;
     width: auto;
     height: auto;
     object-fit: contain;
+    user-select: none;
+    transition: transform 300ms ease-in-out;
     cursor: default;
 }
 .lightbox > img.active {
     display: block;
+}
+.lightbox > img.zoom {
+    transform: scale(2);
+}
+.lightbox > img.drag {
+    transition: none;
 }
 .lightbox .btn {
     position: absolute;
@@ -339,6 +348,16 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
 .overlay.active {
     opacity: 1;
     pointer-events: auto;
+}
+@media (hover: hover) {
+    .lightbox > img.zoom {
+        transform: scale(1.25);
+    }
+}
+@media (hover: none) {
+    .lightbox .btn {
+        display: none;
+    }
 }
 @media screen and (max-width: 1145px) {
     .no-scroll {
@@ -462,9 +481,6 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
         transform: translate(-50%, -50%);
         width: 80vw;
         height: auto;
-    }
-    .lightbox .btn {
-        display: none;
     }
 }
 @media screen and (prefers-color-scheme: dark) {
