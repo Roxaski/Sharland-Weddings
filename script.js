@@ -34,11 +34,9 @@ function toggleHamburgerMenu() {
     if (hamburgerMenuOpen) {
         document.addEventListener('keydown', escapeKeyPress);
         hamburgerMenu.setAttribute('aria-expanded', 'true');
-        console.log(hamburgerMenu)
     } else {
         document.removeEventListener('keydown', escapeKeyPress);
         hamburgerMenu.setAttribute('aria-expanded', 'false');
-        console.log(hamburgerMenu)
     };
 };
 
