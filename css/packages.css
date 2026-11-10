@@ -507,7 +507,8 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
 .wedding-form .venue-details #selected-date {
     position: absolute;
     top: 0;
-    left: 3.25rem;
+    left: 3.5rem;
+    text-transform: capitalize;
 }
 .wedding-form .input-field {
     display: flex;
