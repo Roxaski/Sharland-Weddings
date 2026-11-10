@@ -486,6 +486,10 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
 .no-scroll {
     overflow-y: hidden;
 }
+.wedding-form input,
+.wedding-form textarea {
+    font-size: .9rem;
+}
 .wedding-form .details-wrapper .your-details,
 .wedding-form .details-wrapper .contact-details {
     display: grid;
