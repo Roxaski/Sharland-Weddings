@@ -508,7 +508,6 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
     position: absolute;
     top: 0;
     left: 3.5rem;
-    text-transform: capitalize;
 }
 .wedding-form .input-field {
     display: flex;
@@ -561,6 +560,10 @@ dialog legend::after {
     flex: 1;
     height: 2px;
     background: var(--clr-coolGrey);
+}
+dialog .valid,
+dialog .invalid {
+    text-transform: capitalize;
 }
 dialog .valid {
     color: var(--clr-green);
