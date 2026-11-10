@@ -561,10 +561,6 @@ dialog legend::after {
     height: 2px;
     background: var(--clr-coolGrey);
 }
-dialog .valid,
-dialog .invalid {
-    text-transform: capitalize;
-}
 dialog .valid {
     color: var(--clr-green);
 }
