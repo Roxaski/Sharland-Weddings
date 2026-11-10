@@ -56,14 +56,14 @@ currentDate.addEventListener('change', () => {
     // checks if the selected date is equal to or greater than todays date along with checking against the two available months
     if (selectedDate >= todaysDate && (selectedMonth === '08' || selectedMonth === '09')) {
         chosenDateValidity = true;
-        selectedDateOuput.textContent = 'available';
+        selectedDateOuput.textContent = 'Available';
         selectedDateOuput.classList.remove('invalid');
         selectedDateOuput.classList.add('valid');
         currentDate.classList.remove('invalid');
         currentDate.classList.add('valid');
     } else {
         chosenDateValidity = false;
-        selectedDateOuput.textContent = 'unavailable';
+        selectedDateOuput.textContent = 'Unavailable';
         selectedDateOuput.classList.remove('valid');
         selectedDateOuput.classList.add('invalid');
         currentDate.classList.remove('valid');
