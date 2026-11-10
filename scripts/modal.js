@@ -38,6 +38,11 @@ partnerTwoInput.addEventListener('input', () => {
 
 // event listener for the date element in order to display a message depending on the selected date
 currentDate.addEventListener('change', () => {
+    // returns early if the current date has no selected value
+    if (!currentDate.value) {
+        return;
+    };
+
     // holds the value of the selected month by splitting the date and picking out the month in the array
     const selectedMonth = currentDate.value.split('-')[1];
     // holds the value of the selected date
