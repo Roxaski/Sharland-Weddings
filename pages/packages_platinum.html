@@ -27,6 +27,7 @@
     <link rel="manifest" href="../site.webmanifest" />
     <link rel="stylesheet" href="../css/packages.css">
     <script defer src="../script.js"></script>
+    <script defer src="../scripts/modal.js"></script>
 </head>
 <body>
     <header>
@@ -212,15 +213,13 @@
                         <li>may<span>fully booked</span></li>
                         <li>june<span>fully booked</span></li>
                         <li>july<span>fully booked</span></li>
-                        <li>august
-                            <a href="../pages/contact.html">
-                                <span class="available">available</span>
-                            </a>
+                        <li>
+                            august
+                            <button class="open-modal" type="button">available</button>
                         </li>
-                        <li>september
-                            <a href="../pages/contact.html">
-                                <span class="available">available</span>
-                            </a>
+                        <li>
+                            september
+                            <button class="open-modal" type="button">available</button>
                         </li>
                         <li>october<span>fully booked</span></li>
                         <li>november<span>fully booked</span></li>
@@ -229,6 +228,126 @@
                 </div>
             </div>
         </div>
+
+        <dialog>
+            <form class="wedding-form">
+                <h3>wedding booking form</h3>
+                
+                <div class="details-wrapper">
+                    <legend>your details</legend>
+
+                    <div class="your-details">
+                        <div class="input-field">
+                            <label for="partner-1-first-name">first name</label>
+                            <input type="text" id="partner-1-first-name" autocomplete="off" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="partner-1-last-name">last name</label>
+                            <input type="text" id="partner-1-last-name" autocomplete="off" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="partner-2-first-name">first name</label>
+                            <input type="text" id="partner-2-first-name" autocomplete="off" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="partner-2-last-name">last name</label>
+                            <input type="text" id="partner-2-last-name" autocomplete="off" required>
+                        </div>
+                    </div>
+
+                    <legend>contact details</legend>
+                    
+                    <div class="contact-details">
+                        <div class="input-field">
+                            <label for="email">email</label>
+                            <input type="email" id="email" autocomplete="off" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="phone">phone</label>
+                            <input type="tel" id="phone" maxlength="11" autocomplete="off">
+                        </div>
+                    </div>
+
+                    <legend>venue details</legend>
+
+                    <div class="venue-details">
+                        <div class="input-field">
+                            <label for="wedding-date">date</label>
+                            <input type="date" class="getDate" id="wedding-date" required>
+                            <p id="selected-date"></p>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="venue">venue</label>
+                            <select id="venue" required>
+                                <option value="" disabled selected>choose an option</option>
+                                <option value="serenity manor">Serenity Lake</option>
+                                <option value="thornfield manor">Thornfield Manor</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="guests">guests</label>
+                            <select id="guests" required>
+                                <option value="" disabled selected>choose an option</option>
+                                <option value="1-9">Between 1 - 9</option>
+                                <option value="10-24">Between 10 - 24</option>
+                                <option value="25-49">Between 25 - 49</option>
+                                <option value="50-99">Between 50 - 99</option>
+                                <option value="100-199">Between 100 - 199</option>
+                                <option value="200-300">Between 200 - 300</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="packages">package</label>
+                            <select id="packages" required>
+                                <option value="" disabled selected>choose an option</option>
+                                <option value="no packge">None</option>
+                                <option value="silver package">Silver Package</option>
+                                <option value="gold package">Gold Package</option>
+                                <option value="platinum package">Platinum Package</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <legend>additional notes</legend>
+                    
+                    <div class="additional-details">
+                        <div class="input-field">
+                            <label for="additional-notes"></label>
+                            <textarea id="additional-notes" rows="10" maxlength="1250"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="submitBtn">submit</button>
+
+                <button id="close-modal" aria-label="closes the form" type="button">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 6 6 18"/>
+                    <path d="m6 6 12 12"/>
+                    </svg>
+                </button>
+            </form>
+
+            <div class="booking-confirmation hidden">
+                <canvas class="confetti-canvas"></canvas>
+
+                <img src="../assets/icons/wedding_rings.svg" alt="wedding rings">
+                <h3>congratulations</h3>
+
+                <p class="partner-names"><span id="partner-one-name"></span> & <span id="partner-two-name"></span></p>
+                <p class="wedding-booked">Your wedding is now booked</p>
+                <p><span id="booking-date"></span></p>
+
+                <button id="confirm-booking">booking confirmed</button>
+            </div>
+        </dialog>
 
         <div class="price-container">
             <div class="content">
