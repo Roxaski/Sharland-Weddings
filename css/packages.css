@@ -885,6 +885,9 @@ dialog .submitBtn {
     dialog .submitBtn:hover {
         background: var(--clr-coolGrey);
     }
+    .booking-confirmation h3 {
+        color: var(--clr-alabasterWhite);
+    }
     .booking-confirmation .partner-names {
         border-bottom: 2px solid var(--clr-mediumGrey);
     }
