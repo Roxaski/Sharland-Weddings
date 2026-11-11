@@ -23,7 +23,7 @@ let chosenDateValidity = false;
 openModal.forEach((availableBooking) => {
     availableBooking.addEventListener('click', () => {
         dialog.showModal();
-        document.body.classList.add('no-scroll');
+        document.documentElement.classList.add('modal-no-scroll');
     });
 });
 
@@ -56,14 +56,12 @@ currentDate.addEventListener('change', () => {
     // checks if the selected date is equal to or greater than todays date along with checking against the two available months
     if (selectedDate >= todaysDate && (selectedMonth === '08' || selectedMonth === '09')) {
         chosenDateValidity = true;
-        selectedDateOuput.textContent = 'Available';
         selectedDateOuput.classList.remove('invalid');
         selectedDateOuput.classList.add('valid');
         currentDate.classList.remove('invalid');
         currentDate.classList.add('valid');
     } else {
         chosenDateValidity = false;
-        selectedDateOuput.textContent = 'Unavailable';
         selectedDateOuput.classList.remove('valid');
         selectedDateOuput.classList.add('invalid');
         currentDate.classList.remove('valid');
@@ -72,7 +70,6 @@ currentDate.addEventListener('change', () => {
 
     // clears the message, color and border for the calendar
     dateTimeout = setTimeout(() => {
-        selectedDateOuput.textContent = '';
         selectedDateOuput.classList.remove('valid', 'invalid');
         currentDate.classList.remove('valid', 'invalid');
     }, 2000);
@@ -163,8 +160,7 @@ function modalReset() {
     weddingForm.classList.remove('hidden');
     currentDate.classList.remove('valid');
     currentDate.classList.remove('invalid');
-    selectedDateOuput.textContent = '';
     bookingConfirmation.classList.add('hidden');
-    document.body.classList.remove('no-scroll');
     chosenDateValidity = false;
+    document.documentElement.classList.remove('modal-no-scroll');
 };
