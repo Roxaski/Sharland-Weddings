@@ -490,6 +490,7 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
 .wedding-form textarea,
 .wedding-form select {
     font-size: 1rem;
+    color: var(--clr-charcoal);
 }
 .wedding-form .details-wrapper .your-details,
 .wedding-form .details-wrapper .contact-details {
@@ -597,7 +598,7 @@ dialog #close-modal {
 }
 dialog .submitBtn {
     display: block;
-    margin: .5rem auto;
+    margin: .5rem auto 1rem;
     padding: .45rem;
     width: 100%;
     text-transform: uppercase;
@@ -877,20 +878,12 @@ dialog .submitBtn {
     dialog #close-modal {
         color: var(--clr-alabasterWhite);
     }
-    dialog .valid,
-    dialog .invalid {
-        color: var(--clr-alabasterWhite);
-    }
     dialog .submitBtn {
         color: var(--clr-charcoal);
         background: var(--clr-alabasterWhite);
     }
     dialog .submitBtn:hover {
         background: var(--clr-coolGrey);
-    }
-    .booking-confirmation h3,
-    .booking-confirmation p {
-        color: var(--clr-alabasterWhite);
     }
     .booking-confirmation .partner-names {
         border-bottom: 2px solid var(--clr-mediumGrey);
