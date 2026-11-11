@@ -483,12 +483,13 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
 .hidden {
     display: none;
 }
-.no-scroll {
-    overflow-y: hidden;
+.modal-no-scroll {
+    overflow: hidden;
 }
 .wedding-form input,
-.wedding-form textarea {
-    font-size: .9rem;
+.wedding-form textarea,
+.wedding-form select {
+    font-size: 1rem;
 }
 .wedding-form .details-wrapper .your-details,
 .wedding-form .details-wrapper .contact-details {
@@ -527,7 +528,6 @@ nav.hamburger-menu-open .hamburger-menu .bars::after {
     z-index: 1;
 }
 dialog {
-    position: fixed;
     margin: 1.25rem auto;
     width: 90%;
     max-width: 50rem;
@@ -613,14 +613,15 @@ dialog .submitBtn {
     display: block;
     margin: 1.5rem auto 0;
     width: 100%;
-    max-width: 5.5rem;
+    max-width: 5.8rem;
     height: auto;
 }
 .booking-confirmation h3 {
     text-transform: capitalize;
     color: var(--clr-charcoal);
     font-family: "Great Vibes", cursive;
-    font-size: clamp(2.4rem, 8vw, 4.5rem);
+    font-size: clamp(3rem, 8vw, 4.5rem);
+    text-decoration: none;
 }
 .booking-confirmation p {
     display: flex;
@@ -669,6 +670,10 @@ dialog .submitBtn {
     background: var(--clr-mediumGrey);
 }
 @media screen and (max-width: 1145px) {
+    .no-scroll {
+        position: fixed;
+        overflow-y: hidden;
+    }
     nav {
         position: relative;
         max-width: 100%;
@@ -747,10 +752,10 @@ dialog .submitBtn {
         transform: rotate(315deg);
     }
     .booking-confirmation {
-        margin-top: 0;
+        margin-top: 2.5rem;
     }
     .booking-confirmation img {
-        margin: .5rem auto 0;
+        margin: 1rem auto 0;
     }
 }
 @media screen and (max-width: 1100px) {
